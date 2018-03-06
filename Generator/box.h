@@ -9,7 +9,7 @@
 #include <vector>
 #include "vertex.h"
 
-std::vector<Vertex*> cube(float x, float y, float z, int div);
+std::vector<Vertex*> box(float x, float y, float z, int div);
 
 
 #endif //PHASE1_CUBE_H

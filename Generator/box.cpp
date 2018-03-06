@@ -2,14 +2,14 @@
 // Created by yoda45 on 06-03-2018.
 //
 
-#include "cube.h"
+#include "box.h"
 using std::vector;
 
 vector<Vertex*> draw_xy(float x, float y, float z, int div);
 vector<Vertex*> draw_xys(float x, float sx, float y, float sy, float z);
 
 
-vector<Vertex*> cube(float x, float y, float z, int div){
+vector<Vertex*> box(float x, float y, float z, int div){
     vector<Vertex*> vertexes,aux;
 
 
@@ -52,5 +52,5 @@ vector<Vertex*> draw_xy(float x, float y, float z, int div){
 }
 
 vector<Vertex*> draw_xys(float x, float sx, float y, float sy, float z){
-    
+
 }
