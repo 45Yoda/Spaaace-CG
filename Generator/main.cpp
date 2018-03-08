@@ -4,7 +4,7 @@
 #include <vector>
 #include "vertex.h"
 #include "plane.h"
-#include "cube.h"
+#include "box.h"
 
 
 using std::ofstream;
@@ -26,7 +26,7 @@ void drawPlane(float size, string name){
 void drawBox(float x, float y, float z, int div, string name){
     ofstream file(name);
     char buffer[1024];
-    vector<Vertex*> vertexes = cube(x,y,z,div);
+    vector<Vertex*> vertexes = box(x,y,z,div);
 }
 
 int main(int argc, char** argv) {
