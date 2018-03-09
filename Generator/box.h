@@ -2,8 +2,9 @@
 // Created by yoda45 on 06-03-2018.
 //
 
-#ifndef PHASE1_CUBE_H
-#define PHASE1_CUBE_H
+#ifndef SPAAACE_CG_SPHERE_H
+#define SPAAACE_CG_SPHERE_H
+
 
 
 #include <vector>
@@ -12,4 +13,4 @@
 std::vector<Vertex*> box(float x, float y, float z, int div);
 
 
-#endif //PHASE1_CUBE_H
+#endif //SPAAACE_CG_SPHERE_H

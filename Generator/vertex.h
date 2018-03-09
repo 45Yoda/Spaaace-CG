@@ -2,8 +2,8 @@
 // Created by yoda45 on 01-03-2018.
 //
 
-#ifndef PHASE1_VERTEX_H
-#define PHASE1_VERTEX_H
+#ifndef SPAAACE_CG_SPHERE_H
+#define SPAAACE_CG_SPHERE_H
 
 
 class Vertex {
@@ -20,4 +20,4 @@ class Vertex {
 };
 
 
-#endif //PHASE1_VERTEX_H
+#endif //SPAAACE_CG_SPHERE_H

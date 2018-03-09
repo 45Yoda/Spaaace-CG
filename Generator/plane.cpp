@@ -14,15 +14,7 @@ vector<Vertex*> plane(float size){
     //calculate side of square
 
     side = size/2;
-/*
-    // posição do plano centrada com o eixo
-    if((size % 2) == 0){
-        xz = (float)size/2;
-    }
-    else{
-        xz = (float)size/2 +0.5;
-    }
-*/
+
 
     //Push vertexes into vector
 

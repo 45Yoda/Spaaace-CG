@@ -2,8 +2,9 @@
 // Created by yoda45 on 01-03-2018.
 //
 
-#ifndef PHASE1_PLANE_H
-#define PHASE1_PLANE_H
+#ifndef SPAAACE_CG_SPHERE_H
+#define SPAAACE_CG_SPHERE_H
+
 
 #include "vertex.h"
 #include <vector>
@@ -18,4 +19,4 @@
 std::vector<Vertex*> plane(float size);
 
 
-#endif //PHASE1_PLANE_H
+#endif //SPAAACE_CG_SPHERE_H

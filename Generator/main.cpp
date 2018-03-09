@@ -5,6 +5,7 @@
 #include "vertex.h"
 #include "plane.h"
 #include "box.h"
+#include "cone.h"
 
 
 using std::ofstream;
@@ -27,6 +28,25 @@ void drawBox(float x, float y, float z, int div, string name){
     ofstream file(name);
     char buffer[1024];
     vector<Vertex*> vertexes = box(x,y,z,div);
+
+    for(Vertex* v: vertexes){
+        sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
+        file << buffer;
+    }
+    file.close();
+}
+
+void drawCone(float radius, float height, int slices, int stacks, string name){
+    ofstream file(name);
+    char buffer[1024];
+    vector<Vertex*> vertexes = cone(radius,height,slices,stacks);
+
+    for(Vertex* v: vertexes){
+        sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
+        file << buffer;
+    }
+
+    file.close();
 }
 
 int main(int argc, char** argv) {
@@ -39,21 +59,32 @@ int main(int argc, char** argv) {
         drawPlane(atof(argv[2]), argv[3]);
     }
     else if(!strcmp(argv[1],"box") && (argc == 6 || argc == 7 )) {
-        std::cout << "placeholder";
-        /*
-         * if(argc == 6){ //No divisions
-         *      drawBox((atof)argv[2],(atof)argv[3],(atof)argv[4],0,argv[5]);
-         * else if(argc == 7){ //Divisions
-         *      drawBox((atof)argv[2],(atof)argv[3],(atof)argv[4],(atoi)argv[5],argv[6]);
-         */
+        std::cout << "box";
+
+        if (argc == 6) {  //No divisions
+            drawBox(atof(argv[2]),
+                    atof(argv[3]),
+                    atof(argv[4]),
+                    1,
+                    argv[5]);
+        }
+
+        else{  //Divisions
+            drawBox(atof(argv[2]),
+                    atof(argv[3]),
+                    atof(argv[4]),
+                    atof(argv[5]),
+                    argv[6]);
+
+        }
     }
     else if(!strcmp(argv[1],"sphere") && argc == 6) {
         std::cout << "placeholder";
         //drawSphere(argv[2],argv[3],argv[4],argv[5]);
     }
     else if(!strcmp(argv[1],"cone") && argc == 7){
-        std::cout << "placeholder";
-        //drawCone(argv[2],argv[3],argv[4],argv[5],argv[6]);
+        std::cout << "cone";
+        drawCone(atof(argv[2]),atof(argv[3]),atoi(argv[4]),atoi(argv[5]),argv[6]);
         }
     else
         std::cout << "placeholder";
