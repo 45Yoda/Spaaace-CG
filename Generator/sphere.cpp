@@ -1,7 +1,7 @@
 #include <algorithm>
 #include <cmath>
 #include "sphere.h"
-using std::vector
+using std::vector;
 
 vector<Vertex*> sphere(float radius, int slices, int stacks) {
 

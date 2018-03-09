@@ -83,6 +83,45 @@
 			</Target>
 		</Build>
 		<Unit filename="/home/jose/Spaaace-CG/CMakeLists.txt">
+			<Option target="Spaaace_CG"/>
+		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/Generator/box.cpp">
+			<Option target="Spaaace_CG"/>
+		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/Generator/box.h">
+			<Option target="Spaaace_CG"/>
+		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/Generator/main.cpp">
+			<Option target="Spaaace_CG"/>
+		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/Generator/plane.cpp">
+			<Option target="Spaaace_CG"/>
+		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/Generator/plane.h">
+			<Option target="Spaaace_CG"/>
+		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/Generator/sphere.cpp">
+			<Option target="Spaaace_CG"/>
+		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/Generator/sphere.h">
+			<Option target="Spaaace_CG"/>
+		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/Generator/vertex.cpp">
+			<Option target="Spaaace_CG"/>
+		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/Generator/vertex.h">
+			<Option target="Spaaace_CG"/>
+		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/README.md">
+			<Option target="Spaaace_CG"/>
+		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/tinyxml2.cpp">
+			<Option target="Spaaace_CG"/>
+		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/tinyxml2.h">
+			<Option target="Spaaace_CG"/>
+		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

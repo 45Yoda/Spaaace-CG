@@ -14,6 +14,13 @@ CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o: ../Generator/plane.cpp
 CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o: ../Generator/plane.h
 CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o: ../Generator/vertex.h
 
+CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.o: ../Generator/sphere.cpp
+CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.o: ../Generator/sphere.h
+CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.o: ../Generator/vertex.h
+
 CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o: ../Generator/vertex.cpp
 CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o: ../Generator/vertex.h
+
+CMakeFiles/Spaaace_CG.dir/tinyxml2.cpp.o: ../tinyxml2.cpp
+CMakeFiles/Spaaace_CG.dir/tinyxml2.cpp.o: ../tinyxml2.h
 

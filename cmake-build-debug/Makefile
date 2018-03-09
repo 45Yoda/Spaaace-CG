@@ -123,6 +123,168 @@ Spaaace_CG/fast:
 	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/build
 .PHONY : Spaaace_CG/fast
 
+Generator/box.o: Generator/box.cpp.o
+
+.PHONY : Generator/box.o
+
+# target to build an object file
+Generator/box.cpp.o:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.o
+.PHONY : Generator/box.cpp.o
+
+Generator/box.i: Generator/box.cpp.i
+
+.PHONY : Generator/box.i
+
+# target to preprocess a source file
+Generator/box.cpp.i:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.i
+.PHONY : Generator/box.cpp.i
+
+Generator/box.s: Generator/box.cpp.s
+
+.PHONY : Generator/box.s
+
+# target to generate assembly for a file
+Generator/box.cpp.s:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.s
+.PHONY : Generator/box.cpp.s
+
+Generator/main.o: Generator/main.cpp.o
+
+.PHONY : Generator/main.o
+
+# target to build an object file
+Generator/main.cpp.o:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/main.cpp.o
+.PHONY : Generator/main.cpp.o
+
+Generator/main.i: Generator/main.cpp.i
+
+.PHONY : Generator/main.i
+
+# target to preprocess a source file
+Generator/main.cpp.i:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/main.cpp.i
+.PHONY : Generator/main.cpp.i
+
+Generator/main.s: Generator/main.cpp.s
+
+.PHONY : Generator/main.s
+
+# target to generate assembly for a file
+Generator/main.cpp.s:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/main.cpp.s
+.PHONY : Generator/main.cpp.s
+
+Generator/plane.o: Generator/plane.cpp.o
+
+.PHONY : Generator/plane.o
+
+# target to build an object file
+Generator/plane.cpp.o:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o
+.PHONY : Generator/plane.cpp.o
+
+Generator/plane.i: Generator/plane.cpp.i
+
+.PHONY : Generator/plane.i
+
+# target to preprocess a source file
+Generator/plane.cpp.i:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.i
+.PHONY : Generator/plane.cpp.i
+
+Generator/plane.s: Generator/plane.cpp.s
+
+.PHONY : Generator/plane.s
+
+# target to generate assembly for a file
+Generator/plane.cpp.s:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.s
+.PHONY : Generator/plane.cpp.s
+
+Generator/sphere.o: Generator/sphere.cpp.o
+
+.PHONY : Generator/sphere.o
+
+# target to build an object file
+Generator/sphere.cpp.o:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.o
+.PHONY : Generator/sphere.cpp.o
+
+Generator/sphere.i: Generator/sphere.cpp.i
+
+.PHONY : Generator/sphere.i
+
+# target to preprocess a source file
+Generator/sphere.cpp.i:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.i
+.PHONY : Generator/sphere.cpp.i
+
+Generator/sphere.s: Generator/sphere.cpp.s
+
+.PHONY : Generator/sphere.s
+
+# target to generate assembly for a file
+Generator/sphere.cpp.s:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.s
+.PHONY : Generator/sphere.cpp.s
+
+Generator/vertex.o: Generator/vertex.cpp.o
+
+.PHONY : Generator/vertex.o
+
+# target to build an object file
+Generator/vertex.cpp.o:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o
+.PHONY : Generator/vertex.cpp.o
+
+Generator/vertex.i: Generator/vertex.cpp.i
+
+.PHONY : Generator/vertex.i
+
+# target to preprocess a source file
+Generator/vertex.cpp.i:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.i
+.PHONY : Generator/vertex.cpp.i
+
+Generator/vertex.s: Generator/vertex.cpp.s
+
+.PHONY : Generator/vertex.s
+
+# target to generate assembly for a file
+Generator/vertex.cpp.s:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.s
+.PHONY : Generator/vertex.cpp.s
+
+tinyxml2.o: tinyxml2.cpp.o
+
+.PHONY : tinyxml2.o
+
+# target to build an object file
+tinyxml2.cpp.o:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/tinyxml2.cpp.o
+.PHONY : tinyxml2.cpp.o
+
+tinyxml2.i: tinyxml2.cpp.i
+
+.PHONY : tinyxml2.i
+
+# target to preprocess a source file
+tinyxml2.cpp.i:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/tinyxml2.cpp.i
+.PHONY : tinyxml2.cpp.i
+
+tinyxml2.s: tinyxml2.cpp.s
+
+.PHONY : tinyxml2.s
+
+# target to generate assembly for a file
+tinyxml2.cpp.s:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/tinyxml2.cpp.s
+.PHONY : tinyxml2.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -132,6 +294,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Spaaace_CG"
+	@echo "... Generator/box.o"
+	@echo "... Generator/box.i"
+	@echo "... Generator/box.s"
+	@echo "... Generator/main.o"
+	@echo "... Generator/main.i"
+	@echo "... Generator/main.s"
+	@echo "... Generator/plane.o"
+	@echo "... Generator/plane.i"
+	@echo "... Generator/plane.s"
+	@echo "... Generator/sphere.o"
+	@echo "... Generator/sphere.i"
+	@echo "... Generator/sphere.s"
+	@echo "... Generator/vertex.o"
+	@echo "... Generator/vertex.i"
+	@echo "... Generator/vertex.s"
+	@echo "... tinyxml2.o"
+	@echo "... tinyxml2.i"
+	@echo "... tinyxml2.s"
 .PHONY : help
 
 
