@@ -16,4 +16,6 @@ add_executable(Spaaace_CG
         Generator/sphere.cpp
         Generator/sphere.h
         tinyxml2.cpp
-        tinyxml2.h)
+        tinyxml2.h
+        Generator/cone.cpp
+        Generator/cone.h)
