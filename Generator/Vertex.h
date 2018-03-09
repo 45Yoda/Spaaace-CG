@@ -2,8 +2,8 @@
 // Created by yoda45 on 01-03-2018.
 //
 
-#ifndef SPAAACE_CG_SPHERE_H
-#define SPAAACE_CG_SPHERE_H
+#ifndef SPAAACE_CG_VERTEX_H
+#define SPAAACE_CG_VERTEX_H
 
 
 class Vertex {
@@ -20,4 +20,4 @@ class Vertex {
 };
 
 
-#endif //SPAAACE_CG_SPHERE_H
+#endif //SPAAACE_CG_VERTEX_H
