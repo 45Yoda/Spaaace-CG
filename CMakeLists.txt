@@ -12,4 +12,4 @@ add_executable(Spaaace_CG
         Generator/plane.h
         Generator/vertex.cpp
         Generator/vertex.h
-        README.md Generator/sphere.cpp Generator/sphere.h Engine/engine.cpp Engine/engine.h)
+        README.md Generator/sphere.cpp Generator/sphere.h Engine/engine.cpp Engine/engine.h tinyxml2.cpp tinyxml2.h Engine/Shape.cpp Engine/Shape.h)

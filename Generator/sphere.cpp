@@ -1,7 +1,3 @@
-//
-// Created by jose on 3/8/18.
-//
-
 #include <algorithm>
 #include <cmath>
 #include "sphere.h"

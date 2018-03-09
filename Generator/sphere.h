@@ -1,7 +1,3 @@
-//
-// Created by jose on 3/8/18.
-//
-
 #ifndef SPAAACE_CG_SPHERE_H
 #define SPAAACE_CG_SPHERE_H
 
