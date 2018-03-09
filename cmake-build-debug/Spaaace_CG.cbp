@@ -85,6 +85,12 @@
 		<Unit filename="/home/jose/Spaaace-CG/CMakeLists.txt">
 			<Option target="Spaaace_CG"/>
 		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/Generator/Vertex.cpp">
+			<Option target="Spaaace_CG"/>
+		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/Generator/Vertex.h">
+			<Option target="Spaaace_CG"/>
+		</Unit>
 		<Unit filename="/home/jose/Spaaace-CG/Generator/box.cpp">
 			<Option target="Spaaace_CG"/>
 		</Unit>
@@ -104,12 +110,6 @@
 			<Option target="Spaaace_CG"/>
 		</Unit>
 		<Unit filename="/home/jose/Spaaace-CG/Generator/sphere.h">
-			<Option target="Spaaace_CG"/>
-		</Unit>
-		<Unit filename="/home/jose/Spaaace-CG/Generator/vertex.cpp">
-			<Option target="Spaaace_CG"/>
-		</Unit>
-		<Unit filename="/home/jose/Spaaace-CG/Generator/vertex.h">
 			<Option target="Spaaace_CG"/>
 		</Unit>
 		<Unit filename="/home/jose/Spaaace-CG/README.md">

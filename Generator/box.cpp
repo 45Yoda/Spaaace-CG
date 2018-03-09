@@ -4,6 +4,8 @@
 
 #include <algorithm>
 #include "box.h"
+#include "Vertex.h"
+
 using std::vector;
 
 vector<Vertex*> draw_xy(float x, float y, float z, int div);

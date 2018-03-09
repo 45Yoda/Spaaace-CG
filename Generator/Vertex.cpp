@@ -2,7 +2,7 @@
 // Created by yoda45 on 01-03-2018.
 //
 
-#include "vertex.h"
+#include "Vertex.h"
 
 //Estrutura de um vertice contem as coordenadas x, y e z;
 

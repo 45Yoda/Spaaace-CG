@@ -8,7 +8,7 @@
 
 
 #include <vector>
-#include "vertex.h"
+#include "Vertex.h"
 
 std::vector<Vertex*> box(float x, float y, float z, int div);
 

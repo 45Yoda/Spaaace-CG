@@ -6,17 +6,33 @@
 
 #IncludeRegexTransform: 
 
+/home/jose/Spaaace-CG/Generator/Vertex.cpp
+Vertex.h
+/home/jose/Spaaace-CG/Generator/Vertex.h
+
+/home/jose/Spaaace-CG/Generator/Vertex.h
+
 /home/jose/Spaaace-CG/Generator/box.cpp
 algorithm
 -
 box.h
 /home/jose/Spaaace-CG/Generator/box.h
+Vertex.h
+/home/jose/Spaaace-CG/Generator/Vertex.h
 
 /home/jose/Spaaace-CG/Generator/box.h
 vector
 -
+Vertex.h
+/home/jose/Spaaace-CG/Generator/Vertex.h
+
+/home/jose/Spaaace-CG/Generator/cone.h
 vertex.h
 /home/jose/Spaaace-CG/Generator/vertex.h
+vector
+-
+cmath
+-
 
 /home/jose/Spaaace-CG/Generator/main.cpp
 iostream
@@ -27,20 +43,22 @@ fstream
 -
 vector
 -
-vertex.h
-/home/jose/Spaaace-CG/Generator/vertex.h
+Vertex.h
+/home/jose/Spaaace-CG/Generator/Vertex.h
 plane.h
 /home/jose/Spaaace-CG/Generator/plane.h
 box.h
 /home/jose/Spaaace-CG/Generator/box.h
+cone.h
+/home/jose/Spaaace-CG/Generator/cone.h
 
 /home/jose/Spaaace-CG/Generator/plane.cpp
 plane.h
 /home/jose/Spaaace-CG/Generator/plane.h
 
 /home/jose/Spaaace-CG/Generator/plane.h
-vertex.h
-/home/jose/Spaaace-CG/Generator/vertex.h
+Vertex.h
+/home/jose/Spaaace-CG/Generator/Vertex.h
 vector
 -
 
@@ -55,14 +73,8 @@ sphere.h
 /home/jose/Spaaace-CG/Generator/sphere.h
 vector
 -
-vertex.h
-/home/jose/Spaaace-CG/Generator/vertex.h
-
-/home/jose/Spaaace-CG/Generator/vertex.cpp
-vertex.h
-/home/jose/Spaaace-CG/Generator/vertex.h
-
-/home/jose/Spaaace-CG/Generator/vertex.h
+Vertex.h
+/home/jose/Spaaace-CG/Generator/Vertex.h
 
 /home/jose/Spaaace-CG/tinyxml2.cpp
 tinyxml2.h

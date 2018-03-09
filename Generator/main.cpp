@@ -2,7 +2,7 @@
 #include <cstring>
 #include <fstream>
 #include <vector>
-#include "vertex.h"
+#include "Vertex.h"
 #include "plane.h"
 #include "box.h"
 #include "cone.h"

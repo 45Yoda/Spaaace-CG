@@ -129,28 +129,28 @@ CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o.provides: CMakeFiles/Spaaace_CG.
 CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o.provides.build: CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o
 
 
-CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o: CMakeFiles/Spaaace_CG.dir/flags.make
-CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o: ../Generator/vertex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jose/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o -c /home/jose/Spaaace-CG/Generator/vertex.cpp
+CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o: CMakeFiles/Spaaace_CG.dir/flags.make
+CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o: ../Generator/Vertex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jose/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o -c /home/jose/Spaaace-CG/Generator/Vertex.cpp
 
-CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jose/Spaaace-CG/Generator/vertex.cpp > CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.i
+CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jose/Spaaace-CG/Generator/Vertex.cpp > CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.i
 
-CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jose/Spaaace-CG/Generator/vertex.cpp -o CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.s
+CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jose/Spaaace-CG/Generator/Vertex.cpp -o CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.s
 
-CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o.requires:
+CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o.requires:
 
-.PHONY : CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o.requires
+.PHONY : CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o.requires
 
-CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o.provides: CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o.provides.build
-.PHONY : CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o.provides
+CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o.provides: CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o.provides.build
+.PHONY : CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o.provides
 
-CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o.provides.build: CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o
+CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o.provides.build: CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o
 
 
 CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.o: CMakeFiles/Spaaace_CG.dir/flags.make
@@ -206,7 +206,7 @@ Spaaace_CG_OBJECTS = \
 "CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.o" \
 "CMakeFiles/Spaaace_CG.dir/Generator/main.cpp.o" \
 "CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o" \
-"CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o" \
+"CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o" \
 "CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.o" \
 "CMakeFiles/Spaaace_CG.dir/tinyxml2.cpp.o"
 
@@ -216,7 +216,7 @@ Spaaace_CG_EXTERNAL_OBJECTS =
 Spaaace_CG: CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.o
 Spaaace_CG: CMakeFiles/Spaaace_CG.dir/Generator/main.cpp.o
 Spaaace_CG: CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o
-Spaaace_CG: CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o
+Spaaace_CG: CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o
 Spaaace_CG: CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.o
 Spaaace_CG: CMakeFiles/Spaaace_CG.dir/tinyxml2.cpp.o
 Spaaace_CG: CMakeFiles/Spaaace_CG.dir/build.make
@@ -232,7 +232,7 @@ CMakeFiles/Spaaace_CG.dir/build: Spaaace_CG
 CMakeFiles/Spaaace_CG.dir/requires: CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.o.requires
 CMakeFiles/Spaaace_CG.dir/requires: CMakeFiles/Spaaace_CG.dir/Generator/main.cpp.o.requires
 CMakeFiles/Spaaace_CG.dir/requires: CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o.requires
-CMakeFiles/Spaaace_CG.dir/requires: CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o.requires
+CMakeFiles/Spaaace_CG.dir/requires: CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o.requires
 CMakeFiles/Spaaace_CG.dir/requires: CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.o.requires
 CMakeFiles/Spaaace_CG.dir/requires: CMakeFiles/Spaaace_CG.dir/tinyxml2.cpp.o.requires
 

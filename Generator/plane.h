@@ -6,7 +6,7 @@
 #define SPAAACE_CG_SPHERE_H
 
 
-#include "vertex.h"
+#include "Vertex.h"
 #include <vector>
 
 /**

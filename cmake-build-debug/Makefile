@@ -123,6 +123,33 @@ Spaaace_CG/fast:
 	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/build
 .PHONY : Spaaace_CG/fast
 
+Generator/Vertex.o: Generator/Vertex.cpp.o
+
+.PHONY : Generator/Vertex.o
+
+# target to build an object file
+Generator/Vertex.cpp.o:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o
+.PHONY : Generator/Vertex.cpp.o
+
+Generator/Vertex.i: Generator/Vertex.cpp.i
+
+.PHONY : Generator/Vertex.i
+
+# target to preprocess a source file
+Generator/Vertex.cpp.i:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.i
+.PHONY : Generator/Vertex.cpp.i
+
+Generator/Vertex.s: Generator/Vertex.cpp.s
+
+.PHONY : Generator/Vertex.s
+
+# target to generate assembly for a file
+Generator/Vertex.cpp.s:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.s
+.PHONY : Generator/Vertex.cpp.s
+
 Generator/box.o: Generator/box.cpp.o
 
 .PHONY : Generator/box.o
@@ -231,33 +258,6 @@ Generator/sphere.cpp.s:
 	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.s
 .PHONY : Generator/sphere.cpp.s
 
-Generator/vertex.o: Generator/vertex.cpp.o
-
-.PHONY : Generator/vertex.o
-
-# target to build an object file
-Generator/vertex.cpp.o:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o
-.PHONY : Generator/vertex.cpp.o
-
-Generator/vertex.i: Generator/vertex.cpp.i
-
-.PHONY : Generator/vertex.i
-
-# target to preprocess a source file
-Generator/vertex.cpp.i:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.i
-.PHONY : Generator/vertex.cpp.i
-
-Generator/vertex.s: Generator/vertex.cpp.s
-
-.PHONY : Generator/vertex.s
-
-# target to generate assembly for a file
-Generator/vertex.cpp.s:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.s
-.PHONY : Generator/vertex.cpp.s
-
 tinyxml2.o: tinyxml2.cpp.o
 
 .PHONY : tinyxml2.o
@@ -294,6 +294,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Spaaace_CG"
+	@echo "... Generator/Vertex.o"
+	@echo "... Generator/Vertex.i"
+	@echo "... Generator/Vertex.s"
 	@echo "... Generator/box.o"
 	@echo "... Generator/box.i"
 	@echo "... Generator/box.s"
@@ -306,9 +309,6 @@ help:
 	@echo "... Generator/sphere.o"
 	@echo "... Generator/sphere.i"
 	@echo "... Generator/sphere.s"
-	@echo "... Generator/vertex.o"
-	@echo "... Generator/vertex.i"
-	@echo "... Generator/vertex.s"
 	@echo "... tinyxml2.o"
 	@echo "... tinyxml2.i"
 	@echo "... tinyxml2.s"

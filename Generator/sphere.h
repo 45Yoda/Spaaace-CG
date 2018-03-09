@@ -2,7 +2,7 @@
 #define SPAAACE_CG_SPHERE_H
 
 #include <vector>
-#include "vertex.h"
+#include "Vertex.h"
 
 /**
  * Generates a sphere, centered in the origin

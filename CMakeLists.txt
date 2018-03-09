@@ -10,8 +10,8 @@ add_executable(Spaaace_CG
         Generator/main.cpp
         Generator/plane.cpp
         Generator/plane.h
-        Generator/vertex.cpp
-        Generator/vertex.h
+        Generator/Vertex.cpp
+        Generator/Vertex.h
         README.md
         Generator/sphere.cpp
         Generator/sphere.h
