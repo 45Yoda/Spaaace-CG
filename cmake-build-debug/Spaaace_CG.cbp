@@ -83,17 +83,13 @@
 		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/CMakeLists.txt">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-<<<<<<< HEAD
-		<Unit filename="/home/jose/Spaaace-CG/Generator/Vertex.cpp">
+		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/Vertex.cpp">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/home/jose/Spaaace-CG/Generator/Vertex.h">
+		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/Vertex.h">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/home/jose/Spaaace-CG/Generator/box.cpp">
-=======
 		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/box.cpp">
->>>>>>> d8d893fa43314200452ea029e43317112fbfc337
 			<Option target="Spaaace_CG"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/box.h">
@@ -114,20 +110,10 @@
 		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/plane.h">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-<<<<<<< HEAD
-		<Unit filename="/home/jose/Spaaace-CG/README.md">
-=======
 		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/sphere.cpp">
 			<Option target="Spaaace_CG"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/sphere.h">
-			<Option target="Spaaace_CG"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/vertex.cpp">
->>>>>>> d8d893fa43314200452ea029e43317112fbfc337
-			<Option target="Spaaace_CG"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/vertex.h">
 			<Option target="Spaaace_CG"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/README.md">

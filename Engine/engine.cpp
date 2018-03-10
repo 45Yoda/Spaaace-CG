@@ -2,7 +2,7 @@
 #include <cmath>
 #include <GL/glut.h>
 #include <vector>
-#include "Shape.h"
+#include "shape.h"
 #include "../tinyxml2.h"
 #include "../Generator/vertex.h"
 

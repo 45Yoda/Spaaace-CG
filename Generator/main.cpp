@@ -6,6 +6,7 @@
 #include "plane.h"
 #include "box.h"
 #include "cone.h"
+#include "sphere.h"
 
 
 using std::ofstream;
@@ -33,7 +34,19 @@ void drawBox(float x, float y, float z, int div, string name){
         sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
         file << buffer;
     }
+
     file.close();
+}
+
+void drawSphere(float radius, int slices, int stacks, string name){
+    ofstream file(name);
+    char buffer[1024];
+    vector<Vertex*> vertexes = sphere(radius,slices,stacks);
+
+    for(Vertex* v: vertexes){
+        sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
+        file << buffer;
+    }
 }
 
 void drawCone(float radius, float height, int slices, int stacks, string name){
@@ -79,12 +92,19 @@ int main(int argc, char** argv) {
         }
     }
     else if(!strcmp(argv[1],"sphere") && argc == 6) {
-        std::cout << "placeholder";
-        //drawSphere(argv[2],argv[3],argv[4],argv[5]);
+        std::cout << "sphere";
+        drawSphere(atof(argv[2]),
+                   atoi(argv[3]),
+                   atoi(argv[4]),
+                   argv[5]);
     }
     else if(!strcmp(argv[1],"cone") && argc == 7){
         std::cout << "cone";
-        drawCone(atof(argv[2]),atof(argv[3]),atoi(argv[4]),atoi(argv[5]),argv[6]);
+        drawCone(atof(argv[2]),
+                 atof(argv[3]),
+                 atoi(argv[4]),
+                 atoi(argv[5]),
+                 argv[6]);
         }
     else
         std::cout << "placeholder";
