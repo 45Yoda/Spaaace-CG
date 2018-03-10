@@ -11,8 +11,55 @@ using namespace tinyxml2;
 
 vector<Shape*> shapes;
 int total_shapes = 0;
-int line = GL_LINE;
+int mode = GL_LINE;
 float angleX = 1.0, angleY = 1.0;
+
+void print_help(){
+    std::cout<<"#****************************************************************#" << std::endl;
+    std::cout<<"*                              HELP                              *" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
+    std::cout<<"*    Usage: ./engine {XML FILE}                                  *" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
+    std::cout<<"*    {XML FILE}:                                                 *" << std::endl;
+    std::cout<<"*       Specify the path of the XML FILE you wish to use.        *" << std::endl;
+    std::cout<<"*       This file must contain information about the models      *" << std::endl;
+    std::cout<<"*       you want to create                                       *" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
+    std::cout<<"*    MOVEMENT:                                                   *" << std::endl;
+    std::cout<<"*       - w: Rotate Up   (positive Y direction)                  *" << std::endl;
+    std::cout<<"*       - s: Rotate Down (negative Y direction)                  *" << std::endl;
+    std::cout<<"*       - a: Rotate Left (negative X direction)                  *" << std::endl;
+    std::cout<<"*       - d: Rotate Right (positive X direction)                 *" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
+    std::cout<<"*    FORMAT:                                                     *" << std::endl;
+    std::cout<<"*       - j: Change PolygonMode to GL_FILL                       *" << std::endl;
+    std::cout<<"*       - k: Change PolygonMode to GL_LINE                       *" << std::endl;
+    std::cout<<"*       - l: Change PolygonMode to GL_POINT                      *" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
+    std::cout<<"#****************************************************************#" << std::endl;
+}
+
+void key_normal (unsigned char key, int x, int y){
+
+    switch(key){
+        case 'w': angleY+=5.0f;
+                  break;
+        case 's': angleY-=5.0f;
+                  break;
+        case 'a': angleX-=5.0f;
+                  break;
+        case 'd': angleX+=5.0f;
+                  break;
+        case 'j': mode = GL_FILL;
+                  break;
+        case 'k': mode = GL_LINE;
+                  break;
+        case 'l': mode = GL_POINT;
+                  break;
+    }
+    glutPostRedisplay();
+}
+
 
 void changeSize(int w, int h) {
 
@@ -55,14 +102,15 @@ void renderScene(void) {
               0.0,0.0,0.0,
               0.0f,1.0f,0.0f);
 
-    // put drawing instructions here
+    //put the geometric transformations here
     glEnable(GL_CULL_FACE);
-    glPolygonMode(GL_FRONT_AND_BACK, line);
+    glPolygonMode(GL_FRONT_AND_BACK, mode);
 
     glRotatef(angleX,0,1,0);
     glRotatef(angleY,0,0,1);
 
-    glColor3f(255,255,255);
+    // put drawing instructions here
+    glColor3f(1.0f,1.0f,1.0f);
 
     for (vector<Shape*>::iterator shape_it = shapes.begin(); shape_it != shapes.end(); ++shape_it){
         vector<Vertex*> vertexes = (*shape_it)->getVertexes();
@@ -79,4 +127,41 @@ void renderScene(void) {
 
     // End of frame
     glutSwapBuffers();
+}
+
+int main(int argc, char **argv) {
+
+    vector<string> files;
+    string line;
+    int r;
+
+    if(argc != 2){
+        std::cout << "Error" << std::endl;
+        print_help();
+    }
+
+// init GLUT and the window
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
+    glutInitWindowPosition(100,100);
+    glutInitWindowSize(800,800);
+    glutCreateWindow("CG_WORK");
+
+// Required callback registry
+    glutDisplayFunc(renderScene);
+    glutReshapeFunc(changeSize);
+
+
+// put here the registration of the keyboard callbacks
+    glutKeyboardFunc(key_normal);
+
+
+//  OpenGL settings
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_CULL_FACE);
+
+// enter GLUT's main cycle
+    glutMainLoop();
+
+    return 0;
 }
