@@ -11,7 +11,6 @@ using namespace tinyxml2;
 vector<Shape*> shapes;
 int total_shapes = 0;
 int mode = GL_LINE;
-int mode = GL_LINE;
 float angleX = 1.0, angleY = 1.0;
 
 void print_help(){
@@ -157,6 +156,30 @@ vector<string> find_files(char* file_name){
     }
 }
 
+vector<Vertex*> read_file(string file_name){
+
+    vector<Vertex*> vertexes;
+    vector<string> tokens;
+    string buffer;
+    string line;
+    int index = 0;
+
+    ifstream file (file_name);
+    if(file.is_open()){
+        while(getline(file,line)){ // iterate over the lines of the file
+            stringstream ss(line);
+            while(ss >> buf)
+                tokens.push_back(buf); // iterate over the coordinates of the vertexes in each line
+            //add vertexes to the vector
+            vertexes.push_back(new Vertex(stof(tokens[index]),stof(tokens[index+1]),stof(tokens[index+2])));
+            index+=3;
+        }
+        file.close();
+    }
+    else cout << "Unable to open file." << endl;
+    return vertexes;
+}
+
 int main(int argc, char **argv) {
 
     vector<string> files;
@@ -169,6 +192,14 @@ int main(int argc, char **argv) {
     }
     else {
         files = find_files(argv[1]);
+        if(flies.size()){
+            for(vector<string>::const_iterator i = files.begin; i != files.end(); ++i){
+                vector<Vertex*> aux = read_file(*i);
+                shapes.push_back(new Shape(total_shapes,aux));
+                total_shapes++;
+            }
+        }
+        else return 0;
     }
 
 // init GLUT and the window
