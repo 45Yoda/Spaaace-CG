@@ -6,11 +6,11 @@
 #include "../tinyxml2.h"
 #include "../Generator/vertex.h"
 
-using namespace std;
 using namespace tinyxml2;
 
 vector<Shape*> shapes;
 int total_shapes = 0;
+int mode = GL_LINE;
 int mode = GL_LINE;
 float angleX = 1.0, angleY = 1.0;
 
@@ -129,6 +129,34 @@ void renderScene(void) {
     glutSwapBuffers();
 }
 
+vector<string> find_files(char* file_name){
+
+    vector<string> files;
+    XMLDocument doc;
+    XMLElement* element;
+    XMLError error;
+
+    //Confirm that the file loaded successfully
+    error = doc.LoadFile(file_name);
+
+    if(error == 0){
+        element = doc.FirstChildElement("scene")->FirstChildElement("model");
+        for(;element;element = element->NextSiblingElement()){
+            if(!strcmp(element-Name(),"model")){
+                file = element->Attribute("file");
+                files.push_back(file);
+                std::cout << file << std::endl;
+            }
+        }
+    }
+    else{
+        std::cout << "Loading XML File failed" << file_name << "." << endl;
+
+
+    return files;
+    }
+}
+
 int main(int argc, char **argv) {
 
     vector<string> files;
@@ -138,6 +166,9 @@ int main(int argc, char **argv) {
     if(argc != 2){
         std::cout << "Error" << std::endl;
         print_help();
+    }
+    else {
+        files = find_files(argv[1]);
     }
 
 // init GLUT and the window
