@@ -62,11 +62,42 @@ void drawCone(float radius, float height, int slices, int stacks, string name){
     file.close();
 }
 
+void print_help(){
+    std::cout<<"#****************************************************************#" << std::endl;
+    std::cout<<"*                              HELP                              *" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
+    std::cout<<"*    Usage: ./generator {SHAPE} [OPTIONS] {FILE}                 *" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
+    std::cout<<"*    {SHAPE} & [OPTIONS]:                                        *" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
+    std::cout<<"*    - plane [SIZE]                                              *" << std::endl;
+    std::cout<<"*      Creates a square in the XZ plane, centered in the origin. *" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
+    std::cout<<"*    - box [X SIZE] [Y SIZE] [Z SIZE] opt:[DIVISIONS]            *" << std::endl;
+    std::cout<<"*      Creates a box with x,y and z dimensions specified and     *" << std::endl;
+    std::cout<<"*      optionally the number of divisions.                       *" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
+    std::cout<<"*    - sphere [RADIUS] [SLICES] [STACKS]                         *" << std::endl;
+    std::cout<<"*      Creates a sphere with the radius, number of slices and    *" << std::endl;
+    std::cout<<"*      number of stacks specified.                               *" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
+    std::cout<<"*    - cone [RADIUS] [HEIGHT] [SLICES] [STACKS]                  *" << std::endl;
+    std::cout<<"*      Creates a cone with the bottom radius, height, number of  *" << std::endl;
+    std::cout<<"*      slices and stacks specified.                              *" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
+    std::cout<<"*    {FILE}:                                                     *" << std::endl;
+    std::cout<<"*      In this section you give the name of the file which will  *" << std::endl;
+    std::cout<<"*      contain the vertexes generated with the previous commands.*" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
+    std::cout<<"#****************************************************************#" << std::endl;
+}
+
 int main(int argc, char** argv) {
 
-    if(argc < 2)
-        std::cout << "fuck";
-        //print_help();
+    if(argc < 2) {
+        std::cout << "halp meh"  << std::endl;
+        print_help();
+    }
     else if(!strcmp(argv[1],"plane") && argc == 4) {
         std::cout << "plane";
         drawPlane(atof(argv[2]), argv[3]);
@@ -106,10 +137,11 @@ int main(int argc, char** argv) {
                  atoi(argv[5]),
                  argv[6]);
         }
-    else
-        std::cout << "placeholder";
-        //print_help();
-
+    else {
+        std::cout << "halp meh"  << std::endl;
+        print_help();
+    }
     return 0;
 }
+
 

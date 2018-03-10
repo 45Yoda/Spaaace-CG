@@ -6,35 +6,39 @@
 
 #IncludeRegexTransform: 
 
-/home/jose/Spaaace-CG/Generator/Vertex.cpp
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/Vertex.cpp
 Vertex.h
-/home/jose/Spaaace-CG/Generator/Vertex.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/Vertex.h
 
-/home/jose/Spaaace-CG/Generator/Vertex.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/Vertex.h
 
-/home/jose/Spaaace-CG/Generator/box.cpp
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/box.cpp
 algorithm
 -
 box.h
-/home/jose/Spaaace-CG/Generator/box.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/box.h
 Vertex.h
-/home/jose/Spaaace-CG/Generator/Vertex.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/Vertex.h
 
-/home/jose/Spaaace-CG/Generator/box.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/box.h
 vector
 -
 Vertex.h
-/home/jose/Spaaace-CG/Generator/Vertex.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/Vertex.h
 
-/home/jose/Spaaace-CG/Generator/cone.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/cone.cpp
+cone.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/cone.h
+
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/cone.h
 vertex.h
-/home/jose/Spaaace-CG/Generator/vertex.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/vertex.h
 vector
 -
 cmath
 -
 
-/home/jose/Spaaace-CG/Generator/main.cpp
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/main.cpp
 iostream
 -
 cstring
@@ -44,41 +48,45 @@ fstream
 vector
 -
 Vertex.h
-/home/jose/Spaaace-CG/Generator/Vertex.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/Vertex.h
 plane.h
-/home/jose/Spaaace-CG/Generator/plane.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/plane.h
 box.h
-/home/jose/Spaaace-CG/Generator/box.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/box.h
 cone.h
-/home/jose/Spaaace-CG/Generator/cone.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/cone.h
+sphere.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/sphere.h
 
-/home/jose/Spaaace-CG/Generator/plane.cpp
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/plane.cpp
 plane.h
-/home/jose/Spaaace-CG/Generator/plane.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/plane.h
 
-/home/jose/Spaaace-CG/Generator/plane.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/plane.h
 Vertex.h
-/home/jose/Spaaace-CG/Generator/Vertex.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/Vertex.h
 vector
 -
 
-/home/jose/Spaaace-CG/Generator/sphere.cpp
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/sphere.cpp
 algorithm
 -
 cmath
 -
 sphere.h
-/home/jose/Spaaace-CG/Generator/sphere.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/sphere.h
 
-/home/jose/Spaaace-CG/Generator/sphere.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/sphere.h
 vector
 -
 Vertex.h
-/home/jose/Spaaace-CG/Generator/Vertex.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/Vertex.h
 
-/home/jose/Spaaace-CG/tinyxml2.cpp
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/vertex.h
+
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/tinyxml2.cpp
 tinyxml2.h
-/home/jose/Spaaace-CG/tinyxml2.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/tinyxml2.h
 new
 -
 stddef.h
@@ -90,7 +98,7 @@ cstddef
 cstdarg
 -
 
-/home/jose/Spaaace-CG/tinyxml2.h
+/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/tinyxml2.h
 ctype.h
 -
 limits.h

@@ -4,7 +4,7 @@
 
 
 #include "cone.h"
-using std::vector
+using std::vector;
 
 vector<Vertex*> cone(float radius, float height, int slices, int stacks){
     int i, j;
