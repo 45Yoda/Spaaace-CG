@@ -137,7 +137,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Spaaace_CG
+CMAKE_PROJECT_NAME:STATIC=generator
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -223,6 +223,18 @@ Spaaace_CG_BINARY_DIR:STATIC=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-deb
 
 //Value Computed by CMake
 Spaaace_CG_SOURCE_DIR:STATIC=/home/yoda45/Desktop/git/Spaaace-CG
+
+//Value Computed by CMake
+engine_BINARY_DIR:STATIC=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug
+
+//Value Computed by CMake
+engine_SOURCE_DIR:STATIC=/home/yoda45/Desktop/git/Spaaace-CG
+
+//Value Computed by CMake
+generator_BINARY_DIR:STATIC=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug
+
+//Value Computed by CMake
+generator_SOURCE_DIR:STATIC=/home/yoda45/Desktop/git/Spaaace-CG
 
 
 ########################

@@ -9,39 +9,47 @@ using std::vector;
 
 
 
-std::vector<Vertex*> sphere(double radius, int slices, int stacks) {
+std::vector<Vertex*> sphere(float radius, int slices, int stacks) {
 
     std::vector<Vertex*> vertexes;
     int i, j;
-    float angle1 = 0, angle2 = 0;
-    float jumpH = M_PI / stacks;
-    float jumpV = (2 * M_PI) / slices;
-    float x1, y1, z1, x2, y2, z2, x3, y3, z3;
+    float angleH = 0, angleV = 0;
+    float shiftH = M_PI / stacks;
+    float shiftV = (2 * M_PI) / slices;
+    float x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4, z4;
 
     for (i = 0; i < stacks; i++) {
-        angle1 = 0;
+        angleH = shiftH * i;
 
         for (j = 0; j < slices; j++) {
 
-            x1 = radius*sin(angle2)*sin(angle1);
-            y1 = radius*cos(angle2);
-            z1 = radius*cos(angle1)*sin(angle2);
+            angleV = shiftV * j;
 
-            x2 = radius*sin(angle2 + jumpH)*sin(angle1 + jumpV);
-            y2 = radius*cos(angle2 + jumpH);
-            z2 = radius*cos(angle1 + jumpV)*sin(angle2 + jumpH);
+            x1 = radius * sin(angleV) * sin(angleH);
+            y1 = radius * cos(angleH);
+            z1 = radius * sin(angleH) * cos(angleV);
 
-            x3 = radius*sin(angle2 + jumpH)*sin(angle1);
-            y3 = radius*cos(angle2 + jumpH);
-            z3 = radius*cos(angle1)*sin(angle2 + jumpH);
+            x2 = radius * sin(angleH) * sin(angleV + shiftV);
+            y2 = radius * cos(angleH);
+            z2 = radius * sin(angleH) * cos(angleV + shiftV);
+
+            x3 = radius * sin(angleH + shiftH) * sin(angleV + shiftV);
+            y3 = radius * cos(angleH + shiftH);
+            z3 = radius * sin(angleH + shiftH) * cos(angleV + shiftV);
+
+            x4 = radius * sin(angleH + shiftH) * sin(angleV);
+            y4 = radius * cos(angleH + shiftH);
+            z4 = radius * sin(angleH + shiftH) * cos(angleV);
+
 
             vertexes.push_back(new Vertex(x1, y1, z1));
             vertexes.push_back(new Vertex(x2, y2, z2));
             vertexes.push_back(new Vertex(x3, y3, z3));
 
-            angle1 += jumpV;
+            vertexes.push_back(new Vertex(x1,y1,z1));
+            vertexes.push_back(new Vertex(x3,y3,z3));
+            vertexes.push_back(new Vertex(x4,y4,z4));
         }
-        angle2 += jumpH;
     }
 
     return vertexes;

@@ -5,6 +5,6 @@
 
 #include "../Generator/vertex.h"
 
-std::vector<Vertex*> sphere(double radius, int slices, int stacks);
+std::vector<Vertex*> sphere(float radius, int slices, int stacks);
 
 #endif
