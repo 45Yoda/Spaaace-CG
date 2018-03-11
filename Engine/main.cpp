@@ -2,7 +2,10 @@
 #include <cmath>
 #include <GL/glut.h>
 #include <vector>
-#include "shape.h"
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include "Shape.h"
 #include "../tinyxml2.h"
 #include "../Generator/vertex.h"
 
@@ -129,27 +132,28 @@ void renderScene(void) {
 }
 
 vector<string> find_files(char* file_name){
-
+    string model_name;
     vector<string> files;
     XMLDocument doc;
-    XMLElement* element;
+    XMLElement* element,*root;
     XMLError error;
 
     //Confirm that the file loaded successfully
     error = doc.LoadFile(file_name);
 
     if(error == 0){
-        element = doc.FirstChildElement("scene")->FirstChildElement("model");
+        root = doc.FirstChildElement("scene");
+        element = root->FirstChildElement("model");
         for(;element;element = element->NextSiblingElement()){
-            if(!strcmp(element-Name(),"model")){
-                file = element->Attribute("file");
-                files.push_back(file);
-                std::cout << file << std::endl;
+            if(!strcmp(element->Name(),"model")){
+                model_name = element->Attribute("file");
+                files.push_back(model_name);
+                std::cout << model_name << std::endl;
             }
         }
     }
     else{
-        std::cout << "Loading XML File failed" << file_name << "." << endl;
+        std::cout << "XML file not found:" << file_name << "." << endl;
 
 
     return files;
@@ -168,8 +172,8 @@ vector<Vertex*> read_file(string file_name){
     if(file.is_open()){
         while(getline(file,line)){ // iterate over the lines of the file
             stringstream ss(line);
-            while(ss >> buf)
-                tokens.push_back(buf); // iterate over the coordinates of the vertexes in each line
+            while(ss >> buffer)
+                tokens.push_back(buffer); // iterate over the coordinates of the vertexes in each line
             //add vertexes to the vector
             vertexes.push_back(new Vertex(stof(tokens[index]),stof(tokens[index+1]),stof(tokens[index+2])));
             index+=3;
@@ -192,8 +196,8 @@ int main(int argc, char **argv) {
     }
     else {
         files = find_files(argv[1]);
-        if(flies.size()){
-            for(vector<string>::const_iterator i = files.begin; i != files.end(); ++i){
+        if(files.size()){
+            for(vector<string>::const_iterator i = files.begin(); i != files.end(); ++i){
                 vector<Vertex*> aux = read_file(*i);
                 shapes.push_back(new Shape(total_shapes,aux));
                 total_shapes++;
@@ -207,7 +211,7 @@ int main(int argc, char **argv) {
     glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
     glutInitWindowPosition(100,100);
     glutInitWindowSize(800,800);
-    glutCreateWindow("CG_WORK");
+    glutCreateWindow("");
 
 // Required callback registry
     glutDisplayFunc(renderScene);

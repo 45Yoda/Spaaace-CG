@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/Bandolero/.CLion2017.3/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = /opt/clion/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/Bandolero/.CLion2017.3/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = /opt/clion/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG
+CMAKE_SOURCE_DIR = /home/jose/Spaaace-CG
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug
+CMAKE_BINARY_DIR = /home/jose/Spaaace-CG/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/cygdrive/c/Users/Bandolero/.CLion2017.3/system/cygwin_cmake/bin/cmake.exe -E echo No\ interactive\ CMake\ dialog\ available.
+	/opt/clion/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -70,7 +70,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/cygdrive/c/Users/Bandolero/.CLion2017.3/system/cygwin_cmake/bin/cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/clion/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/CMakeFiles /cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jose/Spaaace-CG/cmake-build-debug/CMakeFiles /home/jose/Spaaace-CG/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jose/Spaaace-CG/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,59 @@ Spaaace_CG/fast:
 	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/build
 .PHONY : Spaaace_CG/fast
 
-Generator/Vertex.o: Generator/Vertex.cpp.o
+Engine/Shape.o: Engine/Shape.cpp.o
 
-.PHONY : Generator/Vertex.o
+.PHONY : Engine/Shape.o
 
 # target to build an object file
-Generator/Vertex.cpp.o:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.o
-.PHONY : Generator/Vertex.cpp.o
+Engine/Shape.cpp.o:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/Shape.cpp.o
+.PHONY : Engine/Shape.cpp.o
 
-Generator/Vertex.i: Generator/Vertex.cpp.i
+Engine/Shape.i: Engine/Shape.cpp.i
 
-.PHONY : Generator/Vertex.i
+.PHONY : Engine/Shape.i
 
 # target to preprocess a source file
-Generator/Vertex.cpp.i:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.i
-.PHONY : Generator/Vertex.cpp.i
+Engine/Shape.cpp.i:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/Shape.cpp.i
+.PHONY : Engine/Shape.cpp.i
 
-Generator/Vertex.s: Generator/Vertex.cpp.s
+Engine/Shape.s: Engine/Shape.cpp.s
 
-.PHONY : Generator/Vertex.s
+.PHONY : Engine/Shape.s
 
 # target to generate assembly for a file
-Generator/Vertex.cpp.s:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/Vertex.cpp.s
-.PHONY : Generator/Vertex.cpp.s
+Engine/Shape.cpp.s:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/Shape.cpp.s
+.PHONY : Engine/Shape.cpp.s
+
+Engine/main.o: Engine/main.cpp.o
+
+.PHONY : Engine/main.o
+
+# target to build an object file
+Engine/main.cpp.o:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o
+.PHONY : Engine/main.cpp.o
+
+Engine/main.i: Engine/main.cpp.i
+
+.PHONY : Engine/main.i
+
+# target to preprocess a source file
+Engine/main.cpp.i:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.i
+.PHONY : Engine/main.cpp.i
+
+Engine/main.s: Engine/main.cpp.s
+
+.PHONY : Engine/main.s
+
+# target to generate assembly for a file
+Engine/main.cpp.s:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.s
+.PHONY : Engine/main.cpp.s
 
 Generator/box.o: Generator/box.cpp.o
 
@@ -204,33 +231,6 @@ Generator/cone.cpp.s:
 	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/cone.cpp.s
 .PHONY : Generator/cone.cpp.s
 
-Generator/main.o: Generator/main.cpp.o
-
-.PHONY : Generator/main.o
-
-# target to build an object file
-Generator/main.cpp.o:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/main.cpp.o
-.PHONY : Generator/main.cpp.o
-
-Generator/main.i: Generator/main.cpp.i
-
-.PHONY : Generator/main.i
-
-# target to preprocess a source file
-Generator/main.cpp.i:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/main.cpp.i
-.PHONY : Generator/main.cpp.i
-
-Generator/main.s: Generator/main.cpp.s
-
-.PHONY : Generator/main.s
-
-# target to generate assembly for a file
-Generator/main.cpp.s:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/main.cpp.s
-.PHONY : Generator/main.cpp.s
-
 Generator/plane.o: Generator/plane.cpp.o
 
 .PHONY : Generator/plane.o
@@ -285,6 +285,33 @@ Generator/sphere.cpp.s:
 	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.s
 .PHONY : Generator/sphere.cpp.s
 
+Generator/vertex.o: Generator/vertex.cpp.o
+
+.PHONY : Generator/vertex.o
+
+# target to build an object file
+Generator/vertex.cpp.o:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o
+.PHONY : Generator/vertex.cpp.o
+
+Generator/vertex.i: Generator/vertex.cpp.i
+
+.PHONY : Generator/vertex.i
+
+# target to preprocess a source file
+Generator/vertex.cpp.i:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.i
+.PHONY : Generator/vertex.cpp.i
+
+Generator/vertex.s: Generator/vertex.cpp.s
+
+.PHONY : Generator/vertex.s
+
+# target to generate assembly for a file
+Generator/vertex.cpp.s:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.s
+.PHONY : Generator/vertex.cpp.s
+
 tinyxml2.o: tinyxml2.cpp.o
 
 .PHONY : tinyxml2.o
@@ -321,24 +348,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Spaaace_CG"
-	@echo "... Generator/Vertex.o"
-	@echo "... Generator/Vertex.i"
-	@echo "... Generator/Vertex.s"
+	@echo "... Engine/Shape.o"
+	@echo "... Engine/Shape.i"
+	@echo "... Engine/Shape.s"
+	@echo "... Engine/main.o"
+	@echo "... Engine/main.i"
+	@echo "... Engine/main.s"
 	@echo "... Generator/box.o"
 	@echo "... Generator/box.i"
 	@echo "... Generator/box.s"
 	@echo "... Generator/cone.o"
 	@echo "... Generator/cone.i"
 	@echo "... Generator/cone.s"
-	@echo "... Generator/main.o"
-	@echo "... Generator/main.i"
-	@echo "... Generator/main.s"
 	@echo "... Generator/plane.o"
 	@echo "... Generator/plane.i"
 	@echo "... Generator/plane.s"
 	@echo "... Generator/sphere.o"
 	@echo "... Generator/sphere.i"
 	@echo "... Generator/sphere.s"
+	@echo "... Generator/vertex.o"
+	@echo "... Generator/vertex.i"
+	@echo "... Generator/vertex.s"
 	@echo "... tinyxml2.o"
 	@echo "... tinyxml2.i"
 	@echo "... tinyxml2.s"

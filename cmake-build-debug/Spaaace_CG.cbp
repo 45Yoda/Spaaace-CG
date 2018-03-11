@@ -8,124 +8,132 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug"/>
+				<Option working_dir="/home/jose/Spaaace-CG/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug"/>
+				<Option working_dir="/home/jose/Spaaace-CG/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug"/>
+				<Option working_dir="/home/jose/Spaaace-CG/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Spaaace_CG">
-				<Option output="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Spaaace_CG.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug"/>
+				<Option output="/home/jose/Spaaace-CG/cmake-build-debug/Spaaace_CG" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jose/Spaaace-CG/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../include/c++/7.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../include/c++/7.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../include/c++/7.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/include-fixed"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 Spaaace_CG"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 Spaaace_CG"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Spaaace_CG/fast">
-				<Option output="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Spaaace_CG.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug"/>
+				<Option output="/home/jose/Spaaace-CG/cmake-build-debug/Spaaace_CG" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jose/Spaaace-CG/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../include/c++/7.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../include/c++/7.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../include/c++/7.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/include-fixed"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 Spaaace_CG/fast"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 Spaaace_CG/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jose/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/CMakeLists.txt">
+		<Unit filename="/home/jose/Spaaace-CG/CMakeLists.txt">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/Vertex.cpp">
+		<Unit filename="/home/jose/Spaaace-CG/Engine/Shape.cpp">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/Vertex.h">
+		<Unit filename="/home/jose/Spaaace-CG/Engine/Shape.h">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/box.cpp">
+		<Unit filename="/home/jose/Spaaace-CG/Engine/main.cpp">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/box.h">
+		<Unit filename="/home/jose/Spaaace-CG/Generator/box.cpp">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/cone.cpp">
+		<Unit filename="/home/jose/Spaaace-CG/Generator/box.h">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/cone.h">
+		<Unit filename="/home/jose/Spaaace-CG/Generator/cone.cpp">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/main.cpp">
+		<Unit filename="/home/jose/Spaaace-CG/Generator/cone.h">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/plane.cpp">
+		<Unit filename="/home/jose/Spaaace-CG/Generator/plane.cpp">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/plane.h">
+		<Unit filename="/home/jose/Spaaace-CG/Generator/plane.h">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/sphere.cpp">
+		<Unit filename="/home/jose/Spaaace-CG/Generator/sphere.cpp">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/Generator/sphere.h">
+		<Unit filename="/home/jose/Spaaace-CG/Generator/sphere.h">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/README.md">
+		<Unit filename="/home/jose/Spaaace-CG/Generator/vertex.cpp">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/tinyxml2.cpp">
+		<Unit filename="/home/jose/Spaaace-CG/Generator/vertex.h">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/tinyxml2.h">
+		<Unit filename="/home/jose/Spaaace-CG/README.md">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bandolero/Documents/GitHub/Spaaace-CG/CMakeLists.txt">
+		<Unit filename="/home/jose/Spaaace-CG/tinyxml2.cpp">
+			<Option target="Spaaace_CG"/>
+		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/tinyxml2.h">
+			<Option target="Spaaace_CG"/>
+		</Unit>
+		<Unit filename="/home/jose/Spaaace-CG/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

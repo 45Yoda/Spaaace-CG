@@ -1,71 +1,48 @@
-#include <algorithm>
-#include <cmath>
 #include "sphere.h"
+#include "vertex.h"
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 using std::vector;
 
-vector<Vertex*> sphere(float radius, int slices, int stacks) {
 
-    vector<Vertex*> vertexes;
 
-    int i,j,x,nextX,infX,nextInfX,supX,nextSupX,z,nextZ,infZ,nextInfZ,supZ,nextSupZ;
-    float curve;
+std::vector<Vertex*> sphere(double radius, int slices, int stacks) {
 
-    //Horizontal and vertical angular shifts
-    float shiftH = (M_PI*2)/slices;
-    float shiftV = M_PI/stacks;
+    std::vector<Vertex*> vertexes;
+    int i, j;
+    float angle1 = 0, angle2 = 0;
+    float jumpH = M_PI / stacks;
+    float jumpV = (2 * M_PI) / slices;
+    float x1, y1, z1, x2, y2, z2, x3, y3, z3;
 
-    float height = radius*sin((M_PI/2)-shiftV); //Height of stacks
-    float topHeight = radius;
+    for (i = 0; i < stacks; i++) {
+        angle1 = 0;
 
-    for(i=0;i<slices;i++) {
+        for (j = 0; j < slices; j++) {
 
-        //Actual coords
-        x = radius * sin(i * shiftH);
-        z = radius * cos(i * shiftH);
+            x1 = radius*sin(angle2)*sin(angle1);
+            y1 = radius*cos(angle2);
+            z1 = radius*cos(angle1)*sin(angle2);
 
-        //Next coords
-        nextX = radius * sin((i + 1) * shiftH);
-        nextZ = radius * cos((i + 1) * shiftH);
+            x2 = radius*sin(angle2 + jumpH)*sin(angle1 + jumpV);
+            y2 = radius*cos(angle2 + jumpH);
+            z2 = radius*cos(angle1 + jumpV)*sin(angle2 + jumpH);
 
-        //The triangles will be printed from top to bottom
-        for (j = 1; j < stacks + 2; j++) {
+            x3 = radius*sin(angle2 + jumpH)*sin(angle1);
+            y3 = radius*cos(angle2 + jumpH);
+            z3 = radius*cos(angle1)*sin(angle2 + jumpH);
 
-            //Inferior triangle coords
-            curve = cos(asin(height / radius));
-            infX = x * curve;
-            infZ = z * curve;
-            nextInfX = nextX * curve;
-            nextInfZ = nextZ * curve;
+            vertexes.push_back(new Vertex(x1, y1, z1));
+            vertexes.push_back(new Vertex(x2, y2, z2));
+            vertexes.push_back(new Vertex(x3, y3, z3));
 
-            //Superior triangle coords
-            curve = cos(asin(topHeight / radius));
-            supX = x * curve;
-            supZ = z * curve;
-            nextSupX = nextX * curve;
-            nextSupZ = nextZ * curve;
-
-            vertexes.push_back(new Vertex(infX, height, infZ));
-            vertexes.push_back(new Vertex(nextInfX, height, nextInfZ));
-            vertexes.push_back(new Vertex(supX, topHeight, supZ));
-
-            vertexes.push_back(new Vertex(supX, topHeight, supZ));
-            vertexes.push_back(new Vertex(nextInfX, height, nextInfZ));
-            vertexes.push_back(new Vertex(nextSupX, topHeight, nextSupZ));
-
-            //Update the height to print triangles below
-            topHeight = height;
-            height = radius * sin((M_PI / 2) - shiftV);
-
+            angle1 += jumpV;
         }
-        //Restart the height to the initial values so we can print another slice
-        height = radius * sin((M_PI / 2) - shiftV);
-        topHeight = radius;
+        angle2 += jumpH;
     }
 
     return vertexes;
-
-
 }
-
-
-

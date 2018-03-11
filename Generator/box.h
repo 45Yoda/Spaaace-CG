@@ -5,10 +5,12 @@
 #ifndef SPAAACE_CG_BOX_H
 #define SPAAACE_CG_BOX_H
 
-
+#include "vertex.h"
+#include <vector>
+using namespace std;
 
 #include <vector>
-#include "Vertex.h"
+#include "vertex.h"
 
 std::vector<Vertex*> box(float x, float y, float z, int div);
 

@@ -3,7 +3,7 @@
 
 #include <string>
 #include <vector>
-#include "Vertex.h"
+#include "../Generator/vertex.h"
 
 using namespace std;
 

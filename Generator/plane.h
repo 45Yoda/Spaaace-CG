@@ -6,7 +6,7 @@
 #define SPAAACE_CG_PLANE_H
 
 
-#include "Vertex.h"
+#include "vertex.h"
 #include <vector>
 
 /**

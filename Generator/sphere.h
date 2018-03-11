@@ -1,17 +1,10 @@
-#ifndef SPAAACE_CG_SPHERE_H
-#define SPAAACE_CG_SPHERE_H
+#ifndef __SPHERE_H__
+#define __SPHERE_H__
 
 #include <vector>
-#include "Vertex.h"
 
-/**
- * Generates a sphere, centered in the origin
- * made with triangles
- * @param radius of the sphere
- * @param slices
- * @param stacks
- * @return vector with generated vertexes for sphere
- */
-std::vector<Vertex*> sphere(float radius, int slices, int stacks);
+#include "../Generator/vertex.h"
 
-#endif //SPAAACE_CG_SPHERE_H
+std::vector<Vertex*> sphere(double radius, int slices, int stacks);
+
+#endif
