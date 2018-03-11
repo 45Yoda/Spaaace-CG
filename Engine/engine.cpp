@@ -7,7 +7,7 @@
 #include <sstream>
 #include "shape.h"
 #include "../tinyxml2.h"
-
+#include "../Generator/vertex.h"
 
 using namespace tinyxml2;
 
@@ -40,6 +40,10 @@ void print_help(){
     std::cout<<"*       - j: Change PolygonMode to GL_FILL                       *" << std::endl;
     std::cout<<"*       - k: Change PolygonMode to GL_LINE                       *" << std::endl;
     std::cout<<"*       - l: Change PolygonMode to GL_POINT                      *" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
+    std::cout<<"*    COMPILING:                                                  *" << std::endl;
+    std::cout<<"*       - g++ engine.cpp shape.cpp ../tinyxml2.cpp               *" << std::endl;
+    std::cout<<"*         ../Generator/vertex.cpp -o engine -lGL -lGLU -lglut    *" << std::endl;
     std::cout<<"*                                                                *" << std::endl;
     std::cout<<"#****************************************************************#" << std::endl;
 }
@@ -174,10 +178,8 @@ vector<string> find_files(char* file_name){
     }
     else{
         std::cout << "XML file not found:" << file_name << "." << endl;
-
-
-    return files;
     }
+    return files;
 }
 
 vector<Vertex*> read_file(string file_name){
@@ -209,7 +211,6 @@ int main(int argc, char **argv) {
 
     vector<string> files;
     string line;
-    int r;
 
     if(argc != 2){
         std::cout << "Error" << std::endl;
