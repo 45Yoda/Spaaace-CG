@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o"
-  "CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o"
+  "CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o"
   "CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.o"
   "CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o"
   "CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o"

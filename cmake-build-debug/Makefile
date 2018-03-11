@@ -123,32 +123,32 @@ Spaaace_CG/fast:
 	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/build
 .PHONY : Spaaace_CG/fast
 
-Engine/engine.o: Engine/engine.cpp.o
+Engine/main.o: Engine/main.cpp.o
 
-.PHONY : Engine/engine.o
+.PHONY : Engine/main.o
 
 # target to build an object file
-Engine/engine.cpp.o:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o
-.PHONY : Engine/engine.cpp.o
+Engine/main.cpp.o:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o
+.PHONY : Engine/main.cpp.o
 
-Engine/engine.i: Engine/engine.cpp.i
+Engine/main.i: Engine/main.cpp.i
 
-.PHONY : Engine/engine.i
+.PHONY : Engine/main.i
 
 # target to preprocess a source file
-Engine/engine.cpp.i:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.i
-.PHONY : Engine/engine.cpp.i
+Engine/main.cpp.i:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.i
+.PHONY : Engine/main.cpp.i
 
-Engine/engine.s: Engine/engine.cpp.s
+Engine/main.s: Engine/main.cpp.s
 
-.PHONY : Engine/engine.s
+.PHONY : Engine/main.s
 
 # target to generate assembly for a file
-Engine/engine.cpp.s:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.s
-.PHONY : Engine/engine.cpp.s
+Engine/main.cpp.s:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.s
+.PHONY : Engine/main.cpp.s
 
 Engine/shape.o: Engine/shape.cpp.o
 
@@ -230,33 +230,6 @@ Generator/cone.s: Generator/cone.cpp.s
 Generator/cone.cpp.s:
 	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/cone.cpp.s
 .PHONY : Generator/cone.cpp.s
-
-Generator/generator.o: Generator/generator.cpp.o
-
-.PHONY : Generator/generator.o
-
-# target to build an object file
-Generator/generator.cpp.o:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o
-.PHONY : Generator/generator.cpp.o
-
-Generator/generator.i: Generator/generator.cpp.i
-
-.PHONY : Generator/generator.i
-
-# target to preprocess a source file
-Generator/generator.cpp.i:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.i
-.PHONY : Generator/generator.cpp.i
-
-Generator/generator.s: Generator/generator.cpp.s
-
-.PHONY : Generator/generator.s
-
-# target to generate assembly for a file
-Generator/generator.cpp.s:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.s
-.PHONY : Generator/generator.cpp.s
 
 Generator/plane.o: Generator/plane.cpp.o
 
@@ -375,9 +348,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Spaaace_CG"
-	@echo "... Engine/engine.o"
-	@echo "... Engine/engine.i"
-	@echo "... Engine/engine.s"
+	@echo "... Engine/main.o"
+	@echo "... Engine/main.i"
+	@echo "... Engine/main.s"
 	@echo "... Engine/shape.o"
 	@echo "... Engine/shape.i"
 	@echo "... Engine/shape.s"
@@ -387,9 +360,6 @@ help:
 	@echo "... Generator/cone.o"
 	@echo "... Generator/cone.i"
 	@echo "... Generator/cone.s"
-	@echo "... Generator/generator.o"
-	@echo "... Generator/generator.i"
-	@echo "... Generator/generator.s"
 	@echo "... Generator/plane.o"
 	@echo "... Generator/plane.i"
 	@echo "... Generator/plane.s"

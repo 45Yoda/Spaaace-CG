@@ -19,8 +19,8 @@ if(NOT OPENGL_FOUND)
 endif(NOT OPENGL_FOUND)
 
 add_executable(Spaaace_CG
-        Engine/engine.cpp
-        Generator/generator.cpp
+        Engine/main.cpp
+
         Generator/box.cpp
         Generator/box.h
         CMakeLists.txt

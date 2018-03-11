@@ -57,57 +57,33 @@ include CMakeFiles/Spaaace_CG.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Spaaace_CG.dir/flags.make
 
-CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o: CMakeFiles/Spaaace_CG.dir/flags.make
-CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o: ../Engine/engine.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/Engine/engine.cpp
+CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o: CMakeFiles/Spaaace_CG.dir/flags.make
+CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o: ../Engine/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/Engine/main.cpp
 
-CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yoda45/Desktop/git/Spaaace-CG/Engine/engine.cpp > CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.i
+CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yoda45/Desktop/git/Spaaace-CG/Engine/main.cpp > CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.i
 
-CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yoda45/Desktop/git/Spaaace-CG/Engine/engine.cpp -o CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.s
+CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yoda45/Desktop/git/Spaaace-CG/Engine/main.cpp -o CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.s
 
-CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o.requires:
+CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o.requires:
 
-.PHONY : CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o.requires
+.PHONY : CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o.requires
 
-CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o.provides: CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o.provides.build
-.PHONY : CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o.provides
+CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o.provides: CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o.provides.build
+.PHONY : CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o.provides
 
-CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o.provides.build: CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o
-
-
-CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o: CMakeFiles/Spaaace_CG.dir/flags.make
-CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o: ../Generator/generator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/Generator/generator.cpp
-
-CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yoda45/Desktop/git/Spaaace-CG/Generator/generator.cpp > CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.i
-
-CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yoda45/Desktop/git/Spaaace-CG/Generator/generator.cpp -o CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.s
-
-CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o.requires:
-
-.PHONY : CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o.requires
-
-CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o.provides: CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o.provides.build
-.PHONY : CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o.provides
-
-CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o.provides.build: CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o
+CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o.provides.build: CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o
 
 
 CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.o: CMakeFiles/Spaaace_CG.dir/flags.make
 CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.o: ../Generator/box.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/Generator/box.cpp
 
 CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.i: cmake_force
@@ -131,7 +107,7 @@ CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.o.provides.build: CMakeFiles/Spaaace
 
 CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o: CMakeFiles/Spaaace_CG.dir/flags.make
 CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o: ../Generator/plane.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/Generator/plane.cpp
 
 CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.i: cmake_force
@@ -155,7 +131,7 @@ CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o.provides.build: CMakeFiles/Spaaa
 
 CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o: CMakeFiles/Spaaace_CG.dir/flags.make
 CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o: ../Generator/vertex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.cpp
 
 CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.i: cmake_force
@@ -179,7 +155,7 @@ CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o.provides.build: CMakeFiles/Spaa
 
 CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.o: CMakeFiles/Spaaace_CG.dir/flags.make
 CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.o: ../Generator/sphere.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/Generator/sphere.cpp
 
 CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.i: cmake_force
@@ -203,7 +179,7 @@ CMakeFiles/Spaaace_CG.dir/Generator/sphere.cpp.o.provides.build: CMakeFiles/Spaa
 
 CMakeFiles/Spaaace_CG.dir/tinyxml2.cpp.o: CMakeFiles/Spaaace_CG.dir/flags.make
 CMakeFiles/Spaaace_CG.dir/tinyxml2.cpp.o: ../tinyxml2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Spaaace_CG.dir/tinyxml2.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Spaaace_CG.dir/tinyxml2.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spaaace_CG.dir/tinyxml2.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/tinyxml2.cpp
 
 CMakeFiles/Spaaace_CG.dir/tinyxml2.cpp.i: cmake_force
@@ -227,7 +203,7 @@ CMakeFiles/Spaaace_CG.dir/tinyxml2.cpp.o.provides.build: CMakeFiles/Spaaace_CG.d
 
 CMakeFiles/Spaaace_CG.dir/Generator/cone.cpp.o: CMakeFiles/Spaaace_CG.dir/flags.make
 CMakeFiles/Spaaace_CG.dir/Generator/cone.cpp.o: ../Generator/cone.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Spaaace_CG.dir/Generator/cone.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Spaaace_CG.dir/Generator/cone.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spaaace_CG.dir/Generator/cone.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/Generator/cone.cpp
 
 CMakeFiles/Spaaace_CG.dir/Generator/cone.cpp.i: cmake_force
@@ -251,7 +227,7 @@ CMakeFiles/Spaaace_CG.dir/Generator/cone.cpp.o.provides.build: CMakeFiles/Spaaac
 
 CMakeFiles/Spaaace_CG.dir/Engine/shape.cpp.o: CMakeFiles/Spaaace_CG.dir/flags.make
 CMakeFiles/Spaaace_CG.dir/Engine/shape.cpp.o: ../Engine/shape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Spaaace_CG.dir/Engine/shape.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Spaaace_CG.dir/Engine/shape.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Spaaace_CG.dir/Engine/shape.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/Engine/shape.cpp
 
 CMakeFiles/Spaaace_CG.dir/Engine/shape.cpp.i: cmake_force
@@ -275,8 +251,7 @@ CMakeFiles/Spaaace_CG.dir/Engine/shape.cpp.o.provides.build: CMakeFiles/Spaaace_
 
 # Object files for target Spaaace_CG
 Spaaace_CG_OBJECTS = \
-"CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o" \
-"CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o" \
+"CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o" \
 "CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.o" \
 "CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o" \
 "CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o" \
@@ -288,8 +263,7 @@ Spaaace_CG_OBJECTS = \
 # External object files for target Spaaace_CG
 Spaaace_CG_EXTERNAL_OBJECTS =
 
-Spaaace_CG: CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o
-Spaaace_CG: CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o
+Spaaace_CG: CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o
 Spaaace_CG: CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.o
 Spaaace_CG: CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o
 Spaaace_CG: CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o
@@ -302,7 +276,7 @@ Spaaace_CG: /usr/lib/x86_64-linux-gnu/libGLU.so
 Spaaace_CG: /usr/lib/x86_64-linux-gnu/libGL.so
 Spaaace_CG: /usr/lib/x86_64-linux-gnu/libglut.so
 Spaaace_CG: CMakeFiles/Spaaace_CG.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Spaaace_CG"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Spaaace_CG"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Spaaace_CG.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -310,8 +284,7 @@ CMakeFiles/Spaaace_CG.dir/build: Spaaace_CG
 
 .PHONY : CMakeFiles/Spaaace_CG.dir/build
 
-CMakeFiles/Spaaace_CG.dir/requires: CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o.requires
-CMakeFiles/Spaaace_CG.dir/requires: CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o.requires
+CMakeFiles/Spaaace_CG.dir/requires: CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o.requires
 CMakeFiles/Spaaace_CG.dir/requires: CMakeFiles/Spaaace_CG.dir/Generator/box.cpp.o.requires
 CMakeFiles/Spaaace_CG.dir/requires: CMakeFiles/Spaaace_CG.dir/Generator/plane.cpp.o.requires
 CMakeFiles/Spaaace_CG.dir/requires: CMakeFiles/Spaaace_CG.dir/Generator/vertex.cpp.o.requires

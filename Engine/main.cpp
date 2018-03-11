@@ -7,7 +7,7 @@
 #include <sstream>
 #include "shape.h"
 #include "../tinyxml2.h"
-#include "../Generator/vertex.h"
+
 
 using namespace tinyxml2;
 
@@ -112,7 +112,7 @@ void renderScene(void) {
     glRotatef(angleY,0,0,1);
 
     // put drawing instructions here
-    glColor3f(1.0f,1.0f,1.0f);
+    glColor3f(0.0f,1.0f,1.0f);
 
     for (vector<Shape*>::iterator shape_it = shapes.begin(); shape_it != shapes.end(); ++shape_it){
         vector<Vertex*> vertexes = (*shape_it)->getVertexes();
@@ -167,8 +167,9 @@ vector<Vertex*> read_file(string file_name){
     string buffer;
     string line;
     int index = 0;
+    string file_path = "../" + file_name;
 
-    ifstream file (file_name);
+    ifstream file (file_path);
     if(file.is_open()){
         while(getline(file,line)){ // iterate over the lines of the file
             stringstream ss(line);

@@ -87,7 +87,7 @@
 		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/CMakeLists.txt">
 			<Option target="Spaaace_CG"/>
 		</Unit>
-		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/engine.cpp">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/main.cpp">
 			<Option target="Spaaace_CG"/>
 		</Unit>
 		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/shape.cpp">
@@ -106,9 +106,6 @@
 			<Option target="Spaaace_CG"/>
 		</Unit>
 		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/cone.h">
-			<Option target="Spaaace_CG"/>
-		</Unit>
-		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/generator.cpp">
 			<Option target="Spaaace_CG"/>
 		</Unit>
 		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/plane.cpp">
