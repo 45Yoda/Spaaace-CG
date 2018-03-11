@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/clion/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/yoda45/Downloads/clion-2017.3.4/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /opt/clion/bin/cmake/bin/cmake -E remove -f
+RM = /home/yoda45/Downloads/clion-2017.3.4/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jose/Spaaace-CG
+CMAKE_SOURCE_DIR = /home/yoda45/Desktop/git/Spaaace-CG
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jose/Spaaace-CG/cmake-build-debug
+CMAKE_BINARY_DIR = /home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/jose/Spaaace-CG/cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/opt/clion/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/yoda45/Downloads/clion-2017.3.4/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -70,7 +70,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/clion/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/yoda45/Downloads/clion-2017.3.4/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jose/Spaaace-CG/cmake-build-debug/CMakeFiles /home/jose/Spaaace-CG/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles /home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jose/Spaaace-CG/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,59 +123,59 @@ Spaaace_CG/fast:
 	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/build
 .PHONY : Spaaace_CG/fast
 
-Engine/Shape.o: Engine/Shape.cpp.o
+Engine/engine.o: Engine/engine.cpp.o
 
-.PHONY : Engine/Shape.o
-
-# target to build an object file
-Engine/Shape.cpp.o:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/Shape.cpp.o
-.PHONY : Engine/Shape.cpp.o
-
-Engine/Shape.i: Engine/Shape.cpp.i
-
-.PHONY : Engine/Shape.i
-
-# target to preprocess a source file
-Engine/Shape.cpp.i:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/Shape.cpp.i
-.PHONY : Engine/Shape.cpp.i
-
-Engine/Shape.s: Engine/Shape.cpp.s
-
-.PHONY : Engine/Shape.s
-
-# target to generate assembly for a file
-Engine/Shape.cpp.s:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/Shape.cpp.s
-.PHONY : Engine/Shape.cpp.s
-
-Engine/main.o: Engine/main.cpp.o
-
-.PHONY : Engine/main.o
+.PHONY : Engine/engine.o
 
 # target to build an object file
-Engine/main.cpp.o:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.o
-.PHONY : Engine/main.cpp.o
+Engine/engine.cpp.o:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.o
+.PHONY : Engine/engine.cpp.o
 
-Engine/main.i: Engine/main.cpp.i
+Engine/engine.i: Engine/engine.cpp.i
 
-.PHONY : Engine/main.i
+.PHONY : Engine/engine.i
 
 # target to preprocess a source file
-Engine/main.cpp.i:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.i
-.PHONY : Engine/main.cpp.i
+Engine/engine.cpp.i:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.i
+.PHONY : Engine/engine.cpp.i
 
-Engine/main.s: Engine/main.cpp.s
+Engine/engine.s: Engine/engine.cpp.s
 
-.PHONY : Engine/main.s
+.PHONY : Engine/engine.s
 
 # target to generate assembly for a file
-Engine/main.cpp.s:
-	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/main.cpp.s
-.PHONY : Engine/main.cpp.s
+Engine/engine.cpp.s:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/engine.cpp.s
+.PHONY : Engine/engine.cpp.s
+
+Engine/shape.o: Engine/shape.cpp.o
+
+.PHONY : Engine/shape.o
+
+# target to build an object file
+Engine/shape.cpp.o:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/shape.cpp.o
+.PHONY : Engine/shape.cpp.o
+
+Engine/shape.i: Engine/shape.cpp.i
+
+.PHONY : Engine/shape.i
+
+# target to preprocess a source file
+Engine/shape.cpp.i:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/shape.cpp.i
+.PHONY : Engine/shape.cpp.i
+
+Engine/shape.s: Engine/shape.cpp.s
+
+.PHONY : Engine/shape.s
+
+# target to generate assembly for a file
+Engine/shape.cpp.s:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Engine/shape.cpp.s
+.PHONY : Engine/shape.cpp.s
 
 Generator/box.o: Generator/box.cpp.o
 
@@ -230,6 +230,33 @@ Generator/cone.s: Generator/cone.cpp.s
 Generator/cone.cpp.s:
 	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/cone.cpp.s
 .PHONY : Generator/cone.cpp.s
+
+Generator/generator.o: Generator/generator.cpp.o
+
+.PHONY : Generator/generator.o
+
+# target to build an object file
+Generator/generator.cpp.o:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.o
+.PHONY : Generator/generator.cpp.o
+
+Generator/generator.i: Generator/generator.cpp.i
+
+.PHONY : Generator/generator.i
+
+# target to preprocess a source file
+Generator/generator.cpp.i:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.i
+.PHONY : Generator/generator.cpp.i
+
+Generator/generator.s: Generator/generator.cpp.s
+
+.PHONY : Generator/generator.s
+
+# target to generate assembly for a file
+Generator/generator.cpp.s:
+	$(MAKE) -f CMakeFiles/Spaaace_CG.dir/build.make CMakeFiles/Spaaace_CG.dir/Generator/generator.cpp.s
+.PHONY : Generator/generator.cpp.s
 
 Generator/plane.o: Generator/plane.cpp.o
 
@@ -348,18 +375,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Spaaace_CG"
-	@echo "... Engine/Shape.o"
-	@echo "... Engine/Shape.i"
-	@echo "... Engine/Shape.s"
-	@echo "... Engine/main.o"
-	@echo "... Engine/main.i"
-	@echo "... Engine/main.s"
+	@echo "... Engine/engine.o"
+	@echo "... Engine/engine.i"
+	@echo "... Engine/engine.s"
+	@echo "... Engine/shape.o"
+	@echo "... Engine/shape.i"
+	@echo "... Engine/shape.s"
 	@echo "... Generator/box.o"
 	@echo "... Generator/box.i"
 	@echo "... Generator/box.s"
 	@echo "... Generator/cone.o"
 	@echo "... Generator/cone.i"
 	@echo "... Generator/cone.s"
+	@echo "... Generator/generator.o"
+	@echo "... Generator/generator.i"
+	@echo "... Generator/generator.s"
 	@echo "... Generator/plane.o"
 	@echo "... Generator/plane.i"
 	@echo "... Generator/plane.s"

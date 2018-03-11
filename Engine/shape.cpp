@@ -1,4 +1,4 @@
-#include "Shape.h"
+#include "shape.h"
 
 
 Shape::Shape(int i, vector<Vertex*> list){

@@ -5,7 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include "Shape.h"
+#include "shape.h"
 #include "../tinyxml2.h"
 #include "../Generator/vertex.h"
 

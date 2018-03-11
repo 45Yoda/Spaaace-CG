@@ -19,7 +19,8 @@ if(NOT OPENGL_FOUND)
 endif(NOT OPENGL_FOUND)
 
 add_executable(Spaaace_CG
-        Engine/main.cpp
+        Engine/engine.cpp
+        Generator/generator.cpp
         Generator/box.cpp
         Generator/box.h
         CMakeLists.txt
@@ -34,8 +35,8 @@ add_executable(Spaaace_CG
         tinyxml2.h
         Generator/cone.cpp
         Generator/cone.h
-        Engine/Shape.cpp
-        Engine/Shape.h
+        Engine/shape.cpp
+        Engine/shape.h
         )
 
 

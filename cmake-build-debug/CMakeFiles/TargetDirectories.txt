@@ -1,3 +1,3 @@
-/home/jose/Spaaace-CG/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/jose/Spaaace-CG/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/jose/Spaaace-CG/cmake-build-debug/CMakeFiles/Spaaace_CG.dir
+/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/Spaaace_CG.dir
