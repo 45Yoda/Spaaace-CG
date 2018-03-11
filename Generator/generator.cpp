@@ -89,6 +89,9 @@ void print_help(){
     std::cout<<"*      In this section you give the name of the file which will  *" << std::endl;
     std::cout<<"*      contain the vertexes generated with the previous commands.*" << std::endl;
     std::cout<<"*                                                                *" << std::endl;
+    std::cout<<"*    COMPILING:                                                  *" << std::endl;
+    std::cout<<"*       g++ -o generator *.*                                     *" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
     std::cout<<"#****************************************************************#" << std::endl;
 }
 
