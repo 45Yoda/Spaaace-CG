@@ -64,7 +64,7 @@ vector<Vertex*> cone(float radius, float height, int slices, int stacks){
 
             //making lower triangle of slice in stack
             vertexes.push_back(new Vertex(big_radius * cos(curr_angle), bot_layer, big_radius * sin(curr_angle)));
-            vertexes.push_back(new Vertex(small_radius * cos(curr_angle),top_layer, small_radius * sin(above_angle)));
+            vertexes.push_back(new Vertex(small_radius * cos(above_angle),top_layer, small_radius * sin(above_angle)));
             vertexes.push_back(new Vertex(big_radius * cos(above_angle), bot_layer, big_radius * sin(above_angle)));
 
             // updating to make another slice

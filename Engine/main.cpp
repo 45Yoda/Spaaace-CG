@@ -16,6 +16,9 @@ int total_shapes = 0;
 int mode = GL_LINE;
 float angleX = 1.0, angleY = 1.0;
 
+float R1=1.0f , G1=0.5f , B1=0.0f;
+float R2=0.0f , G2=0.5f , B2=1.0f;
+
 void print_help(){
     std::cout<<"#****************************************************************#" << std::endl;
     std::cout<<"*                              HELP                              *" << std::endl;
@@ -92,8 +95,10 @@ void changeSize(int w, int h) {
 
 void renderScene(void) {
 
-    int i = 0;
+    int i= 0;
+    int flag =0;
     float x,y,z;
+    float R=R1,G=G1,B=B1;
 
     // clear buffers
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -121,8 +126,23 @@ void renderScene(void) {
             x = (*iter)->getX();
             y = (*iter)->getY();
             z = (*iter)->getZ();
+
+            if(i%3 == 0){
+               if(flag ==0){
+                  R=R2;G=G2;B=B2;
+                  flag = 1;
+                  i = 0;
+               }
+                else{
+                   R=R1;G=G1;B=B1;
+                   flag = 0;
+                   i = 0;
+               }
+            }
+
+            glColor3f(R,G,B);
+
             glVertex3f(x,y,z);
-            i++;
         }
         glEnd();
     }
