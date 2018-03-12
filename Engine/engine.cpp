@@ -19,6 +19,9 @@ float angleX = 1.0, angleY = 1.0;
 float R1=1.0f , G1=0.5f , B1=0.0f;
 float R2=0.0f , G2=0.5f , B2=1.0f;
 
+float ex=0.0f , ey=0.0f , ez=0.0f;
+float ax=0.0f , ay=0.0f , az=0.0f;
+
 void print_help(){
     std::cout<<"#****************************************************************#" << std::endl;
     std::cout<<"*                              HELP                              *" << std::endl;
@@ -42,8 +45,8 @@ void print_help(){
     std::cout<<"*       - l: Change PolygonMode to GL_POINT                      *" << std::endl;
     std::cout<<"*                                                                *" << std::endl;
     std::cout<<"*    COMPILING:                                                  *" << std::endl;
-    std::cout<<"*       - g++ engine.cpp shape.cpp ../tinyxml2.cpp               *" << std::endl;
-    std::cout<<"*         ../Generator/vertex.cpp -o engine -lGL -lGLU -lglut    *" << std::endl;
+std::cout<<"*       - g++ engine.cpp shape.cpp ../tinyxml2.cpp               *" << std::endl;
+std::cout<<"*         ../Generator/vertex.cpp -o engine -lGL -lGLU -lglut    *" << std::endl;
     std::cout<<"*                                                                *" << std::endl;
     std::cout<<"#****************************************************************#" << std::endl;
 }
@@ -64,6 +67,14 @@ void key_normal (unsigned char key, int x, int y){
         case 'k': mode = GL_LINE;
                   break;
         case 'l': mode = GL_POINT;
+                  break;
+        case '+': ex -= 2.0f; ey -= 2.0f; ez -= 2.0f;
+                  break;
+        case '-': ex += 2.0f; ey += 2.0f; ez += 2.0f;
+                  break;
+        case 'm': ax += 2.0f; ay += 2.0f; az += 2.0f;
+                  break;
+        case 'n': ax -= 2.0f; ay -= 2.0f; az -= 2.0f;
                   break;
     }
     glutPostRedisplay();
@@ -109,7 +120,7 @@ void renderScene(void) {
 
     // set the camera
     glLoadIdentity();
-    gluLookAt(5.0,5.0,5.0,
+    gluLookAt(5.0+ex,5.0+ey,5.0+ez,
               0.0,0.0,0.0,
               0.0f,1.0f,0.0f);
 
@@ -120,19 +131,20 @@ void renderScene(void) {
     glRotatef(angleX,0,1,0);
     glRotatef(angleY,0,0,1);
 
+
     glBegin(GL_LINES);
 // draw line for x axis
-    glColor3f(1.0, 0.0, 0.0);
-    glVertex3f(0.0, 0.0, 0.0);
-    glVertex3f(5.0, 0.0, 0.0);
+        glColor3f(1.0, 0.0, 0.0);
+        glVertex3f(0.0, 0.0, 0.0);
+        glVertex3f(5.0+ax, 0.0, 0.0);
 // draw line for y axis
-    glColor3f(0.0, 1.0, 0.0);
-    glVertex3f(0.0, 0.0, 0.0);
-    glVertex3f(0.0, 5.0, 0.0);
+        glColor3f(0.0, 1.0, 0.0);
+        glVertex3f(0.0, 0.0, 0.0);
+        glVertex3f(0.0, 5.0+ay, 0.0);
 // draw line for Z axis
-    glColor3f(0.0, 0.0, 1.0);
-    glVertex3f(0.0, 0.0, 0.0);
-    glVertex3f(0.0, 0.0, 5.0);
+        glColor3f(0.0, 0.0, 1.0);
+        glVertex3f(0.0, 0.0, 0.0);
+        glVertex3f(0.0, 0.0, 5.0+az);
     glEnd();
 
     // put drawing instructions here
@@ -152,7 +164,7 @@ void renderScene(void) {
                   flag = 1;
                   i = 0;
                }
-                else{
+               else{
                    R=R1;G=G1;B=B1;
                    flag = 0;
                    i = 0;

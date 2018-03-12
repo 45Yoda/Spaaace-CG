@@ -43,12 +43,13 @@ std::vector<Vertex*> sphere(float radius, int slices, int stacks) {
 
 
             vertexes.push_back(new Vertex(x1, y1, z1));
-            vertexes.push_back(new Vertex(x2, y2, z2));
             vertexes.push_back(new Vertex(x3, y3, z3));
+            vertexes.push_back(new Vertex(x2, y2, z2));
 
             vertexes.push_back(new Vertex(x1,y1,z1));
-            vertexes.push_back(new Vertex(x3,y3,z3));
             vertexes.push_back(new Vertex(x4,y4,z4));
+            vertexes.push_back(new Vertex(x3,y3,z3));
+
         }
     }
 
