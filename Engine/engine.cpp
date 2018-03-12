@@ -120,6 +120,21 @@ void renderScene(void) {
     glRotatef(angleX,0,1,0);
     glRotatef(angleY,0,0,1);
 
+    glBegin(GL_LINES);
+// draw line for x axis
+    glColor3f(1.0, 0.0, 0.0);
+    glVertex3f(0.0, 0.0, 0.0);
+    glVertex3f(5.0, 0.0, 0.0);
+// draw line for y axis
+    glColor3f(0.0, 1.0, 0.0);
+    glVertex3f(0.0, 0.0, 0.0);
+    glVertex3f(0.0, 5.0, 0.0);
+// draw line for Z axis
+    glColor3f(0.0, 0.0, 1.0);
+    glVertex3f(0.0, 0.0, 0.0);
+    glVertex3f(0.0, 0.0, 5.0);
+    glEnd();
+
     // put drawing instructions here
     glColor3f(0.0f,1.0f,1.0f);
 
@@ -131,7 +146,7 @@ void renderScene(void) {
             y = (*iter)->getY();
             z = (*iter)->getZ();
 
-            if(i%3 == 0){
+            if(i%3 == 0 && i!= 0){
                if(flag ==0){
                   R=R2;G=G2;B=B2;
                   flag = 1;
@@ -147,7 +162,9 @@ void renderScene(void) {
             glColor3f(R,G,B);
 
             glVertex3f(x,y,z);
+
             i++;
+
         }
         glEnd();
     }
