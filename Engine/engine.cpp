@@ -45,8 +45,8 @@ void print_help(){
     std::cout<<"*       - l: Change PolygonMode to GL_POINT                      *" << std::endl;
     std::cout<<"*                                                                *" << std::endl;
     std::cout<<"*    COMPILING:                                                  *" << std::endl;
-std::cout<<"*       - g++ engine.cpp shape.cpp ../tinyxml2.cpp               *" << std::endl;
-std::cout<<"*         ../Generator/vertex.cpp -o engine -lGL -lGLU -lglut    *" << std::endl;
+    std::cout<<"*       - g++ engine.cpp shape.cpp ../tinyxml2.cpp               *" << std::endl;
+    std::cout<<"*         ../Generator/vertex.cpp -o engine -lGL -lGLU -lglut    *" << std::endl;
     std::cout<<"*                                                                *" << std::endl;
     std::cout<<"#****************************************************************#" << std::endl;
 }

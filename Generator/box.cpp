@@ -17,14 +17,17 @@ vector<Vertex*> box(float x, float y, float z, int div){
             vertexes.push_back(new Vertex(-x + (j*shiftX),-y + (i*shiftY),z));
             vertexes.push_back(new Vertex((-x+shiftX) + (j*shiftX),-y + (i*shiftY),z));
             vertexes.push_back(new Vertex(-x + (j*shiftX),(-y+shiftY) + (i*shiftY),z));
+
             vertexes.push_back(new Vertex(-x + (j*shiftX),(-y+shiftY) + (i*shiftY),z));
             vertexes.push_back(new Vertex((-x+shiftX) + (j*shiftX),-y + (i*shiftY),z));
             vertexes.push_back(new Vertex((-x+shiftX) + (j*shiftX),(-y+shiftY) + (i*shiftY),z));
+
 
             //Back
             vertexes.push_back(new Vertex(-x + (j*shiftX),-y + (i*shiftY),-z));
             vertexes.push_back(new Vertex(-x + (j*shiftX),(-y+shiftY) + (i*shiftY),-z));
             vertexes.push_back(new Vertex((-x+shiftX) + (j*shiftX),-y + (i*shiftY),-z));
+
             vertexes.push_back(new Vertex(-x + (j*shiftX),(-y+shiftY) + (i*shiftY),-z));
             vertexes.push_back(new Vertex((-x+shiftX) + (j*shiftX),(-y+shiftY) + (i*shiftY),-z));
             vertexes.push_back(new Vertex((-x+shiftX) + (j*shiftX),-y + (i*shiftY),-z));
@@ -50,6 +53,7 @@ vector<Vertex*> box(float x, float y, float z, int div){
             vertexes.push_back(new Vertex(-x + (j*shiftX),y,-z + (i*shiftZ)));
             vertexes.push_back(new Vertex(-x + (j*shiftX),y,(-z+shiftZ) + (i*shiftZ)));
             vertexes.push_back(new Vertex((-x+shiftX) + (j*shiftX),y,-z + (i*shiftZ)));
+
             vertexes.push_back(new Vertex(-x + (j*shiftX),y,(-z+shiftZ) + (i*shiftZ)));
             vertexes.push_back(new Vertex((-x+shiftX) + (j*shiftX),y,(-z+shiftZ) + (i*shiftZ)));
             vertexes.push_back(new Vertex((-x+shiftX) + (j*shiftX),y,-z + (i*shiftZ)));
@@ -58,6 +62,7 @@ vector<Vertex*> box(float x, float y, float z, int div){
             vertexes.push_back(new Vertex(-x + (j*shiftX),-y,-z + (i*shiftZ)));
             vertexes.push_back(new Vertex((-x+shiftX) + (j*shiftX),-y,-z + (i*shiftZ)));
             vertexes.push_back(new Vertex(-x + (j*shiftX),-y,(-z+shiftZ) + (i*shiftZ)));
+
             vertexes.push_back(new Vertex(-x + (j*shiftX),-y,(-z+shiftZ) + (i*shiftZ)));
             vertexes.push_back(new Vertex((-x+shiftX) + (j*shiftX),-y,-z + (i*shiftZ)));
             vertexes.push_back(new Vertex((-x+shiftX) + (j*shiftX),-y,(-z+shiftZ) + (i*shiftZ)));
