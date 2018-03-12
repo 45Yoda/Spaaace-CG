@@ -147,6 +147,7 @@ void renderScene(void) {
             glColor3f(R,G,B);
 
             glVertex3f(x,y,z);
+            i++;
         }
         glEnd();
     }
