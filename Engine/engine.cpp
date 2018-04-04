@@ -16,12 +16,8 @@ using namespace tinyxml2;
 Group* scene;
 
 vector<Shape*> shapes;
-int total_shapes = 0;
 int mode = GL_LINE;
 float angleX = 1.0, angleY = 1.0;
-
-float R1=1.0f , G1=0.5f , B1=0.0f;
-float R2=0.0f , G2=0.5f , B2=1.0f;
 
 float ex=0.0f , ey=0.0f , ez=0.0f;
 float ax=0.0f , ay=0.0f , az=0.0f;
@@ -128,47 +124,51 @@ void axis(){
 
 }
 
-/*
-void render(){
-    int i= 0;
-    int flag =0;
+
+void render(Group* g){
+
     float x,y,z;
-    float R=R1,G=G1,B=B1;
 
-    glColor3f(0.0f,1.0f,1.0f);
+    glPushMatrix();
 
-    for (vector<Shape*>::iterator shape_it = shapes.begin(); shape_it != shapes.end(); ++shape_it){
-        vector<Vertex*> vertexes = (*shape_it)->getVertexes();
+    vector<Action*> actions = g->getActions();
+
+    for(vector<Action*>::iterator act_it = actions.begin(); act_it != actions.end(); ++act_it){
+        Action* action = (*act_it);
+
+        action->apply();
+    }
+
+    vector<Shape*> shapes = g->getShapes();
+
+    for(vector<Shape*>::iterator shp_it = shapes.begin(); shp_it != shapes.end(); ++shp_it){
+
+        Shape* shape = (*shp_it);
+        vector<Vertex*> vertexes = shape->getVertexes();
+
         glBegin(GL_TRIANGLES);
+
         for(vector<Vertex*>::iterator iter = vertexes.begin(); iter != vertexes.end(); ++iter){
+
             x = (*iter)->getX();
             y = (*iter)->getY();
             z = (*iter)->getZ();
 
-            if(i%3 == 0 && i!= 0){
-                if(flag ==0){
-                    R=R2;G=G2;B=B2;
-                    flag = 1;
-                    i = 0;
-                }
-                else{
-                    R=R1;G=G1;B=B1;
-                    flag = 0;
-                    i = 0;
-                }
-            }
-
-            glColor3f(R,G,B);
-
             glVertex3f(x,y,z);
-
-            i++;
-
         }
+
         glEnd();
     }
+
+    vector<Group*> childs = g->getChilds();
+    for(vector<Group*>::iterator g_it = childs.begin(); g_it != childs.end(); ++g_it){
+        render(*g_it);
+    }
+
+
+    glPushMatrix();
 }
-*/
+
 
 void renderScene(void) {
 
@@ -191,43 +191,11 @@ void renderScene(void) {
 
     //axis();
 
-
-
-    //render();
+    render(scene);
 
     // End of frame
     glutSwapBuffers();
 }
-
-/*
-vector<string> find_files(char* file_name){
-    string model_name;
-    vector<string> files;
-    XMLDocument doc;
-    XMLElement* element,*root;
-    XMLError error;
-
-    //Confirm that the file loaded successfully
-    error = doc.LoadFile(file_name);
-
-    if(error == 0){
-        root = doc.FirstChildElement("scene");
-        element = root->FirstChildElement("model");
-        for(;element;element = element->NextSiblingElement()){
-            if(!strcmp(element->Name(),"model")){
-                model_name = element->Attribute("file");
-                files.push_back(model_name);
-                std::cout << model_name << std::endl;
-            }
-        }
-    }
-    else{
-        std::cout << "XML file not found:" << file_name << "." << endl;
-    }
-    return files;
-}
- */
-
 
 
 int main(int argc, char **argv) {
@@ -243,25 +211,13 @@ int main(int argc, char **argv) {
         scene = parseXML(argv[1]);
     }
 
-/*
-        files = find_files(argv[1]);
-        if(files.size()){
-            for(vector<string>::const_iterator i = files.begin(); i != files.end(); ++i){
-                vector<Vertex*> aux = read_file(*i);
-                shapes.push_back(new Shape(total_shapes,aux));
-                total_shapes++;
-            }
-    */
-     //   }
-     //   else return 0;
-    //}
 
 // init GLUT and the window
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
     glutInitWindowPosition(100,100);
     glutInitWindowSize(500,500);
-    glutCreateWindow("");
+    glutCreateWindow("CGTP");
 
 // Required callback registry
     glutDisplayFunc(renderScene);

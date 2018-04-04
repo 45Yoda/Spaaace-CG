@@ -7,8 +7,10 @@
 
 #include "../tinyxml2.h"
 
+//pure virtual function (abstract class)
 class Action {
-
+    public:
+        virtual void apply() = 0;
 };
 
 class Translation : public Action{

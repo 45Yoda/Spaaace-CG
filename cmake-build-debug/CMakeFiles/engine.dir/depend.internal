@@ -6,7 +6,10 @@ CMakeFiles/engine.dir/Engine/action.cpp.o
  /home/yoda45/Desktop/git/Spaaace-CG/Engine/action.h
  /home/yoda45/Desktop/git/Spaaace-CG/tinyxml2.h
 CMakeFiles/engine.dir/Engine/engine.cpp.o
+ /home/yoda45/Desktop/git/Spaaace-CG/Engine/action.h
  /home/yoda45/Desktop/git/Spaaace-CG/Engine/engine.cpp
+ /home/yoda45/Desktop/git/Spaaace-CG/Engine/group.h
+ /home/yoda45/Desktop/git/Spaaace-CG/Engine/parser.h
  /home/yoda45/Desktop/git/Spaaace-CG/Engine/shape.h
  /home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.h
  /home/yoda45/Desktop/git/Spaaace-CG/tinyxml2.h
@@ -18,8 +21,13 @@ CMakeFiles/engine.dir/Engine/group.cpp.o
  /home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.h
  /home/yoda45/Desktop/git/Spaaace-CG/tinyxml2.h
 CMakeFiles/engine.dir/Engine/parser.cpp.o
+ /home/yoda45/Desktop/git/Spaaace-CG/Engine/action.h
+ /home/yoda45/Desktop/git/Spaaace-CG/Engine/group.h
  /home/yoda45/Desktop/git/Spaaace-CG/Engine/parser.cpp
  /home/yoda45/Desktop/git/Spaaace-CG/Engine/parser.h
+ /home/yoda45/Desktop/git/Spaaace-CG/Engine/shape.h
+ /home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.h
+ /home/yoda45/Desktop/git/Spaaace-CG/tinyxml2.h
 CMakeFiles/engine.dir/Engine/shape.cpp.o
  /home/yoda45/Desktop/git/Spaaace-CG/Engine/shape.cpp
  /home/yoda45/Desktop/git/Spaaace-CG/Engine/shape.h

@@ -1,6 +1,6 @@
 <scene>
 	<!--SOL-->
- 	<group>	
+ 	<group>
  		<colour R="251" G="119" B="9" />
  		<scale X="10" Y="10" Z="10" />
  		<models>
@@ -115,6 +115,7 @@
 			</models>
 		</group>
 		<!--ANEL-->
+		<!--
 		<group>
 			<rotate angle="90" X="1" Y="0" Z="0"/>
 			<colour R="255" G="223" B="120" />
@@ -122,7 +123,7 @@
 			<models>
 				<model file="torus.3d" />
 			</models>
-		</group>
+		</group> -->
 	</group>
 	<!--URANO-->
 	<group>
@@ -151,4 +152,4 @@
 			</models>
 		</group>
 	</group>
-</scene> 
+</scene>

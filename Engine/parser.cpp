@@ -103,7 +103,7 @@ void findElement(XMLElement* element, Group* g){
         }
     }
 
-    //Iterate over children recursively
+    //Iterate over childs recursively
     else if(!strcmp(element->Name(),"group")) {
         Group *childGroup = myChild(g);
         element = element->FirstChildElement();
@@ -118,7 +118,7 @@ void findElement(XMLElement* element, Group* g){
         findElement(current,g);
 }
 
-vector<Vertex*> read_file(string file_name){
+vector<Vertex*> readFile(string file_name){
 
     vector<Vertex*> vertexes;
     vector<string> tokens;
