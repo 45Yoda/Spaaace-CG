@@ -5,8 +5,6 @@
 #ifndef SPAAACE_CG_BOX_H
 #define SPAAACE_CG_BOX_H
 
-#include "vertex.h"
-#include <vector>
 using namespace std;
 
 #include <vector>

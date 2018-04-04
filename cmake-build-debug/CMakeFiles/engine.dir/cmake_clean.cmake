@@ -3,6 +3,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/Engine/shape.cpp.o"
   "CMakeFiles/engine.dir/tinyxml2.cpp.o"
   "CMakeFiles/engine.dir/Generator/vertex.cpp.o"
+  "CMakeFiles/engine.dir/Engine/action.cpp.o"
+  "CMakeFiles/engine.dir/Engine/parser.cpp.o"
+  "CMakeFiles/engine.dir/Engine/group.cpp.o"
   "engine.pdb"
   "engine"
 )

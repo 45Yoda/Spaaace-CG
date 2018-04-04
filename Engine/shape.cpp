@@ -1,13 +1,17 @@
 #include "shape.h"
 
 
-Shape::Shape(int i, vector<Vertex*> list){
-    id = i;
+Shape::Shape(){
+
+}
+
+Shape::Shape(string i, vector<Vertex*> list){
+    name = i;
     vertexes = list;
 }
 
-int Shape::getID(){
-    return id;
+string Shape::getName(){
+    return name;
 }
 
 vector<Vertex*> Shape::getVertexes(){

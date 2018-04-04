@@ -9,13 +9,14 @@ using namespace std;
 
 class Shape{
 
-    int id;
+    string name;
     vector<Vertex*> vertexes;
 
-public:
-    Shape(int,vector<Vertex*>);
-    int getID();
-    vector<Vertex*> getVertexes();
+    public:
+        Shape();
+        Shape(string,vector<Vertex*>);
+        string getName();
+        vector<Vertex*> getVertexes();
 };
 
 #endif

@@ -98,7 +98,7 @@ void print_help(){
 int main(int argc, char** argv) {
 
     if(argc < 2) {
-        std::cout << "halp meh"  << std::endl;
+        std::cout << "help"  << std::endl;
         print_help();
     }
     else if(!strcmp(argv[1],"plane") && argc == 4) {
@@ -141,7 +141,7 @@ int main(int argc, char** argv) {
                  argv[6]);
         }
     else {
-        std::cout << "halp meh"  << std::endl;
+        std::cout << "help"  << std::endl;
         print_help();
     }
     return 0;

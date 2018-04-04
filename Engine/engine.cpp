@@ -8,8 +8,12 @@
 #include "shape.h"
 #include "../tinyxml2.h"
 #include "../Generator/vertex.h"
+#include "group.h"
+#include "parser.h"
 
 using namespace tinyxml2;
+
+Group* scene;
 
 vector<Shape*> shapes;
 int total_shapes = 0;
@@ -106,14 +110,68 @@ void changeSize(int w, int h) {
     glMatrixMode(GL_MODELVIEW);
 }
 
+void axis(){
+    glBegin(GL_LINES);
+// draw line for x axis
+    glColor3f(1.0, 0.0, 0.0);
+    glVertex3f(0.0, 0.0, 0.0);
+    glVertex3f(5.0+ax, 0.0, 0.0);
+// draw line for y axis
+    glColor3f(0.0, 1.0, 0.0);
+    glVertex3f(0.0, 0.0, 0.0);
+    glVertex3f(0.0, 5.0+ay, 0.0);
+// draw line for Z axis
+    glColor3f(0.0, 0.0, 1.0);
+    glVertex3f(0.0, 0.0, 0.0);
+    glVertex3f(0.0, 0.0, 5.0+az);
+    glEnd();
 
+}
 
-void renderScene(void) {
-
+/*
+void render(){
     int i= 0;
     int flag =0;
     float x,y,z;
     float R=R1,G=G1,B=B1;
+
+    glColor3f(0.0f,1.0f,1.0f);
+
+    for (vector<Shape*>::iterator shape_it = shapes.begin(); shape_it != shapes.end(); ++shape_it){
+        vector<Vertex*> vertexes = (*shape_it)->getVertexes();
+        glBegin(GL_TRIANGLES);
+        for(vector<Vertex*>::iterator iter = vertexes.begin(); iter != vertexes.end(); ++iter){
+            x = (*iter)->getX();
+            y = (*iter)->getY();
+            z = (*iter)->getZ();
+
+            if(i%3 == 0 && i!= 0){
+                if(flag ==0){
+                    R=R2;G=G2;B=B2;
+                    flag = 1;
+                    i = 0;
+                }
+                else{
+                    R=R1;G=G1;B=B1;
+                    flag = 0;
+                    i = 0;
+                }
+            }
+
+            glColor3f(R,G,B);
+
+            glVertex3f(x,y,z);
+
+            i++;
+
+        }
+        glEnd();
+    }
+}
+*/
+
+void renderScene(void) {
+
 
     // clear buffers
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -131,60 +189,17 @@ void renderScene(void) {
     glRotatef(angleX,0,1,0);
     glRotatef(angleY,0,0,1);
 
+    //axis();
 
-    glBegin(GL_LINES);
-// draw line for x axis
-        glColor3f(1.0, 0.0, 0.0);
-        glVertex3f(0.0, 0.0, 0.0);
-        glVertex3f(5.0+ax, 0.0, 0.0);
-// draw line for y axis
-        glColor3f(0.0, 1.0, 0.0);
-        glVertex3f(0.0, 0.0, 0.0);
-        glVertex3f(0.0, 5.0+ay, 0.0);
-// draw line for Z axis
-        glColor3f(0.0, 0.0, 1.0);
-        glVertex3f(0.0, 0.0, 0.0);
-        glVertex3f(0.0, 0.0, 5.0+az);
-    glEnd();
 
-    // put drawing instructions here
-    glColor3f(0.0f,1.0f,1.0f);
 
-    for (vector<Shape*>::iterator shape_it = shapes.begin(); shape_it != shapes.end(); ++shape_it){
-        vector<Vertex*> vertexes = (*shape_it)->getVertexes();
-        glBegin(GL_TRIANGLES);
-        for(vector<Vertex*>::iterator iter = vertexes.begin(); iter != vertexes.end(); ++iter){
-            x = (*iter)->getX();
-            y = (*iter)->getY();
-            z = (*iter)->getZ();
-
-            if(i%3 == 0 && i!= 0){
-               if(flag ==0){
-                  R=R2;G=G2;B=B2;
-                  flag = 1;
-                  i = 0;
-               }
-               else{
-                   R=R1;G=G1;B=B1;
-                   flag = 0;
-                   i = 0;
-               }
-            }
-
-            glColor3f(R,G,B);
-
-            glVertex3f(x,y,z);
-
-            i++;
-
-        }
-        glEnd();
-    }
+    //render();
 
     // End of frame
     glutSwapBuffers();
 }
 
+/*
 vector<string> find_files(char* file_name){
     string model_name;
     vector<string> files;
@@ -211,31 +226,9 @@ vector<string> find_files(char* file_name){
     }
     return files;
 }
+ */
 
-vector<Vertex*> read_file(string file_name){
 
-    vector<Vertex*> vertexes;
-    vector<string> tokens;
-    string buffer;
-    string line;
-    int index = 0;
-    string file_path = "../" + file_name;
-
-    ifstream file (file_path);
-    if(file.is_open()){
-        while(getline(file,line)){ // iterate over the lines of the file
-            stringstream ss(line);
-            while(ss >> buffer)
-                tokens.push_back(buffer); // iterate over the coordinates of the vertexes in each line
-            //add vertexes to the vector
-            vertexes.push_back(new Vertex(stof(tokens[index]),stof(tokens[index+1]),stof(tokens[index+2])));
-            index+=3;
-        }
-        file.close();
-    }
-    else cout << "Unable to open file." << endl;
-    return vertexes;
-}
 
 int main(int argc, char **argv) {
 
@@ -247,6 +240,10 @@ int main(int argc, char **argv) {
         print_help();
     }
     else {
+        scene = parseXML(argv[1]);
+    }
+
+/*
         files = find_files(argv[1]);
         if(files.size()){
             for(vector<string>::const_iterator i = files.begin(); i != files.end(); ++i){
@@ -254,9 +251,10 @@ int main(int argc, char **argv) {
                 shapes.push_back(new Shape(total_shapes,aux));
                 total_shapes++;
             }
-        }
-        else return 0;
-    }
+    */
+     //   }
+     //   else return 0;
+    //}
 
 // init GLUT and the window
     glutInit(&argc, argv);
