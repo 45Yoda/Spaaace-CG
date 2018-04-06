@@ -53,20 +53,28 @@ void print_help(){
 void key_normal (unsigned char key, int x, int y){
 
     switch(key){
-        case 'w': angleY+=5.0f;
+        case 'w':
+        case 'W': angleY+=5.0f;
                   break;
+        case 'S':
         case 's': angleY-=5.0f;
                   break;
+        case 'A':
         case 'a': angleX-=5.0f;
                   break;
+        case 'D':
         case 'd': angleX+=5.0f;
                   break;
+        case 'J':
         case 'j': mode = GL_FILL;
                   break;
+        case 'K':
         case 'k': mode = GL_LINE;
                   break;
+        case 'L':
         case 'l': mode = GL_POINT;
                   break;
+        case 'F':
         case 'f': glutFullScreen();
                   break;
         case '+': ex -= 2.0f; ey -= 2.0f; ez -= 2.0f;
@@ -182,7 +190,7 @@ void renderScene(void) {
 
     // set the camera
     glLoadIdentity();
-    gluLookAt(20.0+ex,20.0+ey,20.0+ez,
+    gluLookAt(40.0+ex,40.0+ey,40.0+ez,
               0.0,0.0,0.0,
               0.0f,1.0f,0.0f);
 
@@ -220,7 +228,7 @@ int main(int argc, char **argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
     glutInitWindowPosition(100,100);
-    glutInitWindowSize(900,600);
+    glutInitWindowSize(1200,750);
     glutCreateWindow("CGTP");
 
 // Required callback registry
