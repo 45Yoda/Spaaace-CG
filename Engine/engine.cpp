@@ -15,7 +15,6 @@ using namespace tinyxml2;
 
 Group* scene;
 
-vector<Shape*> shapes;
 int mode = GL_LINE;
 float angleX = 1.0, angleY = 1.0;
 
@@ -133,6 +132,7 @@ void render(Group* g){
 
     vector<Action*> actions = g->getActions();
 
+
     for(vector<Action*>::iterator act_it = actions.begin(); act_it != actions.end(); ++act_it){
         Action* action = (*act_it);
 
@@ -166,7 +166,7 @@ void render(Group* g){
     }
 
 
-    glPushMatrix();
+    glPopMatrix();
 }
 
 
