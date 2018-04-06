@@ -3,6 +3,9 @@
 //
 
 #include "group.h"
+#include <iostream>
+#include <fstream>
+#include <sstream>
 
 Group::Group(){
 }

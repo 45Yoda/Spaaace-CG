@@ -4,7 +4,7 @@
  		<colour R="251" G="119" B="9" />
  		<scale X="10" Y="10" Z="10" />
  		<models>
- 			<model file="sphere.3d" />
+ 			<model file="sphereSun.3d" />
  		</models>
  	</group>
  	<!--MERCURIO-->

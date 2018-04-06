@@ -3,7 +3,8 @@
 //
 #include <GL/glut.h>
 #include "action.h"
-
+#include <iostream>
+#include <string>
 
 using tinyxml2::XMLElement;
 
@@ -40,9 +41,9 @@ void Translation::parse(XMLElement * tr){
 
 void Rotation::parse(XMLElement *rt){
     rt->QueryFloatAttribute("angle", &angle);
-    rt->QueryFloatAttribute("axisX", &axisX);
-    rt->QueryFloatAttribute("axisY", &axisY);
-    rt->QueryFloatAttribute("axisZ", &axisZ);
+    rt->QueryFloatAttribute("X", &axisX);
+    rt->QueryFloatAttribute("Y", &axisY);
+    rt->QueryFloatAttribute("Z", &axisZ);
 }
 
 void Scale::parse(XMLElement *sc){

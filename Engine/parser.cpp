@@ -78,7 +78,6 @@ vector<Shape*> findModels(XMLElement* element){
 void findElement(XMLElement* element, Group* g){
 
     XMLElement* current = element; //1st group
-
     //Find the Translation
     if(!strcmp(element->Name(),"translate"))
         foundTranslation(element,g);
@@ -92,9 +91,10 @@ void findElement(XMLElement* element, Group* g){
         foundScale(element,g);
 
     //Find the Color
-    else if(!strcmp(element->Name(),"color"))
-        foundColor(element,g);
+    else if(!strcmp(element->Name(),"colour")) {
+        foundColor(element, g);
 
+    }
     //Gather all Models
     else if(!strcmp(element->Name(),"models")){
         vector<Shape*> listShape = findModels(element);
@@ -153,8 +153,9 @@ Group* parseXML(char* file_name) {
 
     error = doc.LoadFile(file_name);
     if(error == 0){
-        element = doc.FirstChildElement("scene");
+        element = doc.FirstChildElement("scene")->FirstChildElement("group");
         findElement(element,group);
+
     }
     else
         cout << "Could not load XML file: " << file_name << "." << endl;
