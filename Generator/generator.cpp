@@ -7,7 +7,7 @@
 #include "box.h"
 #include "cone.h"
 #include "sphere.h"
-
+#include "torus.h"
 
 using std::ofstream;
 using std::string;
@@ -62,6 +62,20 @@ void drawCone(float radius, float height, int slices, int stacks, string name){
     file.close();
 }
 
+void drawTorus(float radiusSmall, float radiusBig, int sides, int rings, string name){
+	ofstream file(name);
+	char buffer[1024];
+	vector<Vertex*> vertexes = torus(radiusSmall,radiusBig,sides,rings);
+
+	for(Vertex* v: vertexes){
+		sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
+		file << buffer;
+	}
+
+	file.close();
+}
+
+
 void print_help(){
     std::cout<<"#****************************************************************#" << std::endl;
     std::cout<<"*                              HELP                              *" << std::endl;
@@ -84,6 +98,11 @@ void print_help(){
     std::cout<<"*    - cone [RADIUS] [HEIGHT] [SLICES] [STACKS]                  *" << std::endl;
     std::cout<<"*      Creates a cone with the bottom radius, height, number of  *" << std::endl;
     std::cout<<"*      slices and stacks specified.                              *" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
+    std::cout<<"*    - torus [SMALLRADIUS] [BIGRADIUS] [SIDES] [RINGS]           *" << std::endl;
+    std::cout<<"*      Creates a torus with the inner radius, outer radius,      *" << std::endl;
+    std::cout<<"*      number of sides and rings specified.                      *" << std::endl;
+    std::cout<<"*                                                                *" << std::endl;
     std::cout<<"*                                                                *" << std::endl;
     std::cout<<"*    {FILE}:                                                     *" << std::endl;
     std::cout<<"*      In this section you give the name of the file which will  *" << std::endl;
@@ -140,6 +159,14 @@ int main(int argc, char** argv) {
                  atoi(argv[5]),
                  argv[6]);
         }
+    else if(!strcmp(argv[1],"torus") && argc == 7){
+        std::cout << "torus";
+        drawTorus(atof(argv[2]),
+                  atof(argv[3]),
+                  atoi(argv[4]),
+                  atoi(argv[5]),
+                  argv[6]);
+    }
     else {
         std::cout << "help"  << std::endl;
         print_help();

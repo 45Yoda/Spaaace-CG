@@ -14,6 +14,6 @@ target_link_libraries(engine ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
 
 project(generator)
 set(GENERATOR_FILES ./Generator/generator.cpp ./Generator/box.cpp ./Generator/cone.cpp
-                   ./Generator/plane.cpp ./Generator/sphere.cpp ./Generator/vertex.cpp)
+                   ./Generator/plane.cpp ./Generator/sphere.cpp ./Generator/vertex.cpp Generator/torus.cpp Generator/torus.h)
 
 add_executable(generator ${GENERATOR_FILES})
