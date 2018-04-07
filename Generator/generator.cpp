@@ -47,6 +47,8 @@ void drawSphere(float radius, int slices, int stacks, string name){
         sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
         file << buffer;
     }
+
+    file.close();
 }
 
 void drawCone(float radius, float height, int slices, int stacks, string name){
