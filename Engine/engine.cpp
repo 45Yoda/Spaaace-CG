@@ -53,18 +53,38 @@ void print_help(){
 void key_normal (unsigned char key, int x, int y){
 
     switch(key){
-        case 'w':
-        case 'W': angleY+=5.0f;
+        case 'q':
+        case 'Q': angleY+=5.0f;
+                  if(angleY>360) angleY = -360;
                   break;
-        case 'S':
-        case 's': angleY-=5.0f;
+        case 'Z':
+        case 'z': angleY-=5.0f;
+                  if(angleY<-360) angleY = 360;
                   break;
         case 'A':
         case 'a': angleX-=5.0f;
+                  if(angleX<-360) angleX = 360;
                   break;
         case 'D':
         case 'd': angleX+=5.0f;
+                  if(angleX>360) angleX = -360;
                   break;
+        case 'W':
+        case 'w': float xrotrad, yrotrad;
+                  xrotrad = (angleX / 180 * 3.141592654f);
+                  yrotrad = (angleY / 180 * 3.141592654f);
+                  ex += float(sin(xrotrad));
+                  ez -= float(cos(xrotrad)) ;
+                  ey -= float(sin(yrotrad));
+                  break;
+        case 'S':
+        case 's': float xrotrad1, yrotrad1;
+                  xrotrad1 = (angleX / 180 * 3.141592654f);
+                  yrotrad1 = (angleY / 180 * 3.141592654f);
+                  ex -= float(sin(xrotrad));
+                  ez += float(cos(xrotrad)) ;
+                  ey += float(sin(yrotrad));
+                  break;         
         case 'J':
         case 'j': mode = GL_FILL;
                   break;
