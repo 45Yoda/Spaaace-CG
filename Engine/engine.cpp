@@ -16,10 +16,15 @@ using namespace tinyxml2;
 Group* scene;
 
 int mode = GL_LINE;
-float angleX = 1.0, angleY = 1.0;
+int fullscreen = 0;
+
+float angleX = 0.0, angleY = 0.0;
 
 float ex=0.0f , ey=0.0f , ez=0.0f;
 float ax=0.0f , ay=0.0f , az=0.0f;
+
+float cRad = 10.0f;
+float xp=40, yp=10, zp=100, angle=0.0;
 
 void print_help(){
     std::cout<<"#****************************************************************#" << std::endl;
@@ -52,39 +57,39 @@ void print_help(){
 
 void key_normal (unsigned char key, int x, int y){
 
+    float xrotrad, yrotrad;
+
+
     switch(key){
-        case 'q':
-        case 'Q': angleY+=5.0f;
-                  if(angleY>360) angleY = -360;
-                  break;
-        case 'Z':
-        case 'z': angleY-=5.0f;
-                  if(angleY<-360) angleY = 360;
-                  break;
-        case 'A':
-        case 'a': angleX-=5.0f;
-                  if(angleX<-360) angleX = 360;
-                  break;
-        case 'D':
-        case 'd': angleX+=5.0f;
-                  if(angleX>360) angleX = -360;
-                  break;
         case 'W':
-        case 'w': float xrotrad, yrotrad;
-                  xrotrad = (angleX / 180 * 3.141592654f);
-                  yrotrad = (angleY / 180 * 3.141592654f);
-                  ex += float(sin(xrotrad));
-                  ez -= float(cos(xrotrad)) ;
-                  ey -= float(sin(yrotrad));
-                  break;
+        case 'w':
+            xrotrad = (angleX / 180 * M_PI);
+            yrotrad = (angleY / 180 * M_PI);
+            xp += float(sin(yrotrad));
+            yp -= float(sin(xrotrad));
+            zp -= float(cos(yrotrad));
+            break;
+        case 'A':
+        case 'a':
+            yrotrad = (angleY / 180 * M_PI);
+            xp -= float(cos(yrotrad));
+            zp -= float(sin(yrotrad));
+            break;
         case 'S':
-        case 's': float xrotrad1, yrotrad1;
-                  xrotrad1 = (angleX / 180 * 3.141592654f);
-                  yrotrad1 = (angleY / 180 * 3.141592654f);
-                  ex -= float(sin(xrotrad));
-                  ez += float(cos(xrotrad)) ;
-                  ey += float(sin(yrotrad));
-                  break;         
+        case 's':
+            xrotrad = (angleX / 180 * M_PI);
+            yrotrad = (angleY / 180 * M_PI);
+            xp -= float(sin(yrotrad));
+            yp += float(sin(xrotrad));
+            zp += float(cos(yrotrad)) ;
+            break;
+        case 'D':
+        case 'd':
+            yrotrad = (angleY / 180 * M_PI);
+            xp += float(cos(yrotrad));
+            zp += float(sin(yrotrad));
+            break;
+
         case 'J':
         case 'j': mode = GL_FILL;
                   break;
@@ -95,8 +100,19 @@ void key_normal (unsigned char key, int x, int y){
         case 'l': mode = GL_POINT;
                   break;
         case 'F':
-        case 'f': glutFullScreen();
-                  break;
+        case 'f':
+            fullscreen = !fullscreen;
+            if (fullscreen)
+            {
+                glutFullScreen();                /* Go to full screen */
+            }
+            else
+            {
+                glutReshapeWindow(800, 600);        /* Restore us */
+                glutPositionWindow(0,0);
+            }
+            break;
+
         case '+': ex -= 2.0f; ey -= 2.0f; ez -= 2.0f;
                   break;
         case '-': ex += 2.0f; ey += 2.0f; ez += 2.0f;
@@ -105,6 +121,28 @@ void key_normal (unsigned char key, int x, int y){
                   break;
         case 'n': ax -= 2.0f; ay -= 2.0f; az -= 2.0f;
                   break;
+    }
+    glutPostRedisplay();
+}
+
+void key_special(int key_code, int x, int y){
+    switch(key_code){
+        case GLUT_KEY_UP:
+            if(angleX > -45) angleX+=5.0f;
+            if(angleX<-360)   angleX+=360;
+            break;
+        case GLUT_KEY_DOWN:
+            if(angleX < 45) angleX+=5.0f;
+            if(angleX > 360) angleX -= 360;
+            break;
+        case GLUT_KEY_LEFT:
+            angleY-=5.0f;
+            if(angleY<-360) angleY += 360;
+            break;
+        case GLUT_KEY_RIGHT:
+            angleY+=5.0f;
+            if(angleY>360) angleY-= 360;
+            break;
     }
     glutPostRedisplay();
 }
@@ -210,16 +248,28 @@ void renderScene(void) {
 
     // set the camera
     glLoadIdentity();
+
     gluLookAt(40.0+ex,40.0+ey,40.0+ez,
-              0.0,0.0,0.0,
+              0.0f,0.0f,0.0f,
               0.0f,1.0f,0.0f);
 
     //put the geometric transformations here
     glEnable(GL_CULL_FACE);
     glPolygonMode(GL_FRONT_AND_BACK, mode);
 
+    /*
     glRotatef(angleX,0,1,0);
     glRotatef(angleY,0,0,1);
+    */
+
+    glTranslatef(0.0f,0.0f,-cRad);
+    glRotatef(angleX,1.0,0.0,0.0);
+
+    glRotatef(angleY,0.0,1.0,0.0);
+    glTranslatef(-xp,-yp,-zp);
+
+
+
 
     //axis();
 
@@ -227,6 +277,8 @@ void renderScene(void) {
 
     // End of frame
     glutSwapBuffers();
+    angle++;
+
 }
 
 
@@ -258,6 +310,7 @@ int main(int argc, char **argv) {
 
 // put here the registration of the keyboard callbacks
     glutKeyboardFunc(key_normal);
+    glutSpecialFunc(key_special);
 
 
 //  OpenGL settings
