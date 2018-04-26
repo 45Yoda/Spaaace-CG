@@ -1,4 +1,4 @@
-//#include <OpenGL/OpenGL.h>
+#include <OpenGL/OpenGL.h>
 #include "shape.h"
 
 
@@ -47,4 +47,3 @@ void Shape::draw(){
     glVertexPointer(3, GL_FLOAT, 0, 0);
     glDrawArrays(GL_TRIANGLES, 0, vertexes.size()*3);
 }
-
