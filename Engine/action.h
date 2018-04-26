@@ -22,6 +22,7 @@ class Translation : public Action{
         float x;
         float y;
         float z;
+        float time;
 };
 
 class Rotation : public Action{
@@ -31,6 +32,7 @@ class Rotation : public Action{
         void apply();
     private:
         float angle;
+        float time;
         float axisX;
         float axisY;
         float axisZ;

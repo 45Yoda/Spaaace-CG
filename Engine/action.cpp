@@ -12,10 +12,12 @@ Translation::Translation(){
     x = 0;
     y = 0;
     z = 0;
+    time = 0;
 }
 
 Rotation::Rotation(){
     angle = 0;
+    time = 0;
     axisX = 0;
     axisY = 0;
     axisZ = 0;
@@ -34,6 +36,7 @@ Color::Color(){
 }
 
 void Translation::parse(XMLElement * tr){
+    tr->QueryFloatAttribute("time",&time);
     tr->QueryFloatAttribute("X", &x);
     tr->QueryFloatAttribute("Y", &y);
     tr->QueryFloatAttribute("Z", &z);
@@ -41,6 +44,7 @@ void Translation::parse(XMLElement * tr){
 
 void Rotation::parse(XMLElement *rt){
     rt->QueryFloatAttribute("angle", &angle);
+    rt->QueryFloatAttribute("time",&time);
     rt->QueryFloatAttribute("X", &axisX);
     rt->QueryFloatAttribute("Y", &axisY);
     rt->QueryFloatAttribute("Z", &axisZ);
@@ -63,6 +67,14 @@ void Translation::apply() {
 }
 
 void Rotation::apply() {
+    float tmp, r;
+
+    if(time!=0){
+        tmp = glutGet(GLUT_ELAPSED_TIME) % (int)(time*1000);
+        r = (tmp*360) / (time * 1000);
+        glRotatef(r,axisX,axisY,axisZ);
+    }
+
     glRotatef(angle,axisX,axisY,axisZ);
 }
 

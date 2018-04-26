@@ -24,7 +24,7 @@ float ex=0.0f , ey=0.0f , ez=0.0f;
 float ax=0.0f , ay=0.0f , az=0.0f;
 
 float cRad = 10.0f;
-float xp=40, yp=10, zp=100, angle=0.0;
+float xp=40, yp=10, zp=100;
 
 void print_help(){
     std::cout<<"#****************************************************************#" << std::endl;
@@ -233,7 +233,6 @@ void render(Group* g){
         render(*g_it);
     }
 
-
     glPopMatrix();
 }
 
@@ -257,10 +256,6 @@ void renderScene(void) {
     glEnable(GL_CULL_FACE);
     glPolygonMode(GL_FRONT_AND_BACK, mode);
 
-    /*
-    glRotatef(angleX,0,1,0);
-    glRotatef(angleY,0,0,1);
-    */
 
     glTranslatef(0.0f,0.0f,-cRad);
     glRotatef(angleX,1.0,0.0,0.0);
@@ -269,15 +264,26 @@ void renderScene(void) {
     glTranslatef(-xp,-yp,-zp);
 
 
-
-
     //axis();
 
     render(scene);
 
     // End of frame
     glutSwapBuffers();
-    angle++;
+}
+
+void initGroup(Group* g){
+
+    vector<Shape*> shapes = g->getShapes();
+    for(vector<Shape*>::iterator shp_it = shapes.begin(); shp_it != shapes.end(); ++shp_it){
+        Shape* shape = (*shp_it);
+        shape->readyUp();
+    }
+
+    vector<Group*> childs = g->getChilds();
+    for(vector<Group*>::iterator g_it = childs.begin(); g_it != childs.end(); ++g_it){
+        initGroup(*g_it);
+    }
 
 }
 
@@ -316,6 +322,12 @@ int main(int argc, char **argv) {
 //  OpenGL settings
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
+
+    glEnableClientState(GL_VERTEX_ARRAY);
+
+    initGroup(scene);
+
+
 
 // enter GLUT's main cycle
     glutMainLoop();
