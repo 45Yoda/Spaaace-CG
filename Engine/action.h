@@ -23,6 +23,7 @@ class Translation : public Action{
         Translation();
         void parse(tinyxml2::XMLElement *tr);
         vector<Vertex*> getPoints();
+        void addPoint(Vertex*);
         vector<Vertex*> getCurvePoints();
         vector<Vertex*> generateCurvePoints();
         void getGlobalCatmullRomPoint(float, float*,float*, vector<Vertex*>);

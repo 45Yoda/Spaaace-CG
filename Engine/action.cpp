@@ -45,6 +45,19 @@ void Translation::parse(XMLElement * tr){
     tr->QueryFloatAttribute("X", &x);
     tr->QueryFloatAttribute("Y", &y);
     tr->QueryFloatAttribute("Z", &z);
+
+    XMLElement* point_element = tr->FirstChildElement();
+
+    for(;point_element;point_element=point_element->NextSiblingElement()){
+        float xs=0, ys=0, zs=0;
+
+        point_element->QueryFloatAttribute("X",&xs);
+        point_element->QueryFloatAttribute("Y",&ys);
+        point_element->QueryFloatAttribute("Z",&zs);
+        Vertex* vertex = new Vertex(xs,ys,zs);
+        addPoint(vertex);
+    }
+
 }
 
 void Rotation::parse(XMLElement *rt){
@@ -70,6 +83,10 @@ void Color::parse(XMLElement *cl){
 
 vector<Vertex*> Translation::getPoints(){
     return points;
+}
+
+void Translation::addPoint(Vertex* v){
+    points.push_back(v);
 }
 
 vector<Vertex*> Translation::getCurvePoints(){

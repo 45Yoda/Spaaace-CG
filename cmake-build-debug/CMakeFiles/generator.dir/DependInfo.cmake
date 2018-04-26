@@ -4,15 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/yoda45/Desktop/git/Spaaace-CG/Generator/box.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/box.cpp.o"
-  "/home/yoda45/Desktop/git/Spaaace-CG/Generator/cone.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/cone.cpp.o"
-  "/home/yoda45/Desktop/git/Spaaace-CG/Generator/generator.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/generator.cpp.o"
-  "/home/yoda45/Desktop/git/Spaaace-CG/Generator/plane.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/plane.cpp.o"
-  "/home/yoda45/Desktop/git/Spaaace-CG/Generator/sphere.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/sphere.cpp.o"
-  "/home/yoda45/Desktop/git/Spaaace-CG/Generator/torus.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/torus.cpp.o"
-  "/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/vertex.cpp.o"
+  "/Users/josesousa/Documents/Spaaace-CG/Generator/box.cpp" "/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/box.cpp.o"
+  "/Users/josesousa/Documents/Spaaace-CG/Generator/cone.cpp" "/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/cone.cpp.o"
+  "/Users/josesousa/Documents/Spaaace-CG/Generator/generator.cpp" "/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/generator.cpp.o"
+  "/Users/josesousa/Documents/Spaaace-CG/Generator/plane.cpp" "/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/plane.cpp.o"
+  "/Users/josesousa/Documents/Spaaace-CG/Generator/sphere.cpp" "/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/sphere.cpp.o"
+  "/Users/josesousa/Documents/Spaaace-CG/Generator/torus.cpp" "/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/torus.cpp.o"
+  "/Users/josesousa/Documents/Spaaace-CG/Generator/vertex.cpp" "/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/vertex.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
