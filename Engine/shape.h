@@ -14,14 +14,14 @@ class Shape{
 
     string name;
     vector<Vertex*> vertexes;
-    GLuint buff;
-
+    GLuint buffer;
     public:
         Shape();
         Shape(string,vector<Vertex*>);
         string getName();
         vector<Vertex*> getVertexes();
-        void readyUp();
+        GLuint getVertexBuffer();
+        void prepare();
         void draw();
 };
 

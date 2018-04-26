@@ -18,8 +18,17 @@
 	</group>
  	<!--MERCURIO-->
  	<group>
- 		<translate X="29.8775" Y="0" Z="0" />
- 		<colour R="128" G="128" B="128" />
+		<translate time="60">
+			<point X="29.8775" Y="0" Z="0"/>
+			<point X="21.1266" Y="0" Z="21.1266"/>
+			<point X="0" Y="0" Z="29.8775"/>
+			<point X="-21.1266" Y="0" Z="21.1266"/>
+			<point X="-29.8775" Y="0" Z="0"/>
+			<point X="-21.1266" Y="0" Z="-21.1266"/>
+			<point X="0" Y="0" Z="-29.8775"/>
+			<point X="21.1266" Y="0" Z="-21.1266"/>
+		</translate>
+		<colour R="128" G="128" B="128" />
  		<scale X="0.3525" Y="0.3525" Z="0.3525" />
  		<models>
  			<model file="sphere.3d" />

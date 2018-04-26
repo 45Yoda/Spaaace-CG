@@ -26,6 +26,8 @@ float ax=0.0f , ay=0.0f , az=0.0f;
 float cRad = 10.0f;
 float xp=40, yp=10, zp=100;
 
+int timebase = 0, frame = 0;
+
 void print_help(){
     std::cout<<"#****************************************************************#" << std::endl;
     std::cout<<"*                              HELP                              *" << std::endl;
@@ -65,29 +67,29 @@ void key_normal (unsigned char key, int x, int y){
         case 'w':
             xrotrad = (angleX / 180 * M_PI);
             yrotrad = (angleY / 180 * M_PI);
-            xp += float(sin(yrotrad));
-            yp -= float(sin(xrotrad));
-            zp -= float(cos(yrotrad));
+            xp += float(sin(yrotrad)) * 2;
+            yp -= float(sin(xrotrad)) * 2;
+            zp -= float(cos(yrotrad)) * 2;
             break;
         case 'A':
         case 'a':
             yrotrad = (angleY / 180 * M_PI);
-            xp -= float(cos(yrotrad));
-            zp -= float(sin(yrotrad));
+            xp -= float(cos(yrotrad)) * 2;
+            zp -= float(sin(yrotrad)) * 2;
             break;
         case 'S':
         case 's':
             xrotrad = (angleX / 180 * M_PI);
             yrotrad = (angleY / 180 * M_PI);
-            xp -= float(sin(yrotrad));
-            yp += float(sin(xrotrad));
-            zp += float(cos(yrotrad)) ;
+            xp -= float(sin(yrotrad)) * 2;
+            yp += float(sin(xrotrad)) * 2;
+            zp += float(cos(yrotrad)) * 2;
             break;
         case 'D':
         case 'd':
             yrotrad = (angleY / 180 * M_PI);
-            xp += float(cos(yrotrad));
-            zp += float(sin(yrotrad));
+            xp += float(cos(yrotrad)) * 2;
+            zp += float(sin(yrotrad)) * 2;
             break;
 
         case 'J':
@@ -132,7 +134,7 @@ void key_special(int key_code, int x, int y){
             if(angleX<-360)   angleX+=360;
             break;
         case GLUT_KEY_DOWN:
-            if(angleX < 45) angleX+=5.0f;
+            if(angleX < 45) angleX-=5.0f;
             if(angleX > 360) angleX -= 360;
             break;
         case GLUT_KEY_LEFT:
@@ -147,6 +149,20 @@ void key_special(int key_code, int x, int y){
     glutPostRedisplay();
 }
 
+void displayFPS() {
+    int time;
+    char title[20];
+
+    frame++;
+    time = glutGet(GLUT_ELAPSED_TIME);
+    if (time - timebase > 1000) {
+        float fps = frame * 1000.0/(time - timebase);
+        timebase = time;
+        frame = 0;
+        sprintf(title,"Engine  |  %.2f FPS",fps);
+        glutSetWindowTitle(title);
+  }
+}
 
 void changeSize(int w, int h) {
 
@@ -248,9 +264,7 @@ void renderScene(void) {
     // set the camera
     glLoadIdentity();
 
-    gluLookAt(40.0+ex,40.0+ey,40.0+ez,
-              0.0f,0.0f,0.0f,
-              0.0f,1.0f,0.0f);
+    
 
     //put the geometric transformations here
     glEnable(GL_CULL_FACE);
@@ -267,7 +281,7 @@ void renderScene(void) {
     //axis();
 
     render(scene);
-
+    displayFPS();
     // End of frame
     glutSwapBuffers();
 }
@@ -287,6 +301,18 @@ void initGroup(Group* g){
 
 }
 
+void initGroup(Group* group){
+
+    vector<Shape*> shape_list = group->getShapes();
+    for(vector<Shape*>::iterator iter = shape_list.begin(); iter != shape_list.end(); ++iter){
+        Shape* shape = (*iter);
+        shape->prepare();
+    }
+
+    vector<Group*> childs = group->getChilds();
+    for(vector<Group*>::iterator iter = childs.begin(); iter != childs.end(); ++iter)
+        initGroup(*iter);
+}
 
 int main(int argc, char **argv) {
 
@@ -311,6 +337,7 @@ int main(int argc, char **argv) {
 
 // Required callback registry
     glutDisplayFunc(renderScene);
+    glutIdleFunc(renderScene);
     glutReshapeFunc(changeSize);
 
 
@@ -322,6 +349,10 @@ int main(int argc, char **argv) {
 //  OpenGL settings
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
+    glEnableClientState(GL_VERTEX_ARRAY);
+
+    initGroup(scene);
+
 
     glEnableClientState(GL_VERTEX_ARRAY);
 
