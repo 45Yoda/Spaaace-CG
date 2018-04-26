@@ -210,8 +210,6 @@ void axis(){
 
 void render(Group* g){
 
-    float x,y,z;
-
     glPushMatrix();
 
     vector<Action*> actions = g->getActions();
@@ -225,9 +223,14 @@ void render(Group* g){
 
     vector<Shape*> shapes = g->getShapes();
 
-    for(vector<Shape*>::iterator shp_it = shapes.begin(); shp_it != shapes.end(); ++shp_it){
+    for(vector<Shape*>::iterator shp_it = shapes.begin(); shp_it != shapes.end(); ++shp_it) {
+        Shape *shape = (*shp_it);
+        shape->draw();
+    }
 
-        Shape* shape = (*shp_it);
+
+
+        /*
         vector<Vertex*> vertexes = shape->getVertexes();
 
         glBegin(GL_TRIANGLES);
@@ -241,14 +244,12 @@ void render(Group* g){
             glVertex3f(x,y,z);
         }
 
-        glEnd();
-    }
+        glEnd();*/
 
     vector<Group*> childs = g->getChilds();
     for(vector<Group*>::iterator g_it = childs.begin(); g_it != childs.end(); ++g_it){
         render(*g_it);
     }
-
 
     glPopMatrix();
 }
@@ -295,17 +296,17 @@ void renderScene(void) {
 
 }
 
-void initGroup(Group* group){
+void initGroup(Group* g){
 
-    vector<Shape*> shape_list = group->getShapes();
-    for(vector<Shape*>::iterator iter = shape_list.begin(); iter != shape_list.end(); ++iter){
-        Shape* shape = (*iter);
-        shape->prepare();
+    vector<Shape*> shapes = g->getShapes();
+    for(vector<Shape*>::iterator shp_it = shapes.begin(); shp_it != shapes.end(); ++shp_it){
+        Shape* shape = (*shp_it);
+        shape->readyUp();
     }
 
-    vector<Group*> childs = group->getChilds();
-    for(vector<Group*>::iterator iter = childs.begin(); iter != childs.end(); ++iter)
-        initGroup(*iter);
+    vector<Group*> childs = g->getChilds();
+    for(vector<Group*>::iterator g_it = childs.begin(); g_it != childs.end(); ++g_it)
+        initGroup(*g_it);
 }
 
 int main(int argc, char **argv) {
@@ -331,7 +332,7 @@ int main(int argc, char **argv) {
 
 // Required callback registry
     glutDisplayFunc(renderScene);
-    glutIdleFunc(renderScene);
+   // glutIdleFunc(renderScene);
     glutReshapeFunc(changeSize);
 
 
@@ -342,7 +343,6 @@ int main(int argc, char **argv) {
 
 //  OpenGL settings
     glEnable(GL_DEPTH_TEST);
-    glEnable(GL_CULL_FACE);
     glEnableClientState(GL_VERTEX_ARRAY);
 
     initGroup(scene);

@@ -41,10 +41,10 @@ Color::Color(){
 }
 
 void Translation::parse(XMLElement * tr){
+    tr->QueryFloatAttribute("time", &time);
     tr->QueryFloatAttribute("X", &x);
     tr->QueryFloatAttribute("Y", &y);
     tr->QueryFloatAttribute("Z", &z);
-    tr->QueryFloatAttribute("time", &time);
 }
 
 void Rotation::parse(XMLElement *rt){
@@ -78,7 +78,7 @@ vector<Vertex*> Translation::getCurvePoints(){
 
 void getCatmullRomPoint(float t, int *indices, float *pos, float *deriv, vector<Vertex*> points) {
 
-    float t3 = t*t*t, t2 = t*t;
+    float  t2 = t*t , t3 = t*t*t;
     float posAux[4];
     float derivAux[4];
 
@@ -88,10 +88,11 @@ void getCatmullRomPoint(float t, int *indices, float *pos, float *deriv, vector<
     Vertex* p3 = points[indices[3]];
 
     // catmull-rom matrix
-    float m[4][4] = {	{-0.5f,  1.5f, -1.5f,  0.5f},
+    float m[4][4] = {	 {-0.5f,  1.5f, -1.5f,  0.5f},
                          { 1.0f, -2.5f,  2.0f, -0.5f},
                          {-0.5f,  0.0f,  0.5f,  0.0f},
-                         { 0.0f,  1.0f,  0.0f,  0.0f}};
+                         { 0.0f,  1.0f,  0.0f,  0.0f}
+                    };
 
     pos[0] = 0.0;
     pos[1] = 0.0;
@@ -227,13 +228,13 @@ void Translation::apply(){
 }
 
 void Rotation::apply() {
-    float r, gr;
+    float tmp, r;
 
     if(time!=0){
-        r = glutGet(GLUT_ELAPSED_TIME) % (int)(time * 1000);
-        gr = (r*360) / (time * 1000);
-        glRotatef(gr,axisX,axisY,axisZ);
-        return;
+        tmp = glutGet(GLUT_ELAPSED_TIME) % (int)(time * 1000);
+        r = (tmp*360) / (time * 1000);
+        glRotatef(r,axisX,axisY,axisZ);
+        return ;
     }
     glRotatef(angle,axisX,axisY,axisZ);
 }

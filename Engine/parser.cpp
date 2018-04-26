@@ -54,6 +54,32 @@ void foundColor(XMLElement* element, Group* g){
     g->addAction(color);
 }
 
+vector<Vertex*> readFile(string file_name){
+
+    vector<Vertex*> vertexes;
+    vector<string> tokens;
+    string buffer;
+    string line;
+    int index = 0;
+    string file_path = "../" + file_name;
+
+    ifstream file (file_path);
+    if(file.is_open()){
+        while(getline(file,line)){ // iterate over the lines of the file
+            stringstream ss(line);
+            while(ss >> buffer)
+                tokens.push_back(buffer); // iterate over the coordinates of the vertexes in each line
+            //add vertexes to the vector
+            vertexes.push_back(new Vertex(stof(tokens[index]),stof(tokens[index+1]),stof(tokens[index+2])));
+            index+=3;
+        }
+        file.close();
+    }
+    else cout << "Unable to open file." << endl;
+    return vertexes;
+}
+
+
 //<models>
 vector<Shape*> findModels(XMLElement* element){
 
@@ -118,30 +144,6 @@ void findElement(XMLElement* element, Group* g){
         findElement(current,g);
 }
 
-vector<Vertex*> readFile(string file_name){
-
-    vector<Vertex*> vertexes;
-    vector<string> tokens;
-    string buffer;
-    string line;
-    int index = 0;
-    string file_path = "../" + file_name;
-
-    ifstream file (file_path);
-    if(file.is_open()){
-        while(getline(file,line)){ // iterate over the lines of the file
-            stringstream ss(line);
-            while(ss >> buffer)
-                tokens.push_back(buffer); // iterate over the coordinates of the vertexes in each line
-            //add vertexes to the vector
-            vertexes.push_back(new Vertex(stof(tokens[index]),stof(tokens[index+1]),stof(tokens[index+2])));
-            index+=3;
-        }
-        file.close();
-    }
-    else cout << "Unable to open file." << endl;
-    return vertexes;
-}
 
 Group* parseXML(char* file_name) {
 

@@ -255,6 +255,7 @@
 		</group>
 	</group>
 	<!--COMETA -->
+	<!--
 	<group>
 		<rotate angle="270" X="1" Y="0" Z="0"/>
 		<translate time="200">
@@ -280,5 +281,5 @@
 		<models>
 			<model file="teapot.3d" />
 		</models>
-	</group>
+	</group> -->
 </scene>

@@ -17,7 +17,7 @@ void foundScale(XMLElement*, Group*);
 void foundColor(XMLElement*, Group*);
 vector<Shape*> findModels(XMLElement*);
 void findElement(XMLElement*, Group*);
-vector<Vertex*> readFile(string);
+//vector<Vertex*> readFile(string);
 Group* parseXML(char*);
 
 
