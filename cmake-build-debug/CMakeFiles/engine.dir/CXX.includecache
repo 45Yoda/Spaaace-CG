@@ -84,6 +84,16 @@ group.h
 ../tinyxml2.h
 /Users/josesousa/Documents/Spaaace-CG/tinyxml2.h
 
+/Users/josesousa/Documents/Spaaace-CG/Engine/patch.cpp
+patch.h
+/Users/josesousa/Documents/Spaaace-CG/Engine/patch.h
+
+/Users/josesousa/Documents/Spaaace-CG/Engine/patch.h
+vector
+-
+../Generator/vertex.h
+/Users/josesousa/Documents/Spaaace-CG/Generator/vertex.h
+
 /Users/josesousa/Documents/Spaaace-CG/Engine/shape.cpp
 OpenGL/OpenGL.h
 -

@@ -26,6 +26,8 @@ float ax=0.0f , ay=0.0f , az=0.0f;
 float cRad = 10.0f;
 float xp=40, yp=10, zp=100, angle=0.0;
 
+int timebase = 0, frame = 0;
+
 void print_help(){
     std::cout<<"#****************************************************************#" << std::endl;
     std::cout<<"*                              HELP                              *" << std::endl;
@@ -147,6 +149,20 @@ void key_special(int key_code, int x, int y){
     glutPostRedisplay();
 }
 
+void displayFPS() {
+    int time;
+    char title[20];
+
+    frame++;
+    time = glutGet(GLUT_ELAPSED_TIME);
+    if (time - timebase > 1000) {
+        float fps = frame * 1000.0/(time - timebase);
+        timebase = time;
+        frame = 0;
+        sprintf(title,"Engine  |  %.2f FPS",fps);
+        glutSetWindowTitle(title);
+  }
+}
 
 void changeSize(int w, int h) {
 
@@ -272,7 +288,7 @@ void renderScene(void) {
     //axis();
 
     render(scene);
-
+    displayFPS();
     // End of frame
     glutSwapBuffers();
     angle++;
@@ -315,6 +331,7 @@ int main(int argc, char **argv) {
 
 // Required callback registry
     glutDisplayFunc(renderScene);
+    glutIdleFunc(renderScene);
     glutReshapeFunc(changeSize);
 
 

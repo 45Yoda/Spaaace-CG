@@ -128,7 +128,7 @@ void getCatmullRomPoint(float t, int *indices, float *pos, float *deriv, vector<
 
 
 // given  global t, returns the point in the curve
-void getGlobalCatmullRomPoint(float gt, float *pos, float *deriv, vector<Vertex*> points) {
+void Translation::getGlobalCatmullRomPoint(float gt, float *pos, float *deriv, vector<Vertex*> points) {
     int POINT_COUNT = points.size();
     float t = gt * POINT_COUNT; // this is the real global t
     int index = floor(t);  // which segment
