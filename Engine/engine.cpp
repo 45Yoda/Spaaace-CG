@@ -65,29 +65,29 @@ void key_normal (unsigned char key, int x, int y){
         case 'w':
             xrotrad = (angleX / 180 * M_PI);
             yrotrad = (angleY / 180 * M_PI);
-            xp += float(sin(yrotrad));
-            yp -= float(sin(xrotrad));
-            zp -= float(cos(yrotrad));
+            xp += float(sin(yrotrad)) * 2;
+            yp -= float(sin(xrotrad)) * 2;
+            zp -= float(cos(yrotrad)) * 2;
             break;
         case 'A':
         case 'a':
             yrotrad = (angleY / 180 * M_PI);
-            xp -= float(cos(yrotrad));
-            zp -= float(sin(yrotrad));
+            xp -= float(cos(yrotrad)) * 2;
+            zp -= float(sin(yrotrad)) * 2;
             break;
         case 'S':
         case 's':
             xrotrad = (angleX / 180 * M_PI);
             yrotrad = (angleY / 180 * M_PI);
-            xp -= float(sin(yrotrad));
-            yp += float(sin(xrotrad));
-            zp += float(cos(yrotrad)) ;
+            xp -= float(sin(yrotrad)) * 2;
+            yp += float(sin(xrotrad)) * 2;
+            zp += float(cos(yrotrad)) * 2;
             break;
         case 'D':
         case 'd':
             yrotrad = (angleY / 180 * M_PI);
-            xp += float(cos(yrotrad));
-            zp += float(sin(yrotrad));
+            xp += float(cos(yrotrad)) * 2;
+            zp += float(sin(yrotrad)) * 2;
             break;
 
         case 'J':
@@ -132,7 +132,7 @@ void key_special(int key_code, int x, int y){
             if(angleX<-360)   angleX+=360;
             break;
         case GLUT_KEY_DOWN:
-            if(angleX < 45) angleX+=5.0f;
+            if(angleX < 45) angleX-=5.0f;
             if(angleX > 360) angleX -= 360;
             break;
         case GLUT_KEY_LEFT:
@@ -249,9 +249,7 @@ void renderScene(void) {
     // set the camera
     glLoadIdentity();
 
-    gluLookAt(40.0+ex,40.0+ey,40.0+ez,
-              0.0f,0.0f,0.0f,
-              0.0f,1.0f,0.0f);
+    
 
     //put the geometric transformations here
     glEnable(GL_CULL_FACE);
@@ -281,6 +279,18 @@ void renderScene(void) {
 
 }
 
+void initGroup(Group* group){
+
+    vector<Shape*> shape_list = group->getShapes();
+    for(vector<Shape*>::iterator iter = shape_list.begin(); iter != shape_list.end(); ++iter){
+        Shape* shape = (*iter);
+        shape->prepare();
+    }
+
+    vector<Group*> childs = group->getChilds();
+    for(vector<Group*>::iterator iter = childs.begin(); iter != childs.end(); ++iter)
+        initGroup(*iter);
+}
 
 int main(int argc, char **argv) {
 
@@ -316,6 +326,10 @@ int main(int argc, char **argv) {
 //  OpenGL settings
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
+    glEnableClientState(GL_VERTEX_ARRAY);
+
+    initGroup(scene);
+
 
 // enter GLUT's main cycle
     glutMainLoop();

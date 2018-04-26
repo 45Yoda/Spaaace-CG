@@ -6,6 +6,11 @@
 #define _ACTION_H
 
 #include "../tinyxml2.h"
+#include "../Generator/vertex.h"
+#include <vector>
+#include <math.h>
+
+using namespace std;
 
 //pure virtual function (abstract class)
 class Action {
@@ -17,11 +22,19 @@ class Translation : public Action{
     public:
         Translation();
         void parse(tinyxml2::XMLElement *tr);
+        vector<Vertex*> getPoints();
+        vector<Vertex*> getCurvePoints();
+        vector<Vertex*> generateCurvePoints();
+        void getGlobalCatmullRomPoint(float, float*,float*, vector<Vertex*>);
         void apply();
     private:
         float x;
         float y;
         float z;
+        float time;
+        float aux[3];
+        vector<Vertex*> points;
+        vector<Vertex*> curvePoints;
 };
 
 class Rotation : public Action{
@@ -31,6 +44,7 @@ class Rotation : public Action{
         void apply();
     private:
         float angle;
+        float time;
         float axisX;
         float axisY;
         float axisZ;
