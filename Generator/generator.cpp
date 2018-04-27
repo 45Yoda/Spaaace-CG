@@ -108,8 +108,8 @@ float* getBezierPoint( float a , float b , int* index , float** points , int ni 
 
     for( i = 0 ; i < 16 ; i++) {
         altp[j][0] = points[index[i]][0];
-        altp[j][0] = points[index[i]][1];
-        altp[j][0] = points[index[i]][2];
+        altp[j][1] = points[index[i]][1];
+        altp[j][2] = points[index[i]][2];
 
         j++;
 

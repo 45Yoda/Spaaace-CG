@@ -60,7 +60,7 @@ vector<Vertex*> readFile(string file_name){
     vector<string> tokens;
     string buffer;
     string line;
-    int index = 0;
+    int index = 0, i=0;
     string file_path = "../" + file_name;
 
     ifstream file (file_path);
@@ -71,6 +71,7 @@ vector<Vertex*> readFile(string file_name){
                 tokens.push_back(buffer); // iterate over the coordinates of the vertexes in each line
             //add vertexes to the vector
             vertexes.push_back(new Vertex(stof(tokens[index]),stof(tokens[index+1]),stof(tokens[index+2])));
+            std::cout << i++;
             index+=3;
         }
         file.close();
