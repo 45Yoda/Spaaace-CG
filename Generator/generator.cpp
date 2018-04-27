@@ -99,7 +99,7 @@ float* bezierCalc( float tt, float *p1 , float *p2 , float *p3 , float *p4) {
 
 float* getBezierPoint( float a , float b , int* index , float** points , int ni , int np) {
 
-    float* point = new float[3];
+    float* point;
     float altp[4][3];
     float res[4][3];
     int i , j = 0 , x = 0;
@@ -302,7 +302,7 @@ int main(int argc, char** argv) {
                   argv[6]);
     }
     else if(!strcmp(argv[1],"patch") && argc == 5){
-        renderPatch(atoi(argv[2]),argv[3],argv[4]);
+        renderPatch(argv[2],atoi(argv[3]),argv[4]);
     }
     else {
         std::cout << "help"  << std::endl;

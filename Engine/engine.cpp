@@ -180,10 +180,10 @@ void changeSize(int w, int h) {
     glLoadIdentity();
 
     // Set the viewport to be the entire window
-    glViewport(0, 0, w, h);
+    //glViewport(0, 0, w, h);
 
     // Set perspective
-    gluPerspective(45.0f ,ratio, 1.0f ,1000.0f);
+    gluPerspective(45.0f ,ratio, 0.1f ,1000.0f);
 
     // return to the model view matrix mode
     glMatrixMode(GL_MODELVIEW);
@@ -269,7 +269,6 @@ void renderScene(void) {
     
 
     //put the geometric transformations here
-    glEnable(GL_CULL_FACE);
     glPolygonMode(GL_FRONT_AND_BACK, mode);
 
     /*
@@ -332,7 +331,7 @@ int main(int argc, char **argv) {
 
 // Required callback registry
     glutDisplayFunc(renderScene);
-   // glutIdleFunc(renderScene);
+    glutIdleFunc(renderScene);
     glutReshapeFunc(changeSize);
 
 
