@@ -1,5 +1,6 @@
 <scene>
 	<group>
+		<rotate time="10" X="0" Y="1" Z="0"/>
 		<colour R="251" G="119" B="9" />
 		<scale X="10" Y="10" Z="10" />
 		<models>
@@ -19,7 +20,7 @@
 			<point X="21.1266" Y="0" Z="-21.1266"/>
 		</translate>
 		<rotate time="10" X="0" Y="1" Z="0"/>
-		<colour R="219" G="170" B="0" />
+        <colour R="128" G="128" B="128" />
 		<scale X="0.3525" Y="0.3525" Z="0.3525" />
 		<models>
 			<model file="sphere.3d" />
@@ -38,7 +39,7 @@
 			<point X="23.98740" Y="0" Z="-23.98740"/>
 		</translate>
 		<rotate time="15" X="0" Y="-1" Z="0"/>
-		<colour R="254" G="198" B="115" />
+        <colour R="243" G="229" B="171" />
 		<scale X="0.8790" Y="0.8790" Z="0.8790" />
 		<models>
 			<model file="sphere.3d" />
@@ -46,7 +47,6 @@
 	</group>
 	<!--TERRA-->
 	<group>
-		<rotate angle="23" X="0" Y="1" Z="1"/>
 		<translate time="120">
 			<point X="44.8061" Y="0" Z="0"/>
 			<point X="31.68270" Y="0" Z="31.68270"/>
@@ -59,7 +59,7 @@
 		</translate>
 		<group>
 			<rotate time="22" X="0" Y="1" Z="0"/>
-			<colour R="0" G="0" B="220" />
+            <colour R="0" G="50" B="255" />
 			<scale X="0.8865" Y="0.8865" Z="0.8865" />
 			<models>
 				<model file="sphere.3d" />
@@ -80,7 +80,6 @@
 	</group>
 	<!--MARTE-->
 	<group>
-		<rotate angle="25" X="0" Y="1" Z="1"/>
 		<translate time="170">
 			<point X="60.9523" Y="0" Z="0"/>
 			<point X="44.51400" Y="0" Z="44.51400"/>
@@ -93,7 +92,7 @@
 		</translate>
 		<group>
 			<rotate time="28" X="0" Y="1" Z="0"/>
-			<colour R="254" G="135" B="1" />
+            <colour R="200" G="75" B="0" />
 			<scale X="0.3720" Y="0.3720" Z="0.3720" />
 			<models>
 				<model file="sphere.3d" />
@@ -113,7 +112,7 @@
 			<point X="62.31723" Y="0" Z="-62.31723"/>
 		</translate>
 		<rotate time="33" X="0" Y="1" Z="0"/>
-		<colour R="231" G="232" B="197" />
+        <colour R="192" G="160" B="100" />
 		<scale X="2.25" Y="2.25" Z="2.25" />
 		<models>
 			<model file="sphere.3d" />
@@ -159,9 +158,8 @@
 			</models>
 		</group>
 	</group>
-	<!--SATRUNO-->
+	<!--SATURNO-->
 	<group>
-		<rotate angle="27" X="0" Y="1" Z="1"/>
 		<translate time="300">
 			<point X="120.5005" Y="0" Z="0"/>
 			<point X="85.20672" Y="0" Z="85.20672"/>
@@ -174,7 +172,7 @@
 		</translate>
 		<group>
 			<rotate time="39" X="0" Y="1" Z="0"/>
-			<colour R="255" G="223" B="161" />
+            <colour R="240" G="232" B="170" />
 			<scale X="1.995" Y="1.995" Z="1.995" />
 			<models>
 				<model file="sphere.3d" />
@@ -191,18 +189,33 @@
 			</group>
 			<!--ANEL-->
 			<group>
-				<rotate angle="90" X="1" Y="0" Z="0"/>
-				<colour R="255" G="223" B="120" />
-				<scale Z="0.01"/>
+				<rotate angle="-75" X="1" Y="0" Z="0"/>
+				<colour R="79" G="52" B="26" />
+				<scale X="0.65" Y="0.65" Z="0.001"/>
 				<models>
-					<model file="torus.3d" />
+					<model file="ring.3d" />
+				</models>
+			</group>
+			<group>
+				<rotate angle="-75" X="1" Y="0" Z="0"/>
+				<colour R="36" G="0" B="84" />
+				<scale X="0.5" Y="0.5" Z="0.001"/>
+				<models>
+					<model file="ring.3d" />
+				</models>
+			</group>
+			<group>
+				<rotate angle="-75" X="1" Y="0" Z="0"/>
+				<colour R="76" G="0" B="84"/>
+				<scale X="0.385" Y="0.385" Z="0.001"/>
+				<models>
+					<model file="ring.3d" />
 				</models>
 			</group>
 		</group>
 	</group>
 	<!--URANO-->
 	<group>
-		<rotate angle="98" X="1" Y="0" Z="0"/>
 		<translate time="375">
 			<point X="158.0747" Y="0" Z="0"/>
 			<point X="111.77569" Y="0" Z="111.77569"/>
@@ -215,7 +228,7 @@
 		</translate>
 		<group>
 			<rotate time="48" X="0" Y="-1" Z="0"/>
-			<colour R="148" G="193" B="255" />
+            <colour R="145" G="163" B="176" />
 			<scale X="1.290" Y="1.290" Z="1.290" />
 			<models>
 				<model file="sphere.3d" />
@@ -224,7 +237,6 @@
 	</group>
 	<!--NEPTUNO-->
 	<group>
-		<rotate angle="30" X="0" Y="1" Z="1"/>
 		<translate time="450">
 			<point X="201.35529" Y="0" Z="0"/>
 			<point X="142.37969" Y="0" Z="142.37969"/>
@@ -237,7 +249,7 @@
 		</translate>
 		<group>
 			<rotate time="60" X="0" Y="1" Z="0"/>
-			<colour R="0" G="83" B="255" />
+            <colour R="140" G="160" B="200" />
 			<scale X="1.275" Y="1.275" Z="1.275" />
 			<models>
 				<model file="sphere.3d" />
