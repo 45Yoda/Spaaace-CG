@@ -2,7 +2,7 @@
 	<group>
 		<colour R="251" G="119" B="9" />
 		<models>
-			<model file="teapot.3d" />
+			<model file="yolo.3d" />
 		</models>
 	</group>
 </scene>
