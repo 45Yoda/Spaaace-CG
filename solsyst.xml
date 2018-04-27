@@ -267,10 +267,9 @@
 		</group>
 	</group>
 	<!--COMETA -->
-	<!--
 	<group>
-		<rotate angle="270" X="1" Y="0" Z="0"/>
-		<translate time="200">
+		<rotate angle="225" X="0" Y="0" Z="1"/>
+		<translate time="50">
 			<point X="40" Y="0" Z="-80" />
 			<point X="36.9552" Y="0" Z="-39.8182" />
 			<point X="28.2843" Y="0" Z="-5.75379" />
@@ -288,10 +287,10 @@
 			<point X="28.2843" Y="0" Z="-154.246" />
 			<point X="36.9552" Y="0" Z="-120.182" />
 		</translate>
-		<scale X="0.1" Y="0.1" Z="0.1" />
+		<scale X="1" Y="1" Z="1" />
 		<colour R="255" G="255" B="255"/>
 		<models>
 			<model file="teapot.3d" />
 		</models>
-	</group> -->
+	</group>
 </scene>

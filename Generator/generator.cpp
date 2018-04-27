@@ -193,13 +193,13 @@ void renderPatch( string file , int tess , string name) {
                     res[count][3] = getBezierPoint(u2, v2, indexes[count], points, npatch, npoints);
 
 
-                    fileo << res[count][0][0] << "," << res[count][0][1] << "," << res[count][0][2] << endl;
-                    fileo << res[count][2][0] << "," << res[count][2][1] << "," << res[count][2][2] << endl;
-                    fileo << res[count][3][0] << "," << res[count][3][1] << "," << res[count][3][2] << endl;
+                    fileo << res[count][0][0] << " " << res[count][0][1] << " " << res[count][0][2] << endl;
+                    fileo << res[count][2][0] << " " << res[count][2][1] << " " << res[count][2][2] << endl;
+                    fileo << res[count][3][0] << " " << res[count][3][1] << " " << res[count][3][2] << endl;
 
-                    fileo << res[count][0][0] << "," << res[count][0][1] << "," << res[count][0][2] << endl;
-                    fileo << res[count][3][0] << "," << res[count][3][1] << "," << res[count][3][2] << endl;
-                    fileo << res[count][1][0] << "," << res[count][1][1] << "," << res[count][1][2] << endl;
+                    fileo << res[count][0][0] << " " << res[count][0][1] << " " << res[count][0][2] << endl;
+                    fileo << res[count][3][0] << " " << res[count][3][1] << " " << res[count][3][2] << endl;
+                    fileo << res[count][1][0] << " " << res[count][1][1] << " " << res[count][1][2] << endl;
                 }
             }
 
