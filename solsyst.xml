@@ -46,7 +46,6 @@
 	</group>
 	<!--TERRA-->
 	<group>
-		<rotate angle="23" X="0" Y="1" Z="1"/>
 		<translate time="120">
 			<point X="44.8061" Y="0" Z="0"/>
 			<point X="31.68270" Y="0" Z="31.68270"/>
@@ -80,7 +79,6 @@
 	</group>
 	<!--MARTE-->
 	<group>
-		<rotate angle="25" X="0" Y="1" Z="1"/>
 		<translate time="170">
 			<point X="60.9523" Y="0" Z="0"/>
 			<point X="44.51400" Y="0" Z="44.51400"/>
@@ -161,7 +159,6 @@
 	</group>
 	<!--SATRUNO-->
 	<group>
-		<rotate angle="27" X="0" Y="1" Z="1"/>
 		<translate time="300">
 			<point X="120.5005" Y="0" Z="0"/>
 			<point X="85.20672" Y="0" Z="85.20672"/>
@@ -191,18 +188,33 @@
 			</group>
 			<!--ANEL-->
 			<group>
-				<rotate angle="90" X="1" Y="0" Z="0"/>
-				<colour R="255" G="223" B="120" />
-				<scale Z="0.01"/>
+				<rotate angle="-75" X="1" Y="0" Z="0"/>
+				<colour R="79" G="52" B="26" />
+				<scale X="0.65" Y="0.65" Z="0.001"/>
 				<models>
-					<model file="torus.3d" />
+					<model file="ring.3d" />
+				</models>
+			</group>
+			<group>
+				<rotate angle="-75" X="1" Y="0" Z="0"/>
+				<colour R="36" G="0" B="84" />
+				<scale X="0.5" Y="0.5" Z="0.001"/>
+				<models>
+					<model file="ring.3d" />
+				</models>
+			</group>
+			<group>
+				<rotate angle="-75" X="1" Y="0" Z="0"/>
+				<colour R="76" G="0" B="84"/>
+				<scale X="0.385" Y="0.385" Z="0.001"/>
+				<models>
+					<model file="ring.3d" />
 				</models>
 			</group>
 		</group>
 	</group>
 	<!--URANO-->
 	<group>
-		<rotate angle="98" X="1" Y="0" Z="0"/>
 		<translate time="375">
 			<point X="158.0747" Y="0" Z="0"/>
 			<point X="111.77569" Y="0" Z="111.77569"/>
@@ -224,7 +236,6 @@
 	</group>
 	<!--NEPTUNO-->
 	<group>
-		<rotate angle="30" X="0" Y="1" Z="1"/>
 		<translate time="450">
 			<point X="201.35529" Y="0" Z="0"/>
 			<point X="142.37969" Y="0" Z="142.37969"/>
