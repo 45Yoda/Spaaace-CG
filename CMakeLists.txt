@@ -5,7 +5,7 @@ set(CMAKE_CXX_FLAGS "-Wall -o3 -g")
 
 
 project(engine)
-set(ENGINE_FILES ./Engine/engine.cpp ./Engine/shape.cpp ./tinyxml2.cpp ./Generator/vertex.cpp Engine/action.cpp Engine/action.h Engine/parser.cpp Engine/parser.h Engine/group.cpp Engine/group.h Engine/patch.cpp Engine/patch.h)
+set(ENGINE_FILES ./Engine/engine.cpp ./Engine/shape.cpp ./tinyxml2.cpp ./Generator/vertex.cpp Engine/action.cpp Engine/action.h Engine/parser.cpp Engine/parser.h Engine/group.cpp Engine/group.h)
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 

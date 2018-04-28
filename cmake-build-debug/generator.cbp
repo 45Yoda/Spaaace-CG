@@ -147,12 +147,6 @@
 		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Engine/parser.h">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Engine/patch.cpp">
-			<Option target="engine"/>
-		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Engine/patch.h">
-			<Option target="engine"/>
-		</Unit>
 		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Engine/shape.cpp">
 			<Option target="engine"/>
 		</Unit>

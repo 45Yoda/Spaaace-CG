@@ -67,29 +67,29 @@ void key_normal (unsigned char key, int x, int y){
         case 'w':
             xrotrad = (angleX / 180 * M_PI);
             yrotrad = (angleY / 180 * M_PI);
-            xp += float(sin(yrotrad)) * 2;
-            yp -= float(sin(xrotrad)) * 2;
-            zp -= float(cos(yrotrad)) * 2;
+            xp += float(sin(yrotrad)) * 3;
+            yp -= float(sin(xrotrad)) * 3;
+            zp -= float(cos(yrotrad)) * 3;
             break;
         case 'A':
         case 'a':
             yrotrad = (angleY / 180 * M_PI);
-            xp -= float(cos(yrotrad)) * 2;
-            zp -= float(sin(yrotrad)) * 2;
+            xp -= float(cos(yrotrad)) * 3;
+            zp -= float(sin(yrotrad)) * 3;
             break;
         case 'S':
         case 's':
             xrotrad = (angleX / 180 * M_PI);
             yrotrad = (angleY / 180 * M_PI);
-            xp -= float(sin(yrotrad)) * 2;
-            yp += float(sin(xrotrad)) * 2;
-            zp += float(cos(yrotrad)) * 2;
+            xp -= float(sin(yrotrad)) * 3;
+            yp += float(sin(xrotrad)) * 3;
+            zp += float(cos(yrotrad)) * 3;
             break;
         case 'D':
         case 'd':
             yrotrad = (angleY / 180 * M_PI);
-            xp += float(cos(yrotrad)) * 2;
-            zp += float(sin(yrotrad)) * 2;
+            xp += float(cos(yrotrad)) * 3;
+            zp += float(sin(yrotrad)) * 3;
             break;
 
         case 'J':
@@ -124,29 +124,23 @@ void key_normal (unsigned char key, int x, int y){
         case 'n': ax -= 2.0f; ay -= 2.0f; az -= 2.0f;
                   break;
     }
-    glutPostRedisplay();
 }
 
 void key_special(int key_code, int x, int y){
     switch(key_code){
         case GLUT_KEY_UP:
-            if(angleX > -45) angleX+=5.0f;
-            if(angleX<-360)   angleX+=360;
+            angleX -= 6;
             break;
         case GLUT_KEY_DOWN:
-            if(angleX < 45) angleX-=5.0f;
-            if(angleX > 360) angleX -= 360;
+            angleX += 6;
             break;
         case GLUT_KEY_LEFT:
-            angleY-=5.0f;
-            if(angleY<-360) angleY += 360;
+            angleY-=3.0f;
             break;
         case GLUT_KEY_RIGHT:
-            angleY+=5.0f;
-            if(angleY>360) angleY-= 360;
+            angleY+=3.0f;
             break;
     }
-    glutPostRedisplay();
 }
 
 void displayFPS() {
@@ -343,7 +337,7 @@ int main(int argc, char **argv) {
 //  OpenGL settings
     glEnable(GL_DEPTH_TEST);
     glEnableClientState(GL_VERTEX_ARRAY);
-
+    glEnable(GL_CULL_FACE);
     initGroup(scene);
 
 

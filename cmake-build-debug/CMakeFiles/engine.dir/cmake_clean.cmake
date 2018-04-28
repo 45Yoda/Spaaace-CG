@@ -6,7 +6,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/Engine/action.cpp.o"
   "CMakeFiles/engine.dir/Engine/parser.cpp.o"
   "CMakeFiles/engine.dir/Engine/group.cpp.o"
-  "CMakeFiles/engine.dir/Engine/patch.cpp.o"
   "engine.pdb"
   "engine"
 )

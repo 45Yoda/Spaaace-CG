@@ -29,10 +29,6 @@ CMakeFiles/engine.dir/Engine/parser.cpp.o: ../Engine/shape.h
 CMakeFiles/engine.dir/Engine/parser.cpp.o: ../Generator/vertex.h
 CMakeFiles/engine.dir/Engine/parser.cpp.o: ../tinyxml2.h
 
-CMakeFiles/engine.dir/Engine/patch.cpp.o: ../Engine/patch.cpp
-CMakeFiles/engine.dir/Engine/patch.cpp.o: ../Engine/patch.h
-CMakeFiles/engine.dir/Engine/patch.cpp.o: ../Generator/vertex.h
-
 CMakeFiles/engine.dir/Engine/shape.cpp.o: ../Engine/shape.cpp
 CMakeFiles/engine.dir/Engine/shape.cpp.o: ../Engine/shape.h
 CMakeFiles/engine.dir/Engine/shape.cpp.o: ../Generator/vertex.h

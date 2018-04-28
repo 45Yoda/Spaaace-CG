@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/josesousa/Documents/Spaaace-CG/Engine/engine.cpp" "/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/CMakeFiles/engine.dir/Engine/engine.cpp.o"
   "/Users/josesousa/Documents/Spaaace-CG/Engine/group.cpp" "/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/CMakeFiles/engine.dir/Engine/group.cpp.o"
   "/Users/josesousa/Documents/Spaaace-CG/Engine/parser.cpp" "/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/CMakeFiles/engine.dir/Engine/parser.cpp.o"
-  "/Users/josesousa/Documents/Spaaace-CG/Engine/patch.cpp" "/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/CMakeFiles/engine.dir/Engine/patch.cpp.o"
   "/Users/josesousa/Documents/Spaaace-CG/Engine/shape.cpp" "/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/CMakeFiles/engine.dir/Engine/shape.cpp.o"
   "/Users/josesousa/Documents/Spaaace-CG/Generator/vertex.cpp" "/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/CMakeFiles/engine.dir/Generator/vertex.cpp.o"
   "/Users/josesousa/Documents/Spaaace-CG/tinyxml2.cpp" "/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/CMakeFiles/engine.dir/tinyxml2.cpp.o"

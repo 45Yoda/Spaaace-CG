@@ -244,33 +244,6 @@ Engine/parser.cpp.s:
 	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/parser.cpp.s
 .PHONY : Engine/parser.cpp.s
 
-Engine/patch.o: Engine/patch.cpp.o
-
-.PHONY : Engine/patch.o
-
-# target to build an object file
-Engine/patch.cpp.o:
-	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/patch.cpp.o
-.PHONY : Engine/patch.cpp.o
-
-Engine/patch.i: Engine/patch.cpp.i
-
-.PHONY : Engine/patch.i
-
-# target to preprocess a source file
-Engine/patch.cpp.i:
-	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/patch.cpp.i
-.PHONY : Engine/patch.cpp.i
-
-Engine/patch.s: Engine/patch.cpp.s
-
-.PHONY : Engine/patch.s
-
-# target to generate assembly for a file
-Engine/patch.cpp.s:
-	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/patch.cpp.s
-.PHONY : Engine/patch.cpp.s
-
 Engine/shape.o: Engine/shape.cpp.o
 
 .PHONY : Engine/shape.o
@@ -539,9 +512,6 @@ help:
 	@echo "... Engine/parser.o"
 	@echo "... Engine/parser.i"
 	@echo "... Engine/parser.s"
-	@echo "... Engine/patch.o"
-	@echo "... Engine/patch.i"
-	@echo "... Engine/patch.s"
 	@echo "... Engine/shape.o"
 	@echo "... Engine/shape.i"
 	@echo "... Engine/shape.s"
