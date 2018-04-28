@@ -8,199 +8,213 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug"/>
+				<Option working_dir="/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="generator">
-				<Option output="/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/generator" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 generator"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="generator/fast">
-				<Option output="/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/generator" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 generator/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug"/>
+				<Option working_dir="/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug"/>
+				<Option working_dir="/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="generator">
+				<Option output="/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/generator" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 generator"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="generator/fast">
+				<Option output="/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/generator" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 generator/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="engine">
-				<Option output="/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/engine" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug"/>
+				<Option output="/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/engine" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 engine"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 engine"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="engine/fast">
-				<Option output="/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/engine" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug"/>
+				<Option output="/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/engine" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 engine/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 engine/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Engine/action.cpp">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/action.cpp">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Engine/action.h">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/action.h">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Engine/engine.cpp">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/engine.cpp">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Engine/group.cpp">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/group.cpp">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Engine/group.h">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/group.h">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Engine/parser.cpp">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/parser.cpp">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Engine/parser.h">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/parser.h">
 			<Option target="engine"/>
 		</Unit>
+<<<<<<< HEAD
 		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Engine/shape.cpp">
+=======
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/patch.cpp">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Engine/shape.h">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/patch.h">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Generator/box.cpp">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/shape.cpp">
+>>>>>>> 49596a3da1e300deae7af390496a41275fb9bdb5
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/shape.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/box.cpp">
 			<Option target="generator"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Generator/box.h">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/box.h">
 			<Option target="generator"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Generator/cone.cpp">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/cone.cpp">
 			<Option target="generator"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Generator/cone.h">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/cone.h">
 			<Option target="generator"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Generator/generator.cpp">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/generator.cpp">
 			<Option target="generator"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Generator/plane.cpp">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/plane.cpp">
 			<Option target="generator"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Generator/plane.h">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/plane.h">
 			<Option target="generator"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Generator/sphere.cpp">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/sphere.cpp">
 			<Option target="generator"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Generator/sphere.h">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/sphere.h">
 			<Option target="generator"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Generator/torus.cpp">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/torus.cpp">
 			<Option target="generator"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Generator/torus.h">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/torus.h">
 			<Option target="generator"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Generator/vertex.cpp">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.cpp">
 			<Option target="generator"/>
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Generator/vertex.h">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.h">
 			<Option target="generator"/>
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/tinyxml2.cpp">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/tinyxml2.cpp">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/tinyxml2.h">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/tinyxml2.h">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/CMakeLists.txt">
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

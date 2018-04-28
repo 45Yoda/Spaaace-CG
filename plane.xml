@@ -4,7 +4,7 @@
 		<rotate angle="-90" X="1" Y="0" Z="0"/>
 		<scale X="8" Y="8" Z="8" />
 		<models>
-			<model file="teapot.3d" />
+			<model file="yolo.3d" />
 		</models>
 	</group>
 </scene>
