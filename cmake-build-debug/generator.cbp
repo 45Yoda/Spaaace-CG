@@ -151,17 +151,7 @@
 		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/parser.h">
 			<Option target="engine"/>
 		</Unit>
-<<<<<<< HEAD
-		<Unit filename="/Users/josesousa/Documents/Spaaace-CG/Engine/shape.cpp">
-=======
-		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/patch.cpp">
-			<Option target="engine"/>
-		</Unit>
-		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/patch.h">
-			<Option target="engine"/>
-		</Unit>
 		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/shape.cpp">
->>>>>>> 49596a3da1e300deae7af390496a41275fb9bdb5
 			<Option target="engine"/>
 		</Unit>
 		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/shape.h">

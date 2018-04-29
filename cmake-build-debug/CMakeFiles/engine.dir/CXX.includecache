@@ -84,21 +84,7 @@ group.h
 ../tinyxml2.h
 /home/yoda45/Desktop/git/Spaaace-CG/tinyxml2.h
 
-<<<<<<< HEAD
-/Users/josesousa/Documents/Spaaace-CG/Engine/shape.cpp
-=======
-/home/yoda45/Desktop/git/Spaaace-CG/Engine/patch.cpp
-patch.h
-/home/yoda45/Desktop/git/Spaaace-CG/Engine/patch.h
-
-/home/yoda45/Desktop/git/Spaaace-CG/Engine/patch.h
-vector
--
-../Generator/vertex.h
-/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.h
-
 /home/yoda45/Desktop/git/Spaaace-CG/Engine/shape.cpp
->>>>>>> 49596a3da1e300deae7af390496a41275fb9bdb5
 shape.h
 /home/yoda45/Desktop/git/Spaaace-CG/Engine/shape.h
 

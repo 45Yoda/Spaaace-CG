@@ -62,7 +62,6 @@ vector<Vertex*> readFile(string file_name){
     string line;
     int index = 0, i=0;
     string file_path = "../" + file_name;
-    int tentativa = 0;
     ifstream file (file_path);
 
     if(file.is_open()){
