@@ -16,7 +16,9 @@
  * @return vector with generated vertexes for plane
  */
 
-std::vector<Point*> plane(float size);
+using namespace std;
+
+vector<Point*> plane(float size,vector<Point*> *normals,vector<Point*> *textures);
 
 
 #endif //SPAAACE_CG_PLANE_H

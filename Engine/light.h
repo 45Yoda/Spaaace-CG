@@ -6,8 +6,21 @@
 #define GENERATOR_LIGHT_H
 
 
-class light {
+#include "../Generator/point.h"
 
+class Light {
+
+    bool pointType;
+    Point* point;
+
+    public:
+        Light();
+        Light(bool,Point*);
+        bool getType();
+        Point* getPoint();
+        void setType(bool);
+        void setPoint(Point*);
+        void draw();
 };
 
 
