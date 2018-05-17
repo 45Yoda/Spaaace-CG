@@ -6,11 +6,11 @@
 #define GENERATOR_TORUS_H
 
 #include <vector>
-#include "vertex.h"
+#include "point.h"
 
 using namespace std;
 
-std::vector<Vertex*> torus(float radiusIn, float radiusOut, int sides, int rings);
+std::vector<Point*> torus(float radiusIn, float radiusOut, int sides, int rings);
 
 
 #endif //GENERATOR_TORUS_H

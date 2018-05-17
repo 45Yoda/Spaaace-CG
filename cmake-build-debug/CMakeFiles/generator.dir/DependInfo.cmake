@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/yoda45/Desktop/git/Spaaace-CG/Generator/cone.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/cone.cpp.o"
   "/home/yoda45/Desktop/git/Spaaace-CG/Generator/generator.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/generator.cpp.o"
   "/home/yoda45/Desktop/git/Spaaace-CG/Generator/plane.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/plane.cpp.o"
+  "/home/yoda45/Desktop/git/Spaaace-CG/Generator/point.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/point.cpp.o"
   "/home/yoda45/Desktop/git/Spaaace-CG/Generator/sphere.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/sphere.cpp.o"
   "/home/yoda45/Desktop/git/Spaaace-CG/Generator/torus.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/torus.cpp.o"
-  "/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/generator.dir/Generator/vertex.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

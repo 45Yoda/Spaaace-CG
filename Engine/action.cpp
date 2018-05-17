@@ -3,7 +3,7 @@
 //
 #include <GL/glut.h>
 #include "action.h"
-#include "../Generator/vertex.h"
+#include "../Generator/point.h"
 #include <iostream>
 #include <string>
 //#include <opencl-c.h>
@@ -54,8 +54,8 @@ void Translation::parse(XMLElement * tr){
         point_element->QueryFloatAttribute("X",&xs);
         point_element->QueryFloatAttribute("Y",&ys);
         point_element->QueryFloatAttribute("Z",&zs);
-        Vertex* vertex = new Vertex(xs,ys,zs);
-        addPoint(vertex);
+        Point* Point = new Point(xs,ys,zs);
+        addPoint(Point);
     }
 
 }
@@ -81,28 +81,28 @@ void Color::parse(XMLElement *cl){
 }
 
 
-vector<Vertex*> Translation::getPoints(){
+vector<Point*> Translation::getPoints(){
     return points;
 }
 
-void Translation::addPoint(Vertex* v){
+void Translation::addPoint(Point* v){
     points.push_back(v);
 }
 
-vector<Vertex*> Translation::getCurvePoints(){
+vector<Point*> Translation::getCurvePoints(){
     return curvePoints;
 }
 
-void getCatmullRomPoint(float t, int *indices, float *pos, float *deriv, vector<Vertex*> points) {
+void getCatmullRomPoint(float t, int *indices, float *pos, float *deriv, vector<Point*> points) {
 
     float  t2 = t*t , t3 = t*t*t;
     float posAux[4];
     float derivAux[4];
 
-    Vertex* p0 = points[indices[0]];
-    Vertex* p1 = points[indices[1]];
-    Vertex* p2 = points[indices[2]];
-    Vertex* p3 = points[indices[3]];
+    Point* p0 = points[indices[0]];
+    Point* p1 = points[indices[1]];
+    Point* p2 = points[indices[2]];
+    Point* p3 = points[indices[3]];
 
     // catmull-rom matrix
     float m[4][4] = {	 {-0.5f,  1.5f, -1.5f,  0.5f},
@@ -146,7 +146,7 @@ void getCatmullRomPoint(float t, int *indices, float *pos, float *deriv, vector<
 
 
 // given  global t, returns the point in the curve
-void Translation::getGlobalCatmullRomPoint(float gt, float *pos, float *deriv, vector<Vertex*> points) {
+void Translation::getGlobalCatmullRomPoint(float gt, float *pos, float *deriv, vector<Point*> points) {
     int POINT_COUNT = points.size();
     float t = gt * POINT_COUNT; // this is the real global t
     int index = floor(t);  // which segment
@@ -178,20 +178,20 @@ void normalize(float *a) {
     a[2] = a[2]/l;
 }
 
-vector<Vertex*> Translation::generateCurvePoints() {
+vector<Point*> Translation::generateCurvePoints() {
     float pos[3];
     float deriv[3];
 
     for(float t = 0;t<1;t+=0.01) {
         getGlobalCatmullRomPoint(t,pos,deriv,points);
-        Vertex* v = new Vertex(pos[0],pos[1],pos[2]);
+        Point* v = new Point(pos[0],pos[1],pos[2]);
         curvePoints.push_back(v);
     }
 
     return curvePoints;
 }
 
-void renderCatmullRomCurve(vector<Vertex*> points) {
+void renderCatmullRomCurve(vector<Point*> points) {
     int size = points.size();
     float p[3];
 // desenhar a curva usando segmentos de reta - GL_LINE_LOOP
@@ -232,7 +232,7 @@ void Translation::apply(){
     if(time!=0){
         te = glutGet(GLUT_ELAPSED_TIME) % (int)(time * 1000);
         gt = te / (time * 1000);
-        vector<Vertex*> vp2 = generateCurvePoints();
+        vector<Point*> vp2 = generateCurvePoints();
         renderCatmullRomCurve(vp2);
         getGlobalCatmullRomPoint(gt,res,deriv,points);
         curvePoints.clear();

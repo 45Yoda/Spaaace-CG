@@ -54,9 +54,9 @@ void foundColor(XMLElement* element, Group* g){
     g->addAction(color);
 }
 
-vector<Vertex*> readFile(string file_name){
+vector<Point*> readFile(string file_name){
 
-    vector<Vertex*> vertexes;
+    vector<Point*> points;
     vector<string> tokens;
     string buffer;
     string line;
@@ -69,17 +69,17 @@ vector<Vertex*> readFile(string file_name){
             stringstream ss(line);
             while(ss >> buffer)
                 tokens.push_back(buffer); // it
-            // erate over the coordinates of the vertexes in each line
+            // erate over the coordinates of the points in each line
             cout << tokens[index] << endl;
-            //add vertexes to the vector
-            vertexes.push_back(new Vertex(stof(tokens[index]),stof(tokens[index+1]),stof(tokens[index+2])));
+            //add points to the vector
+            points.push_back(new Point(stof(tokens[index]),stof(tokens[index+1]),stof(tokens[index+2])));
             std::cout << i++;
             index+=3;
         }
         file.close();
     }
     else cout << "Unable to open file." << endl;
-    return vertexes;
+    return points;
 }
 
 
@@ -91,7 +91,7 @@ vector<Shape*> findModels(XMLElement* element){
     element = element->FirstChildElement();//<model file=--->
     for(;element;element=element->NextSiblingElement()){
         if(!strcmp(element->Name(),"model")){
-            vector<Vertex*> aux = readFile(element->Attribute("file"));
+            vector<Point*> aux = readFile(element->Attribute("file"));
             if(!aux.empty()){
                 Shape* shape = new Shape(element->Attribute("file"),aux);
                 listModels.push_back(shape);

@@ -7,7 +7,7 @@
 #include <sstream>
 #include "shape.h"
 #include "../tinyxml2.h"
-#include "../Generator/vertex.h"
+#include "../Generator/point.h"
 #include "group.h"
 #include "parser.h"
 
@@ -52,7 +52,7 @@ void print_help(){
     std::cout<<"*                                                                *" << std::endl;
     std::cout<<"*    COMPILING:                                                  *" << std::endl;
     std::cout<<"*       - g++ engine.cpp shape.cpp ../tinyxml2.cpp               *" << std::endl;
-    std::cout<<"*         ../Generator/vertex.cpp -o engine -lGL -lGLU -lglut    *" << std::endl;
+    std::cout<<"*         ../Generator/Point.cpp -o engine -lGL -lGLU -lglut    *" << std::endl;
     std::cout<<"*                                                                *" << std::endl;
     std::cout<<"#****************************************************************#" << std::endl;
 }
@@ -225,11 +225,11 @@ void render(Group* g){
 
 
         /*
-        vector<Vertex*> vertexes = shape->getVertexes();
+        vector<Point*> points = shape->getPoints();
 
         glBegin(GL_TRIANGLES);
 
-        for(vector<Vertex*>::iterator iter = vertexes.begin(); iter != vertexes.end(); ++iter){
+        for(vector<Point*>::iterator iter = points.begin(); iter != points.end(); ++iter){
 
             x = (*iter)->getX();
             y = (*iter)->getY();

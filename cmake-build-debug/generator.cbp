@@ -145,6 +145,12 @@
 		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/group.h">
 			<Option target="engine"/>
 		</Unit>
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/light.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/light.h">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/parser.cpp">
 			<Option target="engine"/>
 		</Unit>
@@ -178,6 +184,14 @@
 		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/plane.h">
 			<Option target="generator"/>
 		</Unit>
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/point.cpp">
+			<Option target="generator"/>
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/point.h">
+			<Option target="generator"/>
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/sphere.cpp">
 			<Option target="generator"/>
 		</Unit>
@@ -189,14 +203,6 @@
 		</Unit>
 		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/torus.h">
 			<Option target="generator"/>
-		</Unit>
-		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.cpp">
-			<Option target="generator"/>
-			<Option target="engine"/>
-		</Unit>
-		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.h">
-			<Option target="generator"/>
-			<Option target="engine"/>
 		</Unit>
 		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/tinyxml2.cpp">
 			<Option target="engine"/>

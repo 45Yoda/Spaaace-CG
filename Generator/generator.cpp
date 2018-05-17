@@ -2,7 +2,7 @@
 #include <cstring>
 #include <fstream>
 #include <vector>
-#include "vertex.h"
+#include "point.h"
 #include "plane.h"
 #include "box.h"
 #include "cone.h"
@@ -16,9 +16,9 @@ using std::vector;
 void drawPlane(float size, string name){
     ofstream file(name);
     char buffer[1024];
-    vector<Vertex*> vertexes = plane(size);
+    vector<Point*> points = plane(size);
 
-    for(Vertex* v: vertexes){
+    for(Point* v: points){
         sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
         file << buffer;
     }
@@ -28,9 +28,9 @@ void drawPlane(float size, string name){
 void drawBox(float x, float y, float z, int div, string name){
     ofstream file(name);
     char buffer[1024];
-    vector<Vertex*> vertexes = box(x,y,z,div);
+    vector<Point*> points = box(x,y,z,div);
 
-    for(Vertex* v: vertexes){
+    for(Point* v: points){
         sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
         file << buffer;
     }
@@ -41,9 +41,9 @@ void drawBox(float x, float y, float z, int div, string name){
 void drawSphere(float radius, int slices, int stacks, string name){
     ofstream file(name);
     char buffer[1024];
-    vector<Vertex*> vertexes = sphere(radius,slices,stacks);
+    vector<Point*> points = sphere(radius,slices,stacks);
 
-    for(Vertex* v: vertexes){
+    for(Point* v: points){
         sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
         file << buffer;
     }
@@ -54,9 +54,9 @@ void drawSphere(float radius, int slices, int stacks, string name){
 void drawCone(float radius, float height, int slices, int stacks, string name){
     ofstream file(name);
     char buffer[1024];
-    vector<Vertex*> vertexes = cone(radius,height,slices,stacks);
+    vector<Point*> points = cone(radius,height,slices,stacks);
 
-    for(Vertex* v: vertexes){
+    for(Point* v: points){
         sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
         file << buffer;
     }
@@ -67,9 +67,9 @@ void drawCone(float radius, float height, int slices, int stacks, string name){
 void drawTorus(float radiusSmall, float radiusBig, int sides, int rings, string name){
 	ofstream file(name);
 	char buffer[1024];
-	vector<Vertex*> vertexes = torus(radiusSmall,radiusBig,sides,rings);
+	vector<Point*> points = torus(radiusSmall,radiusBig,sides,rings);
 
-	for(Vertex* v: vertexes){
+	for(Point* v: points){
 		sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
 		file << buffer;
 	}
@@ -240,7 +240,7 @@ void print_help(){
     std::cout<<"*                                                                *" << std::endl;
     std::cout<<"*    {FILE}:                                                     *" << std::endl;
     std::cout<<"*      In this section you give the name of the file which will  *" << std::endl;
-    std::cout<<"*      contain the vertexes generated with the previous commands.*" << std::endl;
+    std::cout<<"*      contain the points generated with the previous commands.*" << std::endl;
     std::cout<<"*                                                                *" << std::endl;
     std::cout<<"*    COMPILING:                                                  *" << std::endl;
     std::cout<<"*       g++ -o generator *.*                                     *" << std::endl;

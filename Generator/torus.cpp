@@ -5,9 +5,9 @@
 #include "torus.h"
 #include <math.h>
 
-vector<Vertex*> torus(float radiusSmall, float radiusBig, int sides, int rings){
+vector<Point*> torus(float radiusSmall, float radiusBig, int sides, int rings){
 
-    vector<Vertex*> vertexes;
+    vector<Point*> points;
 
     float sideSize = (2*M_PI)/sides;
     float ringSize = (2*M_PI)/rings;
@@ -33,15 +33,15 @@ vector<Vertex*> torus(float radiusSmall, float radiusBig, int sides, int rings){
             float nextr = radiusSmall * nexts + radiusBig;
             float nextz = radiusSmall * sin((j+1)*sideSize);
 
-            vertexes.push_back(new Vertex(x0*r,y0*r,z));
-            vertexes.push_back(new Vertex(x1*r,y1*r,z));
-            vertexes.push_back(new Vertex(x0*nextr,y0*nextr,nextz));
+            points.push_back(new Point(x0*r,y0*r,z));
+            points.push_back(new Point(x1*r,y1*r,z));
+            points.push_back(new Point(x0*nextr,y0*nextr,nextz));
 
-            vertexes.push_back(new Vertex(x0*nextr,y0*nextr,nextz));
-            vertexes.push_back(new Vertex(x1*r,y1*r,z));
-            vertexes.push_back(new Vertex(x1*nextr,y1*nextr,nextz));
+            points.push_back(new Point(x0*nextr,y0*nextr,nextz));
+            points.push_back(new Point(x1*r,y1*r,z));
+            points.push_back(new Point(x1*nextr,y1*nextr,nextz));
         }
     }
 
-    return vertexes;
+    return points;
 }

@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 #include <GL/glut.h>
-#include "../Generator/vertex.h"
+#include "../Generator/point.h"
 
 
 
@@ -16,14 +16,14 @@ using namespace std;
 class Shape{
 
     string name;
-    vector<Vertex*> vertexes;
+    vector<Point*> points;
     GLuint buffer;
     public:
         Shape();
-        Shape(string,vector<Vertex*>);
+        Shape(string,vector<Point*>);
         string getName();
-        vector<Vertex*> getVertexes();
-        GLuint getVertexBuffer();
+        vector<Point*> getPoints();
+        GLuint getPointBuffer();
         void readyUp();
         void draw();
 };

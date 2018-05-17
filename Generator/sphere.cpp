@@ -1,5 +1,5 @@
 #include "sphere.h"
-#include "vertex.h"
+#include "point.h"
 
 #include <math.h>
 #include <stdio.h>
@@ -9,9 +9,9 @@ using std::vector;
 
 
 
-std::vector<Vertex*> sphere(float radius, int slices, int stacks) {
+std::vector<Point*> sphere(float radius, int slices, int stacks) {
 
-    std::vector<Vertex*> vertexes;
+    std::vector<Point*> points;
     int i, j;
     float angleH = 0, angleV = 0;
     float shiftV = M_PI / stacks;
@@ -42,16 +42,16 @@ std::vector<Vertex*> sphere(float radius, int slices, int stacks) {
             z4 = radius * sin(angleV + shiftV) * cos(angleH);
 
 
-            vertexes.push_back(new Vertex(x1, y1, z1));
-            vertexes.push_back(new Vertex(x3, y3, z3));
-            vertexes.push_back(new Vertex(x2, y2, z2));
+            points.push_back(new Point(x1, y1, z1));
+            points.push_back(new Point(x3, y3, z3));
+            points.push_back(new Point(x2, y2, z2));
 
-            vertexes.push_back(new Vertex(x1,y1,z1));
-            vertexes.push_back(new Vertex(x4,y4,z4));
-            vertexes.push_back(new Vertex(x3,y3,z3));
+            points.push_back(new Point(x1,y1,z1));
+            points.push_back(new Point(x4,y4,z4));
+            points.push_back(new Point(x3,y3,z3));
 
         }
     }
 
-    return vertexes;
+    return points;
 }

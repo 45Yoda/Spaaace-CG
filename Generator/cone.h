@@ -5,12 +5,12 @@
 #ifndef SPAAACE_CG_CONE_H
 #define SPAAACE_CG_CONE_H
 
-#include "vertex.h"
+#include "point.h"
 #include <vector>
 #include <cmath>
 
 
-std::vector<Vertex*> cone(float radius, float height, int slices, int stacks);
+std::vector<Point*> cone(float radius, float height, int slices, int stacks);
 
 
 

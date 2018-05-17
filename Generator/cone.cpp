@@ -6,10 +6,10 @@
 #include "cone.h"
 using std::vector;
 
-vector<Vertex*> cone(float radius, float height, int slices, int stacks){
+vector<Point*> cone(float radius, float height, int slices, int stacks){
     int i, j;
 
-    vector<Vertex*> vertexes;
+    vector<Point*> points;
 
     //Angle of each slice
     float sl_angle = (2*M_PI)/slices;
@@ -38,10 +38,10 @@ vector<Vertex*> cone(float radius, float height, int slices, int stacks){
 
     //drawing the base of the cone
     for(i=0; i != slices; i++){
-        vertexes.push_back(new Vertex(0.0f,0.0f,0.0f));
-        vertexes.push_back(new Vertex(radius * cos(curr_angle),0.0f,radius * sin(curr_angle)));
+        points.push_back(new Point(0.0f,0.0f,0.0f));
+        points.push_back(new Point(radius * cos(curr_angle),0.0f,radius * sin(curr_angle)));
         curr_angle += sl_angle;
-        vertexes.push_back(new Vertex(radius * cos(curr_angle),0.0f,radius * sin(curr_angle)));
+        points.push_back(new Point(radius * cos(curr_angle),0.0f,radius * sin(curr_angle)));
     }
 
     //calcular o espaçamento entre duas camadas
@@ -58,14 +58,14 @@ vector<Vertex*> cone(float radius, float height, int slices, int stacks){
         //making a full stack
         for(j=0;j!=slices;j++){
             //making upper triangle of slice in stack
-            vertexes.push_back(new Vertex(big_radius*cos(curr_angle),bot_layer,big_radius * sin(curr_angle)));
-            vertexes.push_back(new Vertex(small_radius * cos(curr_angle),top_layer,small_radius*sin(curr_angle)));
-            vertexes.push_back(new Vertex(small_radius * cos(above_angle),top_layer,small_radius * sin(above_angle)));
+            points.push_back(new Point(big_radius*cos(curr_angle),bot_layer,big_radius * sin(curr_angle)));
+            points.push_back(new Point(small_radius * cos(curr_angle),top_layer,small_radius*sin(curr_angle)));
+            points.push_back(new Point(small_radius * cos(above_angle),top_layer,small_radius * sin(above_angle)));
 
             //making lower triangle of slice in stack
-            vertexes.push_back(new Vertex(big_radius * cos(curr_angle), bot_layer, big_radius * sin(curr_angle)));
-            vertexes.push_back(new Vertex(small_radius * cos(above_angle),top_layer, small_radius * sin(above_angle)));
-            vertexes.push_back(new Vertex(big_radius * cos(above_angle), bot_layer, big_radius * sin(above_angle)));
+            points.push_back(new Point(big_radius * cos(curr_angle), bot_layer, big_radius * sin(curr_angle)));
+            points.push_back(new Point(small_radius * cos(above_angle),top_layer, small_radius * sin(above_angle)));
+            points.push_back(new Point(big_radius * cos(above_angle), bot_layer, big_radius * sin(above_angle)));
 
             // updating to make another slice
             curr_angle += sl_angle;
@@ -75,5 +75,5 @@ vector<Vertex*> cone(float radius, float height, int slices, int stacks){
         }
 
     }
-    return vertexes;
+    return points;
 }

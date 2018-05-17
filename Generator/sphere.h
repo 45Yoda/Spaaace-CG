@@ -3,8 +3,8 @@
 
 #include <vector>
 
-#include "../Generator/vertex.h"
+#include "point.h"
 
-std::vector<Vertex*> sphere(float radius, int slices, int stacks);
+std::vector<Point*> sphere(float radius, int slices, int stacks);
 
 #endif
