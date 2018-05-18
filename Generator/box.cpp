@@ -70,6 +70,7 @@ vector<Point*> box(float x, float y, float z, int div,vector<Point*> *normals,ve
             textures->push_back(new Point((1-textShiftX)-(j*textShiftX),textY1+(i*textShiftY),0));
 
 
+
             points.push_back(new Point(-x + (j*shiftX),(-y+shiftY) + (i*shiftY),-z));
             points.push_back(new Point((-x+shiftX) + (j*shiftX),(-y+shiftY) + (i*shiftY),-z));
             points.push_back(new Point((-x+shiftX) + (j*shiftX),-y + (i*shiftY),-z));
@@ -89,36 +90,110 @@ vector<Point*> box(float x, float y, float z, int div,vector<Point*> *normals,ve
             points.push_back(new Point(x,-y + (i*shiftY),-z + (j*shiftZ)));
             points.push_back(new Point(x,(-y+shiftY) + (i*shiftY),-z +(j*shiftZ)));
             points.push_back(new Point(x,-y + (i*shiftY),(-z+shiftZ) + (j*shiftZ)));
+
+            normals->push_back(new Point(1,0,0));
+            normals->push_back(new Point(1,0,0));
+            normals->push_back(new Point(1,0,0));
+
+            textures->push_back(new Point(textX3-(j*textShiftZ),textY1+(i*textShiftY),0));
+            textures->push_back(new Point(textX3-(j*textShiftX),(textY1+textShiftY)+(i*textShiftY),0));
+            textures->push_back(new Point((textX3-textShiftZ)-(j*textShiftZ),textY1+(i*textShiftY),0));
+
+
             points.push_back(new Point(x,(-y+shiftY) + (i*shiftY),-z + (j*shiftZ)));
             points.push_back(new Point(x,(-y+shiftY) + (i*shiftY),(-z+shiftZ) + (j*shiftZ)));
             points.push_back(new Point(x,-y + (i*shiftY),(-z+shiftZ) + (j*shiftZ)));
+
+            normals->push_back(new Point(1,0,0));
+            normals->push_back(new Point(1,0,0));
+            normals->push_back(new Point(1,0,0));
+
+            textures->push_back(new Point(textX3-(j*textShiftZ),(textY1+textShiftY)+(i*textShiftY),0));
+            textures->push_back(new Point((textX3-textShiftZ)-(j*textShiftX),(textY1+textShiftY)+(i*textShiftY),0));
+            textures->push_back(new Point((textX3-textShiftZ)-(j*textShiftX),textY1+(i*textShiftY),0));
+
 
             //Left
             points.push_back(new Point(-x,-y + (i*shiftY),-z + (j*shiftZ)));
             points.push_back(new Point(-x,-y + (i*shiftY),(-z+shiftZ) + (j*shiftZ)));
             points.push_back(new Point(-x,(-y+shiftY) + (i*shiftY),-z +(j*shiftZ)));
 
+            normals->push_back(new Point(-1,0,0));
+            normals->push_back(new Point(-1,0,0));
+            normals->push_back(new Point(-1,0,0));
+
+            textures->push_back(new Point((j*textShiftZ),textY1+(i*textShiftY),0));
+            textures->push_back(new Point(textShiftZ+(j*textShiftZ),textY1+(i*textShiftY),0));
+            textures->push_back(new Point((j*textShiftX),(textY1+textShiftY)+(i*textShiftY),0));
+
+
+
             points.push_back(new Point(-x,(-y+shiftY) + (i*shiftY),-z + (j*shiftZ)));
             points.push_back(new Point(-x,-y + (i*shiftY),(-z+shiftZ) + (j*shiftZ)));
             points.push_back(new Point(-x,(-y+shiftY) + (i*shiftY),(-z+shiftZ) + (j*shiftZ)));
+
+            normals->push_back(new Point(-1,0,0));
+            normals->push_back(new Point(-1,0,0));
+            normals->push_back(new Point(-1,0,0));
+
+            textures->push_back(new Point((j*textShiftZ),(textY1+textShiftY)+(i*textShiftY),0));
+            textures->push_back(new Point(textShiftZ+(j*textShiftZ),textY1+(i*textShiftY),0));
+            textures->push_back(new Point(textShiftZ+(j*textShiftX),(textY1+textShiftY)+(i*textShiftY),0));
+
+            
 
             //Top
             points.push_back(new Point(-x + (j*shiftX),y,-z + (i*shiftZ)));
             points.push_back(new Point(-x + (j*shiftX),y,(-z+shiftZ) + (i*shiftZ)));
             points.push_back(new Point((-x+shiftX) + (j*shiftX),y,-z + (i*shiftZ)));
 
+            normals->push_back(new Point(0,1,0));
+            normals->push_back(new Point(0,1,0));
+            normals->push_back(new Point(0,1,0));
+
+            textures->push_back(new Point(textX1+(j*textShiftX),(1-textShiftZ)-(i*textShiftZ),0));
+            textures->push_back(new Point((textX1+textShiftX)+(j*textShiftX),(1-textShiftZ)-(i*textShiftZ),0));
+            textures->push_back(new Point((textX1+textShiftX)+(j*textShiftX),1-(i*textShiftZ),0));
+
             points.push_back(new Point(-x + (j*shiftX),y,(-z+shiftZ) + (i*shiftZ)));
             points.push_back(new Point((-x+shiftX) + (j*shiftX),y,(-z+shiftZ) + (i*shiftZ)));
             points.push_back(new Point((-x+shiftX) + (j*shiftX),y,-z + (i*shiftZ)));
+
+            normals->push_back(new Point(0,1,0));
+            normals->push_back(new Point(0,1,0));
+            normals->push_back(new Point(0,1,0));
+
+            textures->push_back(new Point(textX1+(j*textShiftX),(1-textShiftZ)-(i*textShiftZ),0));
+            textures->push_back(new Point((textX1+textShiftX)+(j*textShiftX),(1-textShiftZ)-(i*textShiftZ),0));
+            textures->push_back(new Point((textX1+textShiftX)+(j*textShiftX),1-(i*textShiftZ),0));
+
 
             //Bottom
             points.push_back(new Point(-x + (j*shiftX),-y,-z + (i*shiftZ)));
             points.push_back(new Point((-x+shiftX) + (j*shiftX),-y,-z + (i*shiftZ)));
             points.push_back(new Point(-x + (j*shiftX),-y,(-z+shiftZ) + (i*shiftZ)));
 
+            normals->push_back(new Point(0,-1,0));
+            normals->push_back(new Point(0,-1,0));
+            normals->push_back(new Point(0,-1,0));
+
+            textures->push_back(new Point(textX1+(j*textShiftX),(i*textShiftZ),0));
+            textures->push_back(new Point((textX1+textShiftX)+(j*textShiftX),(i*textShiftZ),0));
+            textures->push_back(new Point(textX1+(j*textShiftX),textShiftZ+(i*textShiftZ),0));
+
+
             points.push_back(new Point(-x + (j*shiftX),-y,(-z+shiftZ) + (i*shiftZ)));
             points.push_back(new Point((-x+shiftX) + (j*shiftX),-y,-z + (i*shiftZ)));
             points.push_back(new Point((-x+shiftX) + (j*shiftX),-y,(-z+shiftZ) + (i*shiftZ)));
+
+            normals->push_back(new Point(0,-1,0));
+            normals->push_back(new Point(0,-1,0));
+            normals->push_back(new Point(0,-1,0));
+
+            textures->push_back(new Point(textX1+(j*textShiftX),textShiftZ+(i*textShiftZ),0));
+            textures->push_back(new Point((textX1+textShiftX)+(j*textShiftX),(i*textShiftZ),0));
+            textures->push_back(new Point((textX1+textShiftX)+(j*textShiftX),textShiftZ+(i*textShiftZ),0));
+
         }
     }
     return points;

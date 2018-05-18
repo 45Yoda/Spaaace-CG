@@ -9,8 +9,9 @@
 #include <vector>
 #include <cmath>
 
+using  std::vector;
 
-std::vector<Point*> cone(float radius, float height, int slices, int stacks);
+vector<Point*> cone(float radius, float height, int slices, int stacks);
 
 
 
