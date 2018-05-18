@@ -65,6 +65,7 @@ class Scale : public Action{
 class Color : public Action{
     public:
         Color();
+        Color(float,float,float);
         void parse(tinyxml2::XMLElement *cl);
         void apply();
     private:

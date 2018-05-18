@@ -8,7 +8,7 @@
 		<colour R="251" G="119" B="9" />
 		<scale X="10" Y="10" Z="10" />
 		<models>
-			<model file="sphere.3d" texture="./Spaaace-CG/Textures/sun.jpg" emiX="1" emiY="1" emiZ="1" shini="100"/>
+			<model file="sphere.3d" texture="./Spaaace-CG/Textures/sun.jpg" emiX="1" emiY="1" emiZ="1" shiny="100"/>
 		</models>
 	</group>
 	<!--MERCURIO-->

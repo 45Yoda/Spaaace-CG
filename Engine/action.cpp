@@ -40,6 +40,12 @@ Color::Color(){
     b = 0;
 }
 
+Color::Color(float r1, float g1, float b1){
+    r=r1;
+    g=g1;
+    b=b1;
+}
+
 void Translation::parse(XMLElement * tr){
     tr->QueryFloatAttribute("time", &time);
     tr->QueryFloatAttribute("X", &x);

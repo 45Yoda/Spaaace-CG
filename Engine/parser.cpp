@@ -44,20 +44,99 @@ void foundScale(XMLElement* element, Group* g){
     g->addAction(scale);
 }
 
+void foundColor(XMLElement* element, Shape* shape){
 
-void foundColor(XMLElement* element, Group* g){
+    Color* diffuse = NULL;
+    Color* ambient = NULL;
+    Color* specular = NULL;
+    Color* emission = NULL;
+    float shininess = 0;
+    float x,y,z;
 
-    Color* color = new Color();
+    //Diffuse
+    if(element->Attribute("diffX") || element->Attribute("diffY") || element->Attribute("diffZ")){
 
-    color->parse(element);
+        x = 0.8f;
+        y = 0.8f;
+        z = 0.8f;
 
-    g->addAction(color);
+        element->QueryFloatAttribute("diffX", &x);
+        element->QueryFloatAttribute("diffY", &y);
+        element->QueryFloatAttribute("diffZ", &z);
+
+        diffuse = new Color(x,y,z);
+    }
+
+    //Ambient
+    if(element->Attribute("ambX") || element->Attribute("ambY") || element->Attribute("ambZ")){
+
+        x = 0.2f;
+        y = 0.2f;
+        z = 0.2f;
+
+        element->QueryFloatAttribute("ambX",&x);
+        element->QueryFloatAttribute("ambY",&y);
+        element->QueryFloatAttribute("ambZ",&z);
+
+        ambient = new Color(x,y,z);
+    }
+
+    //Specular
+    x = 0.0f; y=0.0f; z=0.0f;
+    element->QueryFloatAttribute("specX",&x);
+    element->QueryFloatAttribute("specY",&y);
+    element->QueryFloatAttribute("specZ",&z);
+
+    specular = new Color(x,y,z);
+
+    //Emission
+    x = 0.0f; y=0.0f; z=0.0f;
+    element->QueryFloatAttribute("specX",&x);
+    element->QueryFloatAttribute("specY",&y);
+    element->QueryFloatAttribute("specZ",&z);
+
+    emission = new Color(x,y,z);
+
+    element->QueryFloatAttribute("shiny",&shininess);
+
+    Material* colorComp = new Material(diffuse,ambient,specular,emission,shininess);
+
+    shape->setColorComponent(colorComp);
+
 }
 
-vector<Point*> readFile(string file_name){
+void foundLights(XMLElement* element, Group* g){
+
+    vector<Light*> lights;
+    bool pointType;
+    Light* light;
+    float x=0,y=0,z=0;
+
+    element = element->FirstChildElement();
+    for(;element;element=element->NextSiblingElement())
+        if(!strcmp(element->Name(),"light")){
+            if(element->Attribute("type") && !strcmp(element->Attribute("type"),"POINT"))
+                pointType = true;
+            else pointType = false;
+
+            element->QueryFloatAttribute("X", &x);
+            element->QueryFloatAttribute("Y", &y);
+            element->QueryFloatAttribute("Z", &z);
+
+            light = new Light(pointType, new Point(x,y,z));
+            lights.push_back(light);
+    }
+
+    g->setLights(lights);
+}
+
+
+
+
+vector<Point*> readFile(string file_name,vector<Point*> *normals, vector<Point*> *textures){
 
     vector<Point*> points;
-    vector<string> tokens;
+    vector<string> tokens,tokensText,tokensNorm;
     string buffer;
     string line;
     int index = 0, i=0;
@@ -65,17 +144,53 @@ vector<Point*> readFile(string file_name){
     ifstream file (file_path);
 
     if(file.is_open()){
-        while(getline(file,line)){ // iterate over the lines of the file
+
+        index = 0;
+        getline(file,line);
+        int nVert = atoi(line.c_str());
+
+        for(i=0;i< nVert; i++){ // iterate over the lines of the file
+            getline(file,line);
             stringstream ss(line);
             while(ss >> buffer)
                 tokens.push_back(buffer); // it
             // erate over the coordinates of the points in each line
-            cout << tokens[index] << endl;
+            //cout << tokens[index] << endl;
             //add points to the vector
             points.push_back(new Point(stof(tokens[index]),stof(tokens[index+1]),stof(tokens[index+2])));
-            std::cout << i++;
+            //std::cout << i++;
             index+=3;
         }
+
+        index = 0;
+        getline(file,line);
+        int nNorm = atoi(line.c_str());
+
+        for(i=0;i<nNorm;i++){
+            getline(file,line);
+            stringstream ss(line);
+            while(ss >> buffer)
+                tokensNorm.push_back(buffer);
+
+            normals->push_back(new Point(stof(tokensNorm[index]),stof(tokensNorm[index+1]),stof(tokens[index+2])));
+            index+=3;
+        }
+
+        index = 0;
+        getline(file,line);
+        int nText = atoi(line.c_str());
+
+        for(int i=0;i<nText;i++){
+            getline(file,line);
+            stringstream ss(line);
+            while(ss >> buffer)
+                tokensText.push_back(buffer);
+
+            textures->push_back(new Point(stof(tokensText[index]),stof(tokensText[index+1]),stof(tokensText[index+2])));
+            index+=2;
+        }
+
+
         file.close();
     }
     else cout << "Unable to open file." << endl;
@@ -84,16 +199,29 @@ vector<Point*> readFile(string file_name){
 
 
 //<models>
-vector<Shape*> findModels(XMLElement* element){
+vector<Shape*> findModels(XMLElement* element,Group* g){
 
     vector<Shape*> listModels;
 
     element = element->FirstChildElement();//<model file=--->
     for(;element;element=element->NextSiblingElement()){
         if(!strcmp(element->Name(),"model")){
-            vector<Point*> aux = readFile(element->Attribute("file"));
-            if(!aux.empty()){
-                Shape* shape = new Shape(element->Attribute("file"),aux);
+
+            vector<Point*> vertexes;
+            vector<Point*> normals;
+            vector<Point*> textures;
+
+            vertexes = readFile(element->Attribute("file"),&normals,&textures);
+
+            if(!vertexes.empty()){
+                Shape* shape;
+                if(element->Attribute("texture"))
+                    shape = new Shape(element->Attribute("texture"),vertexes,normals,textures);
+                else
+                    shape = new Shape(vertexes,normals,textures);
+                //Shape* shape = new Shape(element->Attribute("file"),aux);
+
+                foundColor(element,shape);
                 listModels.push_back(shape);
             }
             else return listModels;
@@ -120,13 +248,13 @@ void findElement(XMLElement* element, Group* g){
         foundScale(element,g);
 
     //Find the Color
-    else if(!strcmp(element->Name(),"colour")) {
-        foundColor(element, g);
+    else if(!strcmp(element->Name(),"lights")) {
+        foundLights(element, g);
 
     }
     //Gather all Models
     else if(!strcmp(element->Name(),"models")){
-        vector<Shape*> listShape = findModels(element);
+        vector<Shape*> listShape = findModels(element,g);
         if(!listShape.empty()){
             g->setShapes(listShape);
         }
@@ -158,6 +286,10 @@ Group* parseXML(char* file_name) {
 
     error = doc.LoadFile(file_name);
     if(error == 0){
+
+        element = doc.FirstChildElement("scene")->FirstChildElement("lights");
+        if(element) foundLights(element,group);
+
         element = doc.FirstChildElement("scene")->FirstChildElement("group");
         findElement(element,group);
 
