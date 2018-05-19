@@ -34,7 +34,7 @@ void printFile(string name, vector<Point*> points, vector<Point*> normals, vecto
     if(textures.size()){
         file << textures.size() << endl;
         for(Point* t: textures){
-            sprintf(buffer,"%f %f %f\n",t->getX(),t->getY(),t->getZ());
+            sprintf(buffer,"%f %f\n",t->getX(),t->getY());
             file << buffer;
         }
     }
@@ -188,6 +188,9 @@ void renderPatch( string file , int tess , string name) {
 
         float incre = 1.0 / tess , u , v , u2 , v2;
         float *** res = new float**[npatch];
+        vector<Point*> ult;
+        Point* point;
+
 
         for(int count = 0 ; count < npatch ; count++) {
             res[count] = new float*[4];
@@ -206,18 +209,37 @@ void renderPatch( string file , int tess , string name) {
                     res[count][2] = getBezierPoint(u2, v, indexes[count], points, npatch, npoints);
                     res[count][3] = getBezierPoint(u2, v2, indexes[count], points, npatch, npoints);
 
+                    point = new Point(res[count][0][0],res[count][0][1],res[count][0][2]);
+                    ult.push_back(point);
+                    point = new Point(res[count][2][0],res[count][2][1],res[count][2][2]);
+                    ult.push_back(point);
+                    point = new Point(res[count][3][0],res[count][3][1],res[count][3][2]);
+                    ult.push_back(point);
 
-                    fileo << res[count][0][0] << " " << res[count][0][1] << " " << res[count][0][2] << endl;
-                    fileo << res[count][2][0] << " " << res[count][2][1] << " " << res[count][2][2] << endl;
-                    fileo << res[count][3][0] << " " << res[count][3][1] << " " << res[count][3][2] << endl;
+                    point = new Point(res[count][0][0],res[count][0][1],res[count][0][2]);
+                    ult.push_back(point);
+                    point = new Point(res[count][3][0],res[count][3][1],res[count][3][2]);
+                    ult.push_back(point);
+                    point = new Point(res[count][1][0],res[count][1][1],res[count][1][2]);
+                    ult.push_back(point);
 
-                    fileo << res[count][0][0] << " " << res[count][0][1] << " " << res[count][0][2] << endl;
-                    fileo << res[count][3][0] << " " << res[count][3][1] << " " << res[count][3][2] << endl;
-                    fileo << res[count][1][0] << " " << res[count][1][1] << " " << res[count][1][2] << endl;
+
+                    //fileo << res[count][0][0] << " " << res[count][0][1] << " " << res[count][0][2] << endl;
+                    //fileo << res[count][2][0] << " " << res[count][2][1] << " " << res[count][2][2] << endl;
+                    //fileo << res[count][3][0] << " " << res[count][3][1] << " " << res[count][3][2] << endl;
+
+                    //fileo << res[count][0][0] << " " << res[count][0][1] << " " << res[count][0][2] << endl;
+                    //fileo << res[count][3][0] << " " << res[count][3][1] << " " << res[count][3][2] << endl;
+                    //fileo << res[count][1][0] << " " << res[count][1][1] << " " << res[count][1][2] << endl;
                 }
             }
 
         }
+
+        //point done
+        
+
+
     }
 
     filei.close();
