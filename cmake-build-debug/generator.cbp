@@ -151,6 +151,12 @@
 		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/light.h">
 			<Option target="engine"/>
 		</Unit>
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/material.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/material.h">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="/home/yoda45/Desktop/git/Spaaace-CG/Engine/parser.cpp">
 			<Option target="engine"/>
 		</Unit>

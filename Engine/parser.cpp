@@ -6,6 +6,7 @@
 #include <fstream>
 #include <sstream>
 #include "parser.h"
+#include "material.h"
 
 int total = 0;
 

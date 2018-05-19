@@ -244,6 +244,33 @@ Engine/light.cpp.s:
 	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/light.cpp.s
 .PHONY : Engine/light.cpp.s
 
+Engine/material.o: Engine/material.cpp.o
+
+.PHONY : Engine/material.o
+
+# target to build an object file
+Engine/material.cpp.o:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/material.cpp.o
+.PHONY : Engine/material.cpp.o
+
+Engine/material.i: Engine/material.cpp.i
+
+.PHONY : Engine/material.i
+
+# target to preprocess a source file
+Engine/material.cpp.i:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/material.cpp.i
+.PHONY : Engine/material.cpp.i
+
+Engine/material.s: Engine/material.cpp.s
+
+.PHONY : Engine/material.s
+
+# target to generate assembly for a file
+Engine/material.cpp.s:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/material.cpp.s
+.PHONY : Engine/material.cpp.s
+
 Engine/parser.o: Engine/parser.cpp.o
 
 .PHONY : Engine/parser.o
@@ -539,6 +566,9 @@ help:
 	@echo "... Engine/light.o"
 	@echo "... Engine/light.i"
 	@echo "... Engine/light.s"
+	@echo "... Engine/material.o"
+	@echo "... Engine/material.i"
+	@echo "... Engine/material.s"
 	@echo "... Engine/parser.o"
 	@echo "... Engine/parser.i"
 	@echo "... Engine/parser.s"

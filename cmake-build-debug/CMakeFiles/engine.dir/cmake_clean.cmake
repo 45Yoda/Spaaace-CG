@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/Engine/parser.cpp.o"
   "CMakeFiles/engine.dir/Engine/group.cpp.o"
   "CMakeFiles/engine.dir/Engine/light.cpp.o"
+  "CMakeFiles/engine.dir/Engine/material.cpp.o"
   "engine.pdb"
   "engine"
 )

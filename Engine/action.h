@@ -68,6 +68,9 @@ class Color : public Action{
         Color(float,float,float);
         void parse(tinyxml2::XMLElement *cl);
         void apply();
+        float getR();
+        float getG();
+        float getB();
     private:
         float r;
         float g;

@@ -272,3 +272,15 @@ void Color::apply() {
     float bt = b/255;
     glColor3f(rt,gt,bt);
 }
+
+float Color::getR(){
+    return r;
+}
+
+float Color::getG(){
+    return g;
+}
+
+float Color::getB(){
+    return b;
+}

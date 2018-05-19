@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/yoda45/Desktop/git/Spaaace-CG/Engine/engine.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/engine.dir/Engine/engine.cpp.o"
   "/home/yoda45/Desktop/git/Spaaace-CG/Engine/group.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/engine.dir/Engine/group.cpp.o"
   "/home/yoda45/Desktop/git/Spaaace-CG/Engine/light.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/engine.dir/Engine/light.cpp.o"
+  "/home/yoda45/Desktop/git/Spaaace-CG/Engine/material.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/engine.dir/Engine/material.cpp.o"
   "/home/yoda45/Desktop/git/Spaaace-CG/Engine/parser.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/engine.dir/Engine/parser.cpp.o"
   "/home/yoda45/Desktop/git/Spaaace-CG/Engine/shape.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/engine.dir/Engine/shape.cpp.o"
   "/home/yoda45/Desktop/git/Spaaace-CG/Generator/point.cpp" "/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles/engine.dir/Generator/point.cpp.o"
