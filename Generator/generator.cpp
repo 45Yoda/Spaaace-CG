@@ -141,6 +141,69 @@ float* getBezierPoint( float a , float b , int* index , float** points , int ni 
     return ret;
 }
 
+
+vector<Point*> bezPT(int** indexes,float** points,int npoints,int npatch,int tess){
+    vector<Point*> ult;
+    Point* point;
+    float incre = 1.0 / tess , u , v , u2 , v2;
+    float *** res = new float**[npatch];
+
+
+    for(int count = 0 ; count < npatch ; count++) {
+        res[count] = new float*[4];
+
+        for( int count2 = 0 ; count2 < tess ; count2++) {
+
+            for( int mn = 0 ; mn < tess ; mn++) {
+
+                u = count2*incre;
+                v = mn*incre;
+                u2 = (count2 + 1)* incre;
+                v2 = (mn + 1)* incre;
+
+                res[count][0] = getBezierPoint(u, v, indexes[count], points, npatch, npoints);
+                res[count][1] = getBezierPoint(u, v2, indexes[count], points, npatch, npoints);
+                res[count][2] = getBezierPoint(u2, v, indexes[count], points, npatch, npoints);
+                res[count][3] = getBezierPoint(u2, v2, indexes[count], points, npatch, npoints);
+
+
+
+
+
+                point = new Point(res[count][0][0],res[count][0][1],res[count][0][2]);
+                ult.push_back(point);
+                point = new Point(res[count][2][0],res[count][2][1],res[count][2][2]);
+                ult.push_back(point);
+                point = new Point(res[count][3][0],res[count][3][1],res[count][3][2]);
+                ult.push_back(point);
+
+                point = new Point(res[count][0][0],res[count][0][1],res[count][0][2]);
+                ult.push_back(point);
+                point = new Point(res[count][3][0],res[count][3][1],res[count][3][2]);
+                ult.push_back(point);
+                point = new Point(res[count][1][0],res[count][1][1],res[count][1][2]);
+                ult.push_back(point);
+
+
+                //fileo << res[count][0][0] << " " << res[count][0][1] << " " << res[count][0][2] << endl;
+                //fileo << res[count][2][0] << " " << res[count][2][1] << " " << res[count][2][2] << endl;
+                //fileo << res[count][3][0] << " " << res[count][3][1] << " " << res[count][3][2] << endl;
+
+                //fileo << res[count][0][0] << " " << res[count][0][1] << " " << res[count][0][2] << endl;
+                //fileo << res[count][3][0] << " " << res[count][3][1] << " " << res[count][3][2] << endl;
+                //fileo << res[count][1][0] << " " << res[count][1][1] << " " << res[count][1][2] << endl;
+            }
+        }
+
+    }
+
+    return ult;
+}
+
+vector<Point*> bezNorm(int** indexes, float** points, int npoints, int npatch, int tess) {
+
+}
+
 void renderPatch( string file , int tess , string name) {
 
     ofstream fileo(name);
@@ -186,58 +249,13 @@ void renderPatch( string file , int tess , string name) {
             }
         }
 
-        float incre = 1.0 / tess , u , v , u2 , v2;
-        float *** res = new float**[npatch];
-        vector<Point*> ult;
-        Point* point;
-
-
-        for(int count = 0 ; count < npatch ; count++) {
-            res[count] = new float*[4];
-
-            for( int count2 = 0 ; count2 < tess ; count2++) {
-
-                for( int mn = 0 ; mn < tess ; mn++) {
-
-                    u = count2*incre;
-                    v = mn*incre;
-                    u2 = (count2 + 1)* incre;
-                    v2 = (mn + 1)* incre;
-
-                    res[count][0] = getBezierPoint(u, v, indexes[count], points, npatch, npoints);
-                    res[count][1] = getBezierPoint(u, v2, indexes[count], points, npatch, npoints);
-                    res[count][2] = getBezierPoint(u2, v, indexes[count], points, npatch, npoints);
-                    res[count][3] = getBezierPoint(u2, v2, indexes[count], points, npatch, npoints);
-
-                    point = new Point(res[count][0][0],res[count][0][1],res[count][0][2]);
-                    ult.push_back(point);
-                    point = new Point(res[count][2][0],res[count][2][1],res[count][2][2]);
-                    ult.push_back(point);
-                    point = new Point(res[count][3][0],res[count][3][1],res[count][3][2]);
-                    ult.push_back(point);
-
-                    point = new Point(res[count][0][0],res[count][0][1],res[count][0][2]);
-                    ult.push_back(point);
-                    point = new Point(res[count][3][0],res[count][3][1],res[count][3][2]);
-                    ult.push_back(point);
-                    point = new Point(res[count][1][0],res[count][1][1],res[count][1][2]);
-                    ult.push_back(point);
-
-
-                    //fileo << res[count][0][0] << " " << res[count][0][1] << " " << res[count][0][2] << endl;
-                    //fileo << res[count][2][0] << " " << res[count][2][1] << " " << res[count][2][2] << endl;
-                    //fileo << res[count][3][0] << " " << res[count][3][1] << " " << res[count][3][2] << endl;
-
-                    //fileo << res[count][0][0] << " " << res[count][0][1] << " " << res[count][0][2] << endl;
-                    //fileo << res[count][3][0] << " " << res[count][3][1] << " " << res[count][3][2] << endl;
-                    //fileo << res[count][1][0] << " " << res[count][1][1] << " " << res[count][1][2] << endl;
-                }
-            }
-
-        }
-
         //point done
-        
+        vector<Point*> pt = bezPT(indexes,points,npoints,npatch,tess);
+
+        vector<Point*> norm = bezNorm(indexes,points,npoints,npatch,tess);
+
+
+
 
 
     }
