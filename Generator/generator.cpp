@@ -149,11 +149,14 @@ void renderPatch( string file , int tess , string name) {
     int i;
 
     if(filei.is_open()) {
+
+        //Get number of patches
         getline(filei,line);
         int npatch = atoi(line.c_str());
         int** indexes = new int*[npatch];
         cout << npatch << endl;
 
+        //Parsing indexes
         for(int r = 0 ; r < npatch ; r++) {
             getline(filei,line);
             indexes[r] = new int[16];

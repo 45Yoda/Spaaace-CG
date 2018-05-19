@@ -60,8 +60,8 @@ void Translation::parse(XMLElement * tr){
         point_element->QueryFloatAttribute("X",&xs);
         point_element->QueryFloatAttribute("Y",&ys);
         point_element->QueryFloatAttribute("Z",&zs);
-        Point* Point = new Point(xs,ys,zs);
-        addPoint(Point);
+        Point* point = new Point(xs,ys,zs);
+        addPoint(point);
     }
 
 }

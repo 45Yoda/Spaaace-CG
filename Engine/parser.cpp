@@ -219,7 +219,7 @@ vector<Shape*> findModels(XMLElement* element,Group* g){
                 if(element->Attribute("texture")){
                     shape = new Shape(vertexes,normals,textures);
                     shape->readyUp();
-                    shape->loadTexture(element->Attribute("texture");
+                    shape->loadTexture(element->Attribute("texture"));
                 }
                 else
                     shape = new Shape(vertexes,normals,textures);

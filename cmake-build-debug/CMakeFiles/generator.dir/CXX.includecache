@@ -13,16 +13,16 @@ box.h
 /home/yoda45/Desktop/git/Spaaace-CG/Generator/box.h
 vector
 -
-vertex.h
-/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.h
+point.h
+/home/yoda45/Desktop/git/Spaaace-CG/Generator/point.h
 
 /home/yoda45/Desktop/git/Spaaace-CG/Generator/cone.cpp
 cone.h
 /home/yoda45/Desktop/git/Spaaace-CG/Generator/cone.h
 
 /home/yoda45/Desktop/git/Spaaace-CG/Generator/cone.h
-vertex.h
-/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.h
+point.h
+/home/yoda45/Desktop/git/Spaaace-CG/Generator/point.h
 vector
 -
 cmath
@@ -37,8 +37,8 @@ fstream
 -
 vector
 -
-vertex.h
-/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.h
+point.h
+/home/yoda45/Desktop/git/Spaaace-CG/Generator/point.h
 plane.h
 /home/yoda45/Desktop/git/Spaaace-CG/Generator/plane.h
 box.h
@@ -55,16 +55,22 @@ plane.h
 /home/yoda45/Desktop/git/Spaaace-CG/Generator/plane.h
 
 /home/yoda45/Desktop/git/Spaaace-CG/Generator/plane.h
-vertex.h
-/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.h
+point.h
+/home/yoda45/Desktop/git/Spaaace-CG/Generator/point.h
 vector
 -
+
+/home/yoda45/Desktop/git/Spaaace-CG/Generator/point.cpp
+point.h
+/home/yoda45/Desktop/git/Spaaace-CG/Generator/point.h
+
+/home/yoda45/Desktop/git/Spaaace-CG/Generator/point.h
 
 /home/yoda45/Desktop/git/Spaaace-CG/Generator/sphere.cpp
 sphere.h
 /home/yoda45/Desktop/git/Spaaace-CG/Generator/sphere.h
-vertex.h
-/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.h
+point.h
+/home/yoda45/Desktop/git/Spaaace-CG/Generator/point.h
 math.h
 -
 stdio.h
@@ -75,8 +81,8 @@ stdlib.h
 /home/yoda45/Desktop/git/Spaaace-CG/Generator/sphere.h
 vector
 -
-../Generator/vertex.h
-/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.h
+point.h
+/home/yoda45/Desktop/git/Spaaace-CG/Generator/point.h
 
 /home/yoda45/Desktop/git/Spaaace-CG/Generator/torus.cpp
 torus.h
@@ -87,12 +93,6 @@ math.h
 /home/yoda45/Desktop/git/Spaaace-CG/Generator/torus.h
 vector
 -
-vertex.h
-/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.h
-
-/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.cpp
-vertex.h
-/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.h
-
-/home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.h
+point.h
+/home/yoda45/Desktop/git/Spaaace-CG/Generator/point.h
 

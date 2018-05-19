@@ -1,0 +1,5 @@
+<scene>
+    <group>
+        <model file="plane.3d"/>
+    </group>
+</scene>
