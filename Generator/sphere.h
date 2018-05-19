@@ -7,6 +7,6 @@
 
 using std::vector;
 
-vector<Point*> sphere(float radius, int slices, int stacks,vector<Point*> normals, vector<Point*> textures);
+vector<Point*> sphere(float radius, int slices, int stacks,vector<Point*> *normals, vector<Point*> *textures);
 
 #endif

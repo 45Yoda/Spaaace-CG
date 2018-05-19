@@ -13,69 +13,80 @@ using std::ofstream;
 using std::string;
 using std::vector;
 
-void drawPlane(float size, string name){
+void printFile(string name, vector<Point*> points, vector<Point*> normals, vector<Point*> textures){
     ofstream file(name);
     char buffer[1024];
-    vector<Point*> points = plane(size);
 
+    file << points.size() << endl;
     for(Point* v: points){
         sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
         file << buffer;
     }
+
+    if(normals.size()){
+        file << normals.size() << endl;
+        for(Point* n: normals){
+            sprintf(buffer,"%f %f %f\n",n->getX(),n->getY(),n->getZ());
+            file << buffer;
+        }
+    }
+
+    if(textures.size()){
+        file << textures.size() << endl;
+        for(Point* t: textures){
+            sprintf(buffer,"%f %f %f\n",t->getX(),t->getY(),t->getZ());
+            file << buffer;
+        }
+    }
+
     file.close();
+}
+
+
+void drawPlane(float size, string name){
+    vector<Point*> normals;
+    vector<Point*> textures;
+    vector<Point*> points = plane(size,&normals,&textures);
+
+    printFile(name,points,normals,textures);
 }
 
 void drawBox(float x, float y, float z, int div, string name){
-    ofstream file(name);
-    char buffer[1024];
-    vector<Point*> points = box(x,y,z,div);
+    vector<Point*> normals;
+    vector<Point*> textures;
+    vector<Point*> points = box(x,y,z,div,&normals,&textures);
 
-    for(Point* v: points){
-        sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
-        file << buffer;
-    }
-
-    file.close();
+    printFile(name,points,normals,textures);
 }
 
 void drawSphere(float radius, int slices, int stacks, string name){
-    ofstream file(name);
-    char buffer[1024];
-    vector<Point*> points = sphere(radius,slices,stacks);
+    vector<Point*> normals;
+    vector<Point*> textures;
+    vector<Point*> points = sphere(radius,slices,stacks,&normals,&textures);
 
-    for(Point* v: points){
-        sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
-        file << buffer;
-    }
-
-    file.close();
+    printFile(name,points,normals,textures);
 }
 
 void drawCone(float radius, float height, int slices, int stacks, string name){
-    ofstream file(name);
-    char buffer[1024];
+    vector<Point*> normals;
+    vector<Point*> textures;
     vector<Point*> points = cone(radius,height,slices,stacks);
 
-    for(Point* v: points){
-        sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
-        file << buffer;
-    }
+    printFile(name,points,normals,textures);
 
-    file.close();
+
 }
 
 void drawTorus(float radiusSmall, float radiusBig, int sides, int rings, string name){
-	ofstream file(name);
-	char buffer[1024];
-	vector<Point*> points = torus(radiusSmall,radiusBig,sides,rings);
+	vector<Point*> normals;
+	vector<Point*> textures;
+	vector<Point*> points = torus(radiusSmall,radiusBig,sides,rings,&normals,&textures);
 
-	for(Point* v: points){
-		sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
-		file << buffer;
-	}
+	printFile(name,points,normals,textures);
 
-	file.close();
+
 }
+
 
 float* bezierCalc( float tt, float *p1 , float *p2 , float *p3 , float *p4) {
 
