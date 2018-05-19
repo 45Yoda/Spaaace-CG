@@ -71,10 +71,9 @@ vector<Vertex*> readFile(string file_name){
             while(ss >> buffer)
                 tokens.push_back(buffer); // it
             // erate over the coordinates of the vertexes in each line
-            cout << tokens[index] << endl;
+
             //add vertexes to the vector
             vertexes.push_back(new Vertex(stof(tokens[index]),stof(tokens[index+1]),stof(tokens[index+2])));
-            std::cout << i++;
             index+=3;
         }
         file.close();
