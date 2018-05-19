@@ -2,13 +2,13 @@
 // Created by yoda45 on 01-03-2018.
 //
 
-#ifndef SPAAACE_CG_VERTEX_H
-#define SPAAACE_CG_VERTEX_H
+#ifndef SPAAACE_CG_Point_H
+#define SPAAACE_CG_Point_H
 
 
-class Vertex {
+class Point {
     public:
-        Vertex(float x, float y, float z);
+        Point(float x, float y, float z);
         float getX();
         float getY();
         float getZ();
@@ -20,4 +20,4 @@ class Vertex {
 };
 
 
-#endif //SPAAACE_CG_VERTEX_H
+#endif //SPAAACE_CG_Point_H

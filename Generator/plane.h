@@ -6,7 +6,7 @@
 #define SPAAACE_CG_PLANE_H
 
 
-#include "vertex.h"
+#include "point.h"
 #include <vector>
 
 /**
@@ -16,7 +16,9 @@
  * @return vector with generated vertexes for plane
  */
 
-std::vector<Vertex*> plane(float size);
+using namespace std;
+
+vector<Point*> plane(float size,vector<Point*> *normals,vector<Point*> *textures);
 
 
 #endif //SPAAACE_CG_PLANE_H

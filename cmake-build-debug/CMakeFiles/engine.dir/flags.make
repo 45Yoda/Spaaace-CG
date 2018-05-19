@@ -6,5 +6,5 @@ CXX_FLAGS = -Wall -o3 -g -g   -std=gnu++1z
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/usr/include/IL 
 

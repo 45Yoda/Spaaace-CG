@@ -5,12 +5,15 @@
 #include "torus.h"
 #include <math.h>
 
-vector<Vertex*> torus(float radiusSmall, float radiusBig, int sides, int rings){
+vector<Point*> torus(float radiusSmall, float radiusBig, int sides, int rings,vector<Point*> *normals,vector<Point*> *textures){
 
-    vector<Vertex*> vertexes;
+    vector<Point*> points;
 
     float sideSize = (2*M_PI)/sides;
     float ringSize = (2*M_PI)/rings;
+
+    float sideText = 1.0f/sides;
+    float ringText = 1.0f/rings;
 
     for(int i=0; i < rings; i++){
         double alpha = i*ringSize;
@@ -33,15 +36,29 @@ vector<Vertex*> torus(float radiusSmall, float radiusBig, int sides, int rings){
             float nextr = radiusSmall * nexts + radiusBig;
             float nextz = radiusSmall * sin((j+1)*sideSize);
 
-            vertexes.push_back(new Vertex(x0*r,y0*r,z));
-            vertexes.push_back(new Vertex(x1*r,y1*r,z));
-            vertexes.push_back(new Vertex(x0*nextr,y0*nextr,nextz));
+            points.push_back(new Point(x0*r,y0*r,z));
+            points.push_back(new Point(x1*r,y1*r,z));
+            points.push_back(new Point(x0*nextr,y0*nextr,nextz));
+            normals->push_back(new Point(x0*cos(j*sideSize),y0*cos(j*sideSize),sin(j*sideSize)));
+            normals->push_back(new Point(x1*cos(j*sideSize),y1*cos(j*sideSize),sin(j*sideSize)));
+            normals->push_back(new Point(x0*cos((j+1)*sideSize),y0*cos((j+1)*sideSize),sin((j+1)*sideSize)));
+            textures->push_back(new Point(i*ringText,j*sideText,0));
+            textures->push_back(new Point((i+1)*ringText,j*sideText,0));
+            textures->push_back(new Point(i*ringText,(j+1)*sideText,0));
 
-            vertexes.push_back(new Vertex(x0*nextr,y0*nextr,nextz));
-            vertexes.push_back(new Vertex(x1*r,y1*r,z));
-            vertexes.push_back(new Vertex(x1*nextr,y1*nextr,nextz));
+
+
+            points.push_back(new Point(x0*nextr,y0*nextr,nextz));
+            points.push_back(new Point(x1*r,y1*r,z));
+            points.push_back(new Point(x1*nextr,y1*nextr,nextz));
+            normals->push_back(new Point(x0*cos((j+1)*sideSize),y0*cos((j+1)*sideSize),sin((j+1)*sideSize)));
+            normals->push_back(new Point(x1*cos(j*sideSize),y1*cos(j*sideSize),sin(j*sideSize)));
+            normals->push_back(new Point(x1*cos((j+1)*sideSize),y1*cos((j+1)*sideSize),sin((j+1)*sideSize)));
+            textures->push_back(new Point(i*ringText,(j+1)*sideText,0));
+            textures->push_back(new Point((i+1)*ringText,j*sideText,0));
+            textures->push_back(new Point((i+1)*ringText,(j+1)*sideText,0));
         }
     }
 
-    return vertexes;
+    return points;
 }

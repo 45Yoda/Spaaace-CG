@@ -129,28 +129,28 @@ CMakeFiles/engine.dir/tinyxml2.cpp.o.provides: CMakeFiles/engine.dir/tinyxml2.cp
 CMakeFiles/engine.dir/tinyxml2.cpp.o.provides.build: CMakeFiles/engine.dir/tinyxml2.cpp.o
 
 
-CMakeFiles/engine.dir/Generator/vertex.cpp.o: CMakeFiles/engine.dir/flags.make
-CMakeFiles/engine.dir/Generator/vertex.cpp.o: ../Generator/vertex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/engine.dir/Generator/vertex.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/Generator/vertex.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.cpp
+CMakeFiles/engine.dir/Generator/point.cpp.o: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/Generator/point.cpp.o: ../Generator/point.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/engine.dir/Generator/point.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/Generator/point.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/Generator/point.cpp
 
-CMakeFiles/engine.dir/Generator/vertex.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/Generator/vertex.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.cpp > CMakeFiles/engine.dir/Generator/vertex.cpp.i
+CMakeFiles/engine.dir/Generator/point.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/Generator/point.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yoda45/Desktop/git/Spaaace-CG/Generator/point.cpp > CMakeFiles/engine.dir/Generator/point.cpp.i
 
-CMakeFiles/engine.dir/Generator/vertex.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Generator/vertex.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.cpp -o CMakeFiles/engine.dir/Generator/vertex.cpp.s
+CMakeFiles/engine.dir/Generator/point.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Generator/point.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yoda45/Desktop/git/Spaaace-CG/Generator/point.cpp -o CMakeFiles/engine.dir/Generator/point.cpp.s
 
-CMakeFiles/engine.dir/Generator/vertex.cpp.o.requires:
+CMakeFiles/engine.dir/Generator/point.cpp.o.requires:
 
-.PHONY : CMakeFiles/engine.dir/Generator/vertex.cpp.o.requires
+.PHONY : CMakeFiles/engine.dir/Generator/point.cpp.o.requires
 
-CMakeFiles/engine.dir/Generator/vertex.cpp.o.provides: CMakeFiles/engine.dir/Generator/vertex.cpp.o.requires
-	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Generator/vertex.cpp.o.provides.build
-.PHONY : CMakeFiles/engine.dir/Generator/vertex.cpp.o.provides
+CMakeFiles/engine.dir/Generator/point.cpp.o.provides: CMakeFiles/engine.dir/Generator/point.cpp.o.requires
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Generator/point.cpp.o.provides.build
+.PHONY : CMakeFiles/engine.dir/Generator/point.cpp.o.provides
 
-CMakeFiles/engine.dir/Generator/vertex.cpp.o.provides.build: CMakeFiles/engine.dir/Generator/vertex.cpp.o
+CMakeFiles/engine.dir/Generator/point.cpp.o.provides.build: CMakeFiles/engine.dir/Generator/point.cpp.o
 
 
 CMakeFiles/engine.dir/Engine/action.cpp.o: CMakeFiles/engine.dir/flags.make
@@ -225,42 +225,65 @@ CMakeFiles/engine.dir/Engine/group.cpp.o.provides: CMakeFiles/engine.dir/Engine/
 CMakeFiles/engine.dir/Engine/group.cpp.o.provides.build: CMakeFiles/engine.dir/Engine/group.cpp.o
 
 
-<<<<<<< HEAD
-=======
-CMakeFiles/engine.dir/Engine/patch.cpp.o: CMakeFiles/engine.dir/flags.make
-CMakeFiles/engine.dir/Engine/patch.cpp.o: ../Engine/patch.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/engine.dir/Engine/patch.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/Engine/patch.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/Engine/patch.cpp
+CMakeFiles/engine.dir/Engine/light.cpp.o: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/Engine/light.cpp.o: ../Engine/light.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/engine.dir/Engine/light.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/Engine/light.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/Engine/light.cpp
 
-CMakeFiles/engine.dir/Engine/patch.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/Engine/patch.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yoda45/Desktop/git/Spaaace-CG/Engine/patch.cpp > CMakeFiles/engine.dir/Engine/patch.cpp.i
+CMakeFiles/engine.dir/Engine/light.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/Engine/light.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yoda45/Desktop/git/Spaaace-CG/Engine/light.cpp > CMakeFiles/engine.dir/Engine/light.cpp.i
 
-CMakeFiles/engine.dir/Engine/patch.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Engine/patch.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yoda45/Desktop/git/Spaaace-CG/Engine/patch.cpp -o CMakeFiles/engine.dir/Engine/patch.cpp.s
+CMakeFiles/engine.dir/Engine/light.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Engine/light.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yoda45/Desktop/git/Spaaace-CG/Engine/light.cpp -o CMakeFiles/engine.dir/Engine/light.cpp.s
 
-CMakeFiles/engine.dir/Engine/patch.cpp.o.requires:
+CMakeFiles/engine.dir/Engine/light.cpp.o.requires:
 
-.PHONY : CMakeFiles/engine.dir/Engine/patch.cpp.o.requires
+.PHONY : CMakeFiles/engine.dir/Engine/light.cpp.o.requires
 
-CMakeFiles/engine.dir/Engine/patch.cpp.o.provides: CMakeFiles/engine.dir/Engine/patch.cpp.o.requires
-	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/patch.cpp.o.provides.build
-.PHONY : CMakeFiles/engine.dir/Engine/patch.cpp.o.provides
+CMakeFiles/engine.dir/Engine/light.cpp.o.provides: CMakeFiles/engine.dir/Engine/light.cpp.o.requires
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/light.cpp.o.provides.build
+.PHONY : CMakeFiles/engine.dir/Engine/light.cpp.o.provides
 
-CMakeFiles/engine.dir/Engine/patch.cpp.o.provides.build: CMakeFiles/engine.dir/Engine/patch.cpp.o
+CMakeFiles/engine.dir/Engine/light.cpp.o.provides.build: CMakeFiles/engine.dir/Engine/light.cpp.o
 
 
->>>>>>> 49596a3da1e300deae7af390496a41275fb9bdb5
+CMakeFiles/engine.dir/Engine/material.cpp.o: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/Engine/material.cpp.o: ../Engine/material.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/engine.dir/Engine/material.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/Engine/material.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/Engine/material.cpp
+
+CMakeFiles/engine.dir/Engine/material.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/Engine/material.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yoda45/Desktop/git/Spaaace-CG/Engine/material.cpp > CMakeFiles/engine.dir/Engine/material.cpp.i
+
+CMakeFiles/engine.dir/Engine/material.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Engine/material.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yoda45/Desktop/git/Spaaace-CG/Engine/material.cpp -o CMakeFiles/engine.dir/Engine/material.cpp.s
+
+CMakeFiles/engine.dir/Engine/material.cpp.o.requires:
+
+.PHONY : CMakeFiles/engine.dir/Engine/material.cpp.o.requires
+
+CMakeFiles/engine.dir/Engine/material.cpp.o.provides: CMakeFiles/engine.dir/Engine/material.cpp.o.requires
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/material.cpp.o.provides.build
+.PHONY : CMakeFiles/engine.dir/Engine/material.cpp.o.provides
+
+CMakeFiles/engine.dir/Engine/material.cpp.o.provides.build: CMakeFiles/engine.dir/Engine/material.cpp.o
+
+
 # Object files for target engine
 engine_OBJECTS = \
 "CMakeFiles/engine.dir/Engine/engine.cpp.o" \
 "CMakeFiles/engine.dir/Engine/shape.cpp.o" \
 "CMakeFiles/engine.dir/tinyxml2.cpp.o" \
-"CMakeFiles/engine.dir/Generator/vertex.cpp.o" \
+"CMakeFiles/engine.dir/Generator/point.cpp.o" \
 "CMakeFiles/engine.dir/Engine/action.cpp.o" \
 "CMakeFiles/engine.dir/Engine/parser.cpp.o" \
-"CMakeFiles/engine.dir/Engine/group.cpp.o"
+"CMakeFiles/engine.dir/Engine/group.cpp.o" \
+"CMakeFiles/engine.dir/Engine/light.cpp.o" \
+"CMakeFiles/engine.dir/Engine/material.cpp.o"
 
 # External object files for target engine
 engine_EXTERNAL_OBJECTS =
@@ -268,21 +291,25 @@ engine_EXTERNAL_OBJECTS =
 engine: CMakeFiles/engine.dir/Engine/engine.cpp.o
 engine: CMakeFiles/engine.dir/Engine/shape.cpp.o
 engine: CMakeFiles/engine.dir/tinyxml2.cpp.o
-engine: CMakeFiles/engine.dir/Generator/vertex.cpp.o
+engine: CMakeFiles/engine.dir/Generator/point.cpp.o
 engine: CMakeFiles/engine.dir/Engine/action.cpp.o
 engine: CMakeFiles/engine.dir/Engine/parser.cpp.o
 engine: CMakeFiles/engine.dir/Engine/group.cpp.o
+engine: CMakeFiles/engine.dir/Engine/light.cpp.o
+engine: CMakeFiles/engine.dir/Engine/material.cpp.o
 engine: CMakeFiles/engine.dir/build.make
+engine: /usr/lib/x86_64-linux-gnu/libIL.so
+engine: /usr/lib/x86_64-linux-gnu/libGL.so
+engine: /usr/lib/x86_64-linux-gnu/libGLU.so
+engine: /usr/lib/x86_64-linux-gnu/libglut.so
+engine: /usr/lib/x86_64-linux-gnu/libXi.so
+engine: /usr/lib/x86_64-linux-gnu/libIL.so
 engine: /usr/lib/x86_64-linux-gnu/libGL.so
 engine: /usr/lib/x86_64-linux-gnu/libGLU.so
 engine: /usr/lib/x86_64-linux-gnu/libglut.so
 engine: /usr/lib/x86_64-linux-gnu/libXi.so
 engine: CMakeFiles/engine.dir/link.txt
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/josesousa/Documents/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable engine"
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable engine"
->>>>>>> 49596a3da1e300deae7af390496a41275fb9bdb5
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -293,10 +320,12 @@ CMakeFiles/engine.dir/build: engine
 CMakeFiles/engine.dir/requires: CMakeFiles/engine.dir/Engine/engine.cpp.o.requires
 CMakeFiles/engine.dir/requires: CMakeFiles/engine.dir/Engine/shape.cpp.o.requires
 CMakeFiles/engine.dir/requires: CMakeFiles/engine.dir/tinyxml2.cpp.o.requires
-CMakeFiles/engine.dir/requires: CMakeFiles/engine.dir/Generator/vertex.cpp.o.requires
+CMakeFiles/engine.dir/requires: CMakeFiles/engine.dir/Generator/point.cpp.o.requires
 CMakeFiles/engine.dir/requires: CMakeFiles/engine.dir/Engine/action.cpp.o.requires
 CMakeFiles/engine.dir/requires: CMakeFiles/engine.dir/Engine/parser.cpp.o.requires
 CMakeFiles/engine.dir/requires: CMakeFiles/engine.dir/Engine/group.cpp.o.requires
+CMakeFiles/engine.dir/requires: CMakeFiles/engine.dir/Engine/light.cpp.o.requires
+CMakeFiles/engine.dir/requires: CMakeFiles/engine.dir/Engine/material.cpp.o.requires
 
 .PHONY : CMakeFiles/engine.dir/requires
 

@@ -177,28 +177,28 @@ CMakeFiles/generator.dir/Generator/sphere.cpp.o.provides: CMakeFiles/generator.d
 CMakeFiles/generator.dir/Generator/sphere.cpp.o.provides.build: CMakeFiles/generator.dir/Generator/sphere.cpp.o
 
 
-CMakeFiles/generator.dir/Generator/vertex.cpp.o: CMakeFiles/generator.dir/flags.make
-CMakeFiles/generator.dir/Generator/vertex.cpp.o: ../Generator/vertex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/generator.dir/Generator/vertex.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/generator.dir/Generator/vertex.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.cpp
+CMakeFiles/generator.dir/Generator/point.cpp.o: CMakeFiles/generator.dir/flags.make
+CMakeFiles/generator.dir/Generator/point.cpp.o: ../Generator/point.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/generator.dir/Generator/point.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/generator.dir/Generator/point.cpp.o -c /home/yoda45/Desktop/git/Spaaace-CG/Generator/point.cpp
 
-CMakeFiles/generator.dir/Generator/vertex.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/generator.dir/Generator/vertex.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.cpp > CMakeFiles/generator.dir/Generator/vertex.cpp.i
+CMakeFiles/generator.dir/Generator/point.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/generator.dir/Generator/point.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yoda45/Desktop/git/Spaaace-CG/Generator/point.cpp > CMakeFiles/generator.dir/Generator/point.cpp.i
 
-CMakeFiles/generator.dir/Generator/vertex.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/generator.dir/Generator/vertex.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yoda45/Desktop/git/Spaaace-CG/Generator/vertex.cpp -o CMakeFiles/generator.dir/Generator/vertex.cpp.s
+CMakeFiles/generator.dir/Generator/point.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/generator.dir/Generator/point.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yoda45/Desktop/git/Spaaace-CG/Generator/point.cpp -o CMakeFiles/generator.dir/Generator/point.cpp.s
 
-CMakeFiles/generator.dir/Generator/vertex.cpp.o.requires:
+CMakeFiles/generator.dir/Generator/point.cpp.o.requires:
 
-.PHONY : CMakeFiles/generator.dir/Generator/vertex.cpp.o.requires
+.PHONY : CMakeFiles/generator.dir/Generator/point.cpp.o.requires
 
-CMakeFiles/generator.dir/Generator/vertex.cpp.o.provides: CMakeFiles/generator.dir/Generator/vertex.cpp.o.requires
-	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/Generator/vertex.cpp.o.provides.build
-.PHONY : CMakeFiles/generator.dir/Generator/vertex.cpp.o.provides
+CMakeFiles/generator.dir/Generator/point.cpp.o.provides: CMakeFiles/generator.dir/Generator/point.cpp.o.requires
+	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/Generator/point.cpp.o.provides.build
+.PHONY : CMakeFiles/generator.dir/Generator/point.cpp.o.provides
 
-CMakeFiles/generator.dir/Generator/vertex.cpp.o.provides.build: CMakeFiles/generator.dir/Generator/vertex.cpp.o
+CMakeFiles/generator.dir/Generator/point.cpp.o.provides.build: CMakeFiles/generator.dir/Generator/point.cpp.o
 
 
 CMakeFiles/generator.dir/Generator/torus.cpp.o: CMakeFiles/generator.dir/flags.make
@@ -232,7 +232,7 @@ generator_OBJECTS = \
 "CMakeFiles/generator.dir/Generator/cone.cpp.o" \
 "CMakeFiles/generator.dir/Generator/plane.cpp.o" \
 "CMakeFiles/generator.dir/Generator/sphere.cpp.o" \
-"CMakeFiles/generator.dir/Generator/vertex.cpp.o" \
+"CMakeFiles/generator.dir/Generator/point.cpp.o" \
 "CMakeFiles/generator.dir/Generator/torus.cpp.o"
 
 # External object files for target generator
@@ -243,9 +243,10 @@ generator: CMakeFiles/generator.dir/Generator/box.cpp.o
 generator: CMakeFiles/generator.dir/Generator/cone.cpp.o
 generator: CMakeFiles/generator.dir/Generator/plane.cpp.o
 generator: CMakeFiles/generator.dir/Generator/sphere.cpp.o
-generator: CMakeFiles/generator.dir/Generator/vertex.cpp.o
+generator: CMakeFiles/generator.dir/Generator/point.cpp.o
 generator: CMakeFiles/generator.dir/Generator/torus.cpp.o
 generator: CMakeFiles/generator.dir/build.make
+generator: /usr/lib/x86_64-linux-gnu/libIL.so
 generator: CMakeFiles/generator.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yoda45/Desktop/git/Spaaace-CG/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable generator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/generator.dir/link.txt --verbose=$(VERBOSE)
@@ -260,7 +261,7 @@ CMakeFiles/generator.dir/requires: CMakeFiles/generator.dir/Generator/box.cpp.o.
 CMakeFiles/generator.dir/requires: CMakeFiles/generator.dir/Generator/cone.cpp.o.requires
 CMakeFiles/generator.dir/requires: CMakeFiles/generator.dir/Generator/plane.cpp.o.requires
 CMakeFiles/generator.dir/requires: CMakeFiles/generator.dir/Generator/sphere.cpp.o.requires
-CMakeFiles/generator.dir/requires: CMakeFiles/generator.dir/Generator/vertex.cpp.o.requires
+CMakeFiles/generator.dir/requires: CMakeFiles/generator.dir/Generator/point.cpp.o.requires
 CMakeFiles/generator.dir/requires: CMakeFiles/generator.dir/Generator/torus.cpp.o.requires
 
 .PHONY : CMakeFiles/generator.dir/requires

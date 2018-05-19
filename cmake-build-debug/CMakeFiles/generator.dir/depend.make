@@ -3,32 +3,32 @@
 
 CMakeFiles/generator.dir/Generator/box.cpp.o: ../Generator/box.cpp
 CMakeFiles/generator.dir/Generator/box.cpp.o: ../Generator/box.h
-CMakeFiles/generator.dir/Generator/box.cpp.o: ../Generator/vertex.h
+CMakeFiles/generator.dir/Generator/box.cpp.o: ../Generator/point.h
 
 CMakeFiles/generator.dir/Generator/cone.cpp.o: ../Generator/cone.cpp
 CMakeFiles/generator.dir/Generator/cone.cpp.o: ../Generator/cone.h
-CMakeFiles/generator.dir/Generator/cone.cpp.o: ../Generator/vertex.h
+CMakeFiles/generator.dir/Generator/cone.cpp.o: ../Generator/point.h
 
 CMakeFiles/generator.dir/Generator/generator.cpp.o: ../Generator/box.h
 CMakeFiles/generator.dir/Generator/generator.cpp.o: ../Generator/cone.h
 CMakeFiles/generator.dir/Generator/generator.cpp.o: ../Generator/generator.cpp
 CMakeFiles/generator.dir/Generator/generator.cpp.o: ../Generator/plane.h
+CMakeFiles/generator.dir/Generator/generator.cpp.o: ../Generator/point.h
 CMakeFiles/generator.dir/Generator/generator.cpp.o: ../Generator/sphere.h
 CMakeFiles/generator.dir/Generator/generator.cpp.o: ../Generator/torus.h
-CMakeFiles/generator.dir/Generator/generator.cpp.o: ../Generator/vertex.h
 
 CMakeFiles/generator.dir/Generator/plane.cpp.o: ../Generator/plane.cpp
 CMakeFiles/generator.dir/Generator/plane.cpp.o: ../Generator/plane.h
-CMakeFiles/generator.dir/Generator/plane.cpp.o: ../Generator/vertex.h
+CMakeFiles/generator.dir/Generator/plane.cpp.o: ../Generator/point.h
 
+CMakeFiles/generator.dir/Generator/point.cpp.o: ../Generator/point.cpp
+CMakeFiles/generator.dir/Generator/point.cpp.o: ../Generator/point.h
+
+CMakeFiles/generator.dir/Generator/sphere.cpp.o: ../Generator/point.h
 CMakeFiles/generator.dir/Generator/sphere.cpp.o: ../Generator/sphere.cpp
 CMakeFiles/generator.dir/Generator/sphere.cpp.o: ../Generator/sphere.h
-CMakeFiles/generator.dir/Generator/sphere.cpp.o: ../Generator/vertex.h
 
+CMakeFiles/generator.dir/Generator/torus.cpp.o: ../Generator/point.h
 CMakeFiles/generator.dir/Generator/torus.cpp.o: ../Generator/torus.cpp
 CMakeFiles/generator.dir/Generator/torus.cpp.o: ../Generator/torus.h
-CMakeFiles/generator.dir/Generator/torus.cpp.o: ../Generator/vertex.h
-
-CMakeFiles/generator.dir/Generator/vertex.cpp.o: ../Generator/vertex.cpp
-CMakeFiles/generator.dir/Generator/vertex.cpp.o: ../Generator/vertex.h
 

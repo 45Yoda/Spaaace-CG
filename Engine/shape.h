@@ -6,25 +6,33 @@
 
 #include <string>
 #include <vector>
+#include <IL/il.h>
 #include <GL/glut.h>
-#include "../Generator/vertex.h"
-
+#include "../Generator/point.h"
+#include "material.h"
 
 
 using namespace std;
 
 class Shape{
 
-    string name;
-    vector<Vertex*> vertexes;
-    GLuint buffer;
+    vector<Point*> points;
+    vector<Point*> normals;
+    vector<Point*> textures;
+    Material* colorComponent;
+    int pointSize=0,normalSize=0,textureSize=0;
+    GLuint buffers[3];
+    GLuint texture;
     public:
         Shape();
-        Shape(string,vector<Vertex*>);
-        string getName();
-        vector<Vertex*> getVertexes();
-        GLuint getVertexBuffer();
+        Shape(vector<Point*>, vector<Point*>, vector<Point*>);
+        vector<Point*> getPoints();
+        vector<Point*> getNormals();
+        vector<Point*> getTextures();
+        Material* getColorComponent();
+        void setColorComponent(Material*);
         void readyUp();
+        void loadTexture(string);
         void draw();
 };
 

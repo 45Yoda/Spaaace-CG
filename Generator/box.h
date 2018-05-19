@@ -8,9 +8,9 @@
 using namespace std;
 
 #include <vector>
-#include "vertex.h"
+#include "point.h"
 
-std::vector<Vertex*> box(float x, float y, float z, int div);
+vector<Point*> box(float x, float y, float z, int div,vector<Point*> *normals,vector<Point*> *textures);
 
 
 #endif //SPAAACE_CG_BOX_H

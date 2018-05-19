@@ -217,6 +217,60 @@ Engine/group.cpp.s:
 	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/group.cpp.s
 .PHONY : Engine/group.cpp.s
 
+Engine/light.o: Engine/light.cpp.o
+
+.PHONY : Engine/light.o
+
+# target to build an object file
+Engine/light.cpp.o:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/light.cpp.o
+.PHONY : Engine/light.cpp.o
+
+Engine/light.i: Engine/light.cpp.i
+
+.PHONY : Engine/light.i
+
+# target to preprocess a source file
+Engine/light.cpp.i:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/light.cpp.i
+.PHONY : Engine/light.cpp.i
+
+Engine/light.s: Engine/light.cpp.s
+
+.PHONY : Engine/light.s
+
+# target to generate assembly for a file
+Engine/light.cpp.s:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/light.cpp.s
+.PHONY : Engine/light.cpp.s
+
+Engine/material.o: Engine/material.cpp.o
+
+.PHONY : Engine/material.o
+
+# target to build an object file
+Engine/material.cpp.o:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/material.cpp.o
+.PHONY : Engine/material.cpp.o
+
+Engine/material.i: Engine/material.cpp.i
+
+.PHONY : Engine/material.i
+
+# target to preprocess a source file
+Engine/material.cpp.i:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/material.cpp.i
+.PHONY : Engine/material.cpp.i
+
+Engine/material.s: Engine/material.cpp.s
+
+.PHONY : Engine/material.s
+
+# target to generate assembly for a file
+Engine/material.cpp.s:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Engine/material.cpp.s
+.PHONY : Engine/material.cpp.s
+
 Engine/parser.o: Engine/parser.cpp.o
 
 .PHONY : Engine/parser.o
@@ -379,6 +433,36 @@ Generator/plane.cpp.s:
 	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/Generator/plane.cpp.s
 .PHONY : Generator/plane.cpp.s
 
+Generator/point.o: Generator/point.cpp.o
+
+.PHONY : Generator/point.o
+
+# target to build an object file
+Generator/point.cpp.o:
+	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/Generator/point.cpp.o
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Generator/point.cpp.o
+.PHONY : Generator/point.cpp.o
+
+Generator/point.i: Generator/point.cpp.i
+
+.PHONY : Generator/point.i
+
+# target to preprocess a source file
+Generator/point.cpp.i:
+	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/Generator/point.cpp.i
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Generator/point.cpp.i
+.PHONY : Generator/point.cpp.i
+
+Generator/point.s: Generator/point.cpp.s
+
+.PHONY : Generator/point.s
+
+# target to generate assembly for a file
+Generator/point.cpp.s:
+	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/Generator/point.cpp.s
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Generator/point.cpp.s
+.PHONY : Generator/point.cpp.s
+
 Generator/sphere.o: Generator/sphere.cpp.o
 
 .PHONY : Generator/sphere.o
@@ -433,36 +517,6 @@ Generator/torus.cpp.s:
 	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/Generator/torus.cpp.s
 .PHONY : Generator/torus.cpp.s
 
-Generator/vertex.o: Generator/vertex.cpp.o
-
-.PHONY : Generator/vertex.o
-
-# target to build an object file
-Generator/vertex.cpp.o:
-	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/Generator/vertex.cpp.o
-	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Generator/vertex.cpp.o
-.PHONY : Generator/vertex.cpp.o
-
-Generator/vertex.i: Generator/vertex.cpp.i
-
-.PHONY : Generator/vertex.i
-
-# target to preprocess a source file
-Generator/vertex.cpp.i:
-	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/Generator/vertex.cpp.i
-	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Generator/vertex.cpp.i
-.PHONY : Generator/vertex.cpp.i
-
-Generator/vertex.s: Generator/vertex.cpp.s
-
-.PHONY : Generator/vertex.s
-
-# target to generate assembly for a file
-Generator/vertex.cpp.s:
-	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/Generator/vertex.cpp.s
-	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Generator/vertex.cpp.s
-.PHONY : Generator/vertex.cpp.s
-
 tinyxml2.o: tinyxml2.cpp.o
 
 .PHONY : tinyxml2.o
@@ -509,6 +563,12 @@ help:
 	@echo "... Engine/group.o"
 	@echo "... Engine/group.i"
 	@echo "... Engine/group.s"
+	@echo "... Engine/light.o"
+	@echo "... Engine/light.i"
+	@echo "... Engine/light.s"
+	@echo "... Engine/material.o"
+	@echo "... Engine/material.i"
+	@echo "... Engine/material.s"
 	@echo "... Engine/parser.o"
 	@echo "... Engine/parser.i"
 	@echo "... Engine/parser.s"
@@ -527,15 +587,15 @@ help:
 	@echo "... Generator/plane.o"
 	@echo "... Generator/plane.i"
 	@echo "... Generator/plane.s"
+	@echo "... Generator/point.o"
+	@echo "... Generator/point.i"
+	@echo "... Generator/point.s"
 	@echo "... Generator/sphere.o"
 	@echo "... Generator/sphere.i"
 	@echo "... Generator/sphere.s"
 	@echo "... Generator/torus.o"
 	@echo "... Generator/torus.i"
 	@echo "... Generator/torus.s"
-	@echo "... Generator/vertex.o"
-	@echo "... Generator/vertex.i"
-	@echo "... Generator/vertex.s"
 	@echo "... tinyxml2.o"
 	@echo "... tinyxml2.i"
 	@echo "... tinyxml2.s"

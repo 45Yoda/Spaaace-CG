@@ -2,7 +2,7 @@
 #include <cstring>
 #include <fstream>
 #include <vector>
-#include "vertex.h"
+#include "point.h"
 #include "plane.h"
 #include "box.h"
 #include "cone.h"
@@ -13,69 +13,80 @@ using std::ofstream;
 using std::string;
 using std::vector;
 
-void drawPlane(float size, string name){
+void printFile(string name, vector<Point*> points, vector<Point*> normals, vector<Point*> textures){
     ofstream file(name);
     char buffer[1024];
-    vector<Vertex*> vertexes = plane(size);
 
-    for(Vertex* v: vertexes){
+    file << points.size() << endl;
+    for(Point* v: points){
         sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
         file << buffer;
     }
+
+    if(normals.size()){
+        file << normals.size() << endl;
+        for(Point* n: normals){
+            sprintf(buffer,"%f %f %f\n",n->getX(),n->getY(),n->getZ());
+            file << buffer;
+        }
+    }
+
+    if(textures.size()){
+        file << textures.size() << endl;
+        for(Point* t: textures){
+            sprintf(buffer,"%f %f\n",t->getX(),t->getY());
+            file << buffer;
+        }
+    }
+
     file.close();
+}
+
+
+void drawPlane(float size, string name){
+    vector<Point*> normals;
+    vector<Point*> textures;
+    vector<Point*> points = plane(size,&normals,&textures);
+
+    printFile(name,points,normals,textures);
 }
 
 void drawBox(float x, float y, float z, int div, string name){
-    ofstream file(name);
-    char buffer[1024];
-    vector<Vertex*> vertexes = box(x,y,z,div);
+    vector<Point*> normals;
+    vector<Point*> textures;
+    vector<Point*> points = box(x,y,z,div,&normals,&textures);
 
-    for(Vertex* v: vertexes){
-        sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
-        file << buffer;
-    }
-
-    file.close();
+    printFile(name,points,normals,textures);
 }
 
 void drawSphere(float radius, int slices, int stacks, string name){
-    ofstream file(name);
-    char buffer[1024];
-    vector<Vertex*> vertexes = sphere(radius,slices,stacks);
+    vector<Point*> normals;
+    vector<Point*> textures;
+    vector<Point*> points = sphere(radius,slices,stacks,&normals,&textures);
 
-    for(Vertex* v: vertexes){
-        sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
-        file << buffer;
-    }
-
-    file.close();
+    printFile(name,points,normals,textures);
 }
 
 void drawCone(float radius, float height, int slices, int stacks, string name){
-    ofstream file(name);
-    char buffer[1024];
-    vector<Vertex*> vertexes = cone(radius,height,slices,stacks);
+    vector<Point*> normals;
+    vector<Point*> textures;
+    vector<Point*> points = cone(radius,height,slices,stacks);
 
-    for(Vertex* v: vertexes){
-        sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
-        file << buffer;
-    }
+    printFile(name,points,normals,textures);
 
-    file.close();
+
 }
 
 void drawTorus(float radiusSmall, float radiusBig, int sides, int rings, string name){
-	ofstream file(name);
-	char buffer[1024];
-	vector<Vertex*> vertexes = torus(radiusSmall,radiusBig,sides,rings);
+	vector<Point*> normals;
+	vector<Point*> textures;
+	vector<Point*> points = torus(radiusSmall,radiusBig,sides,rings,&normals,&textures);
 
-	for(Vertex* v: vertexes){
-		sprintf(buffer,"%f %f %f\n",v->getX(),v->getY(),v->getZ());
-		file << buffer;
-	}
+	printFile(name,points,normals,textures);
 
-	file.close();
+
 }
+
 
 float* bezierCalc( float tt, float *p1 , float *p2 , float *p3 , float *p4) {
 
@@ -138,11 +149,14 @@ void renderPatch( string file , int tess , string name) {
     int i;
 
     if(filei.is_open()) {
+
+        //Get number of patches
         getline(filei,line);
         int npatch = atoi(line.c_str());
         int** indexes = new int*[npatch];
         cout << npatch << endl;
 
+        //Parsing indexes
         for(int r = 0 ; r < npatch ; r++) {
             getline(filei,line);
             indexes[r] = new int[16];
@@ -174,6 +188,9 @@ void renderPatch( string file , int tess , string name) {
 
         float incre = 1.0 / tess , u , v , u2 , v2;
         float *** res = new float**[npatch];
+        vector<Point*> ult;
+        Point* point;
+
 
         for(int count = 0 ; count < npatch ; count++) {
             res[count] = new float*[4];
@@ -192,18 +209,37 @@ void renderPatch( string file , int tess , string name) {
                     res[count][2] = getBezierPoint(u2, v, indexes[count], points, npatch, npoints);
                     res[count][3] = getBezierPoint(u2, v2, indexes[count], points, npatch, npoints);
 
+                    point = new Point(res[count][0][0],res[count][0][1],res[count][0][2]);
+                    ult.push_back(point);
+                    point = new Point(res[count][2][0],res[count][2][1],res[count][2][2]);
+                    ult.push_back(point);
+                    point = new Point(res[count][3][0],res[count][3][1],res[count][3][2]);
+                    ult.push_back(point);
 
-                    fileo << res[count][0][0] << " " << res[count][0][1] << " " << res[count][0][2] << endl;
-                    fileo << res[count][2][0] << " " << res[count][2][1] << " " << res[count][2][2] << endl;
-                    fileo << res[count][3][0] << " " << res[count][3][1] << " " << res[count][3][2] << endl;
+                    point = new Point(res[count][0][0],res[count][0][1],res[count][0][2]);
+                    ult.push_back(point);
+                    point = new Point(res[count][3][0],res[count][3][1],res[count][3][2]);
+                    ult.push_back(point);
+                    point = new Point(res[count][1][0],res[count][1][1],res[count][1][2]);
+                    ult.push_back(point);
 
-                    fileo << res[count][0][0] << " " << res[count][0][1] << " " << res[count][0][2] << endl;
-                    fileo << res[count][3][0] << " " << res[count][3][1] << " " << res[count][3][2] << endl;
-                    fileo << res[count][1][0] << " " << res[count][1][1] << " " << res[count][1][2] << endl;
+
+                    //fileo << res[count][0][0] << " " << res[count][0][1] << " " << res[count][0][2] << endl;
+                    //fileo << res[count][2][0] << " " << res[count][2][1] << " " << res[count][2][2] << endl;
+                    //fileo << res[count][3][0] << " " << res[count][3][1] << " " << res[count][3][2] << endl;
+
+                    //fileo << res[count][0][0] << " " << res[count][0][1] << " " << res[count][0][2] << endl;
+                    //fileo << res[count][3][0] << " " << res[count][3][1] << " " << res[count][3][2] << endl;
+                    //fileo << res[count][1][0] << " " << res[count][1][1] << " " << res[count][1][2] << endl;
                 }
             }
 
         }
+
+        //point done
+        
+
+
     }
 
     filei.close();
@@ -240,7 +276,7 @@ void print_help(){
     std::cout<<"*                                                                *" << std::endl;
     std::cout<<"*    {FILE}:                                                     *" << std::endl;
     std::cout<<"*      In this section you give the name of the file which will  *" << std::endl;
-    std::cout<<"*      contain the vertexes generated with the previous commands.*" << std::endl;
+    std::cout<<"*      contain the points generated with the previous commands.*" << std::endl;
     std::cout<<"*                                                                *" << std::endl;
     std::cout<<"*    COMPILING:                                                  *" << std::endl;
     std::cout<<"*       g++ -o generator *.*                                     *" << std::endl;

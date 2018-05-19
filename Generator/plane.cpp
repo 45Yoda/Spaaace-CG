@@ -7,27 +7,45 @@
 using std::vector;
 
 
-vector<Vertex*> plane(float size){
-    vector<Vertex*> vertexes;
+vector<Point*> plane(float size, vector<Point*> *normals,vector<Point*> *textures){
+    vector<Point*> points;
     float side;
 
     //calculate side of square
-
     side = size/2;
 
 
-    //Push vertexes into vector
+
+    //Push points into vector
 
     //First triangle
-    vertexes.push_back(new Vertex(side,0.0f,side));
-    vertexes.push_back(new Vertex(side,0.0f,-side));
-    vertexes.push_back(new Vertex(-side,0.0f,side));
+    points.push_back(new Point(side,0.0f,side));
+    normals->push_back(new Point(0,1,0));
+    textures->push_back(new Point(1,1,0));
+
+    points.push_back(new Point(side,0.0f,-side));
+    normals->push_back(new Point(0,1,0));
+    textures->push_back(new Point(1,0,0));
+
+
+    points.push_back(new Point(-side,0.0f,side));
+    normals->push_back(new Point(0,1,0));
+    textures->push_back(new Point(0,1,0));
+
 
     //Second triangle
-    vertexes.push_back(new Vertex(-side,0.0f,-side));
-    vertexes.push_back(new Vertex(-side,0.0f,side));
-    vertexes.push_back(new Vertex(side,0.0f,-side));
+    points.push_back(new Point(-side,0.0f,-side));
+    normals->push_back(new Point(0,1,0));
+    textures->push_back(new Point(0,1,0));
 
-    return vertexes;
+    points.push_back(new Point(-side,0.0f,side));
+    normals->push_back(new Point(0,1,0));
+    textures->push_back(new Point(1,0,0));
+
+    points.push_back(new Point(side,0.0f,-side));
+    normals->push_back(new Point(0,1,0));
+    textures->push_back(new Point(0,0,0));
+
+    return points;
 
 }

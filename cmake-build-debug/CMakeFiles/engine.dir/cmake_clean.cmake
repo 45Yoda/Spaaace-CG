@@ -2,10 +2,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/Engine/engine.cpp.o"
   "CMakeFiles/engine.dir/Engine/shape.cpp.o"
   "CMakeFiles/engine.dir/tinyxml2.cpp.o"
-  "CMakeFiles/engine.dir/Generator/vertex.cpp.o"
+  "CMakeFiles/engine.dir/Generator/point.cpp.o"
   "CMakeFiles/engine.dir/Engine/action.cpp.o"
   "CMakeFiles/engine.dir/Engine/parser.cpp.o"
   "CMakeFiles/engine.dir/Engine/group.cpp.o"
+  "CMakeFiles/engine.dir/Engine/light.cpp.o"
+  "CMakeFiles/engine.dir/Engine/material.cpp.o"
   "engine.pdb"
   "engine"
 )

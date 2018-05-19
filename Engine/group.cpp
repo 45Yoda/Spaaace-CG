@@ -3,6 +3,7 @@
 //
 
 #include "group.h"
+#include "light.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -14,10 +15,11 @@ Group::Group(int n){
     id = n;
 }
 
-Group::Group(vector<Shape*> listShape, vector<Group*> listGroup, vector<Action*> listAction){
+Group::Group(vector<Shape*> listShape, vector<Group*> listGroup, vector<Action*> listAction, vector<Light*> listLight){
     shapes = listShape;
     groups = listGroup;
     actions = listAction;
+    lights = listLight;
 }
 
 vector<Shape*> Group::getShapes(){
@@ -32,6 +34,10 @@ vector<Action*> Group::getActions(){
     return actions;
 }
 
+vector<Light*> Group::getLights(){
+    return lights;
+}
+
 void Group::setShapes(vector<Shape*> listShape){
     shapes = listShape;
 }
@@ -44,6 +50,9 @@ void Group::setActions(vector<Action*> listAction){
     actions = listAction;
 }
 
+void Group::setLights(vector<Light *> listLights) {
+    lights = listLights;
+}
 
 void Group::addShape(Shape* shape) {
     shapes.push_back(shape);
@@ -55,4 +64,8 @@ void Group::addChild(Group* child) {
 
 void Group::addAction(Action* act){
     actions.push_back(act);
+}
+
+void Group::addLight(Light * lit) {
+    lights.push_back(lit);
 }
