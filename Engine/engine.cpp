@@ -1,6 +1,7 @@
 #define _USE_MATH_DEFINES
 #include <cmath>
 #include <GL/glut.h>
+#include <IL/ilut.h>
 #include <vector>
 #include <iostream>
 #include <fstream>
@@ -14,6 +15,7 @@
 using namespace tinyxml2;
 
 Group* scene;
+
 
 int mode = GL_LINE;
 int fullscreen = 0;
@@ -206,14 +208,23 @@ void render(Group* g){
 
     glPushMatrix();
 
-    vector<Action*> actions = g->getActions();
+    vector<Light*> lights = g->getLights();
 
+    for(vector<Light*>::iterator lit_it = lights.begin(); lit_it != lights.end(); ++lit_it ){
+        Light* light = (*lit_it);
+
+        light->draw();
+    }
+
+
+    vector<Action*> actions = g->getActions();
 
     for(vector<Action*>::iterator act_it = actions.begin(); act_it != actions.end(); ++act_it){
         Action* action = (*act_it);
 
         action->apply();
     }
+
 
     vector<Shape*> shapes = g->getShapes();
 
@@ -249,8 +260,6 @@ void render(Group* g){
 }
 
 
-
-
 void renderScene(void) {
 
 
@@ -260,10 +269,12 @@ void renderScene(void) {
     // set the camera
     glLoadIdentity();
 
-    
 
-    //put the geometric transformations here
     glPolygonMode(GL_FRONT_AND_BACK, mode);
+    ilEnable(IL_ORIGIN_SET);
+    ilOriginFunc(IL_ORIGIN_LOWER_LEFT);
+
+
 
     /*
     glRotatef(angleX,0,1,0);
@@ -322,6 +333,7 @@ int main(int argc, char **argv) {
     glutInitWindowPosition(100,100);
     glutInitWindowSize(1200,750);
     glutCreateWindow("CGTP");
+    ilInit();
 
 // Required callback registry
     glutDisplayFunc(renderScene);
@@ -336,8 +348,22 @@ int main(int argc, char **argv) {
 
 //  OpenGL settings
     glEnable(GL_DEPTH_TEST);
-    glEnableClientState(GL_VERTEX_ARRAY);
     glEnable(GL_CULL_FACE);
+
+    //Textures
+    glEnable(GL_TEXTURE_2D);
+
+    glEnable(GL_LIGHT0);
+
+
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glEnableClientState(GL_NORMAL_ARRAY);
+    glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+
+    //Refresh normals
+    glEnable(GL_NORMALIZE);
+
+
     initGroup(scene);
 
 

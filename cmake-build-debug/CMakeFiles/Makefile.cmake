@@ -24,6 +24,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/yoda45/Downloads/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/Compiler/GNU-C.cmake"
   "/home/yoda45/Downloads/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/Compiler/GNU-CXX.cmake"
   "/home/yoda45/Downloads/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/Compiler/GNU.cmake"
+  "/home/yoda45/Downloads/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/FindDevIL.cmake"
   "/home/yoda45/Downloads/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/FindGLUT.cmake"
   "/home/yoda45/Downloads/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/FindOpenGL.cmake"
   "/home/yoda45/Downloads/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake"

@@ -298,6 +298,12 @@ engine: CMakeFiles/engine.dir/Engine/group.cpp.o
 engine: CMakeFiles/engine.dir/Engine/light.cpp.o
 engine: CMakeFiles/engine.dir/Engine/material.cpp.o
 engine: CMakeFiles/engine.dir/build.make
+engine: /usr/lib/x86_64-linux-gnu/libIL.so
+engine: /usr/lib/x86_64-linux-gnu/libGL.so
+engine: /usr/lib/x86_64-linux-gnu/libGLU.so
+engine: /usr/lib/x86_64-linux-gnu/libglut.so
+engine: /usr/lib/x86_64-linux-gnu/libXi.so
+engine: /usr/lib/x86_64-linux-gnu/libIL.so
 engine: /usr/lib/x86_64-linux-gnu/libGL.so
 engine: /usr/lib/x86_64-linux-gnu/libGLU.so
 engine: /usr/lib/x86_64-linux-gnu/libglut.so
