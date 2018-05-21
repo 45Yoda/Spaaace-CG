@@ -331,7 +331,8 @@ int main(int argc, char **argv) {
     glutInitWindowPosition(100,100);
     glutInitWindowSize(800,800);
     glutCreateWindow("CG_Trabalho");
-    ilInit();
+
+
 
     if(argc < 2){
         cout << "Invalid input. Use -h if you need some help." << endl;
@@ -355,6 +356,13 @@ int main(int argc, char **argv) {
         glutKeyboardFunc(key_normal);
         glutSpecialFunc(key_special);
 
+        ilInit();
+        ilEnable(IL_ORIGIN_SET);
+        ilOriginFunc(IL_ORIGIN_LOWER_LEFT);
+
+#ifndef __APPLE__
+        glewInit();
+#endif
         initGL();
 
         // enter GLUT's main loop
