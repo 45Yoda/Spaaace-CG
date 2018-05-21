@@ -13,6 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efda1f47-1a28-4117-80c2-ad4208911b71" name="Default" comment="Error on textures path">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Textures/sphere.3d" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Engine/engine.cpp" afterPath="$PROJECT_DIR$/Engine/engine.cpp" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
@@ -34,7 +35,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/CXX.includecache" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/DependInfo.cmake" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/Engine/action.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/Engine/action.cpp.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/Engine/engine.cpp.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/Engine/engine.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/Engine/engine.cpp.o" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/Engine/group.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/Engine/group.cpp.o" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/Engine/light.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/Engine/light.cpp.o" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/Engine/material.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/engine.dir/Engine/material.cpp.o" />
@@ -74,7 +75,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/generator.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/generator.cbp" />
       <change beforePath="$PROJECT_DIR$/oldFiles/sphere.xml" afterPath="$PROJECT_DIR$/sphere.xml" />
       <change beforePath="$PROJECT_DIR$/oldFiles/sphereSun.3d" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sphere.3d" afterPath="$PROJECT_DIR$/Textures/sphere.3d" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -130,8 +130,8 @@
       <file leaf-file-name="engine.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Engine/engine.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="306" column="0" lean-forward="true" selection-start-line="306" selection-start-column="0" selection-end-line="306" selection-end-column="0" />
+            <state relative-caret-position="305">
+              <caret line="142" column="20" lean-forward="false" selection-start-line="142" selection-start-column="20" selection-end-line="142" selection-end-column="20" />
               <folding>
                 <element signature="e#9969#9980#0" expanded="true" />
               </folding>
@@ -285,7 +285,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526902068636</updated>
-      <workItem from="1526902071412" duration="6855000" />
+      <workItem from="1526902071412" duration="7147000" />
     </task>
     <task id="LOCAL-00001" summary="Error on textures path">
       <created>1526902598831</created>
@@ -308,11 +308,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526929623611</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="New sphere for your ass">
+      <created>1526930223122</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1526930223122</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6855000" />
+    <option name="totallyTimeSpent" value="7147000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="836" extended-state="0" />
@@ -347,7 +354,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Error on textures path" />
     <MESSAGE value="Works works works" />
-    <option name="LAST_COMMIT_MESSAGE" value="Works works works" />
+    <MESSAGE value="New sphere for your ass" />
+    <option name="LAST_COMMIT_MESSAGE" value="New sphere for your ass" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -417,8 +425,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Engine/engine.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="306" column="0" lean-forward="true" selection-start-line="306" selection-start-column="0" selection-end-line="306" selection-end-column="0" />
+        <state relative-caret-position="305">
+          <caret line="142" column="20" lean-forward="false" selection-start-line="142" selection-start-column="20" selection-end-line="142" selection-end-column="20" />
           <folding>
             <element signature="e#9969#9980#0" expanded="true" />
           </folding>

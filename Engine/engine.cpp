@@ -304,6 +304,8 @@ void renderScene(void) {
 
 }
 
+
+
 void initGL(){
 
     // OpenGL settings
