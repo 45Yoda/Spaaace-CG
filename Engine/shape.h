@@ -16,13 +16,19 @@ using namespace std;
 
 class Shape{
 
-    vector<Point*> points;
-    vector<Point*> normals;
-    vector<Point*> textures;
     Material* colorComponent;
-    int pointSize=0,normalSize=0,textureSize=0;
+    int pointsSize=0,normalsSize=0,texturesSize=0;
     GLuint buffers[3];
     GLuint texture;
+    float *v; //Pontos
+    float *n; //Normais
+    float *tex; //Texturas
+    int nvertex;
+    int nnormals;
+    int ntextures;
+    unsigned int t, width, height;
+    unsigned int texID;
+    unsigned char *data;
     public:
         Shape();
         Shape(vector<Point*>, vector<Point*>, vector<Point*>);
@@ -31,7 +37,7 @@ class Shape{
         vector<Point*> getTextures();
         Material* getColorComponent();
         void setColorComponent(Material*);
-        void readyUp();
+        void readyUp(vector<Point*>, vector<Point*>, vector<Point*>);
         void loadTexture(string);
         void draw();
 };

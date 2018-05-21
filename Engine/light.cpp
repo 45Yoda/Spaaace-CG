@@ -2,7 +2,7 @@
 // Created by yoda45 on 5/17/18.
 //
 
-#include <GL/gl.h>
+#include <GLUT/glut.h>
 #include "light.h"
 
 Light::Light(){

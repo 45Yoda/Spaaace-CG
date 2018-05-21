@@ -260,10 +260,13 @@ void render(Group* g){
 }
 
 
+
+
 void renderScene(void) {
 
 
     // clear buffers
+    glClearColor(0.0f,0.0f,0.0f,0.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // set the camera
@@ -276,10 +279,10 @@ void renderScene(void) {
 
 
 
-    /*
+
     glRotatef(angleX,0,1,0);
     glRotatef(angleY,0,0,1);
-    */
+
 
     glTranslatef(0.0f,0.0f,-cRad);
     glRotatef(angleX,1.0,0.0,0.0);
@@ -288,6 +291,7 @@ void renderScene(void) {
     glTranslatef(-xp,-yp,-zp);
 
 
+    glColor3f(255,255,255);
 
 
     //axis();
@@ -300,75 +304,63 @@ void renderScene(void) {
 
 }
 
-void initGroup(Group* g){
+void initGL(){
 
-    vector<Shape*> shapes = g->getShapes();
-    for(vector<Shape*>::iterator shp_it = shapes.begin(); shp_it != shapes.end(); ++shp_it){
-        Shape* shape = (*shp_it);
-        shape->readyUp();
-    }
-
-    vector<Group*> childs = g->getChilds();
-    for(vector<Group*>::iterator g_it = childs.begin(); g_it != childs.end(); ++g_it)
-        initGroup(*g_it);
-}
-
-int main(int argc, char **argv) {
-
-    vector<string> files;
-    string line;
-
-    if(argc != 2){
-        std::cout << "Error" << std::endl;
-        print_help();
-    }
-    else {
-        scene = parseXML(argv[1]);
-    }
-
-
-// init GLUT and the window
-    glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
-    glutInitWindowPosition(100,100);
-    glutInitWindowSize(1200,750);
-    glutCreateWindow("CGTP");
-    ilInit();
-
-// Required callback registry
-    glutDisplayFunc(renderScene);
-    glutIdleFunc(renderScene);
-    glutReshapeFunc(changeSize);
-
-
-// put here the registration of the keyboard callbacks
-    glutKeyboardFunc(key_normal);
-    glutSpecialFunc(key_special);
-
-
-//  OpenGL settings
+    // OpenGL settings
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
-
-    //Textures
+    // Textures
     glEnable(GL_TEXTURE_2D);
 
     glEnable(GL_LIGHT0);
-
 
     glEnableClientState(GL_VERTEX_ARRAY);
     glEnableClientState(GL_NORMAL_ARRAY);
     glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 
-    //Refresh normals
+    // Refresh normals after scale
     glEnable(GL_NORMALIZE);
 
+}
 
-    initGroup(scene);
+int main(int argc, char **argv) {
 
+    // put GLUT init here
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
+    glutInitWindowPosition(100,100);
+    glutInitWindowSize(800,800);
+    glutCreateWindow("CG_Trabalho");
+    ilInit();
 
-// enter GLUT's main cycle
-    glutMainLoop();
+    if(argc < 2){
+        cout << "Invalid input. Use -h if you need some help." << endl;
+        return 0;
+    }
+    else if(!strcmp(argv[1],"-h") || !strcmp(argv[1],"-help")){
+        print_help();
+        return 0;
+    }
+    else
+        scene = parseXML(argv[1]);
+
+    if(scene){
+
+        // put callback registration here
+        glutDisplayFunc(renderScene);
+        glutIdleFunc(renderScene);
+        glutReshapeFunc(changeSize);
+
+        // put here the registration of the keyboard callbacks
+        glutKeyboardFunc(key_normal);
+        glutSpecialFunc(key_special);
+
+        initGL();
+
+        // enter GLUT's main loop
+        glutMainLoop();
+    }
 
     return 0;
+
 }

@@ -8,6 +8,8 @@
 #include "parser.h"
 #include "material.h"
 
+
+
 int total = 0;
 
 Group* myChild(Group* parent){
@@ -92,9 +94,9 @@ void foundColor(XMLElement* element, Shape* shape){
 
     //Emission
     x = 0.0f; y=0.0f; z=0.0f;
-    element->QueryFloatAttribute("specX",&x);
-    element->QueryFloatAttribute("specY",&y);
-    element->QueryFloatAttribute("specZ",&z);
+    element->QueryFloatAttribute("emiX",&x);
+    element->QueryFloatAttribute("emiY",&y);
+    element->QueryFloatAttribute("emiZ",&z);
 
     emission = new Color(x,y,z);
 
@@ -131,12 +133,68 @@ void foundLights(XMLElement* element, Group* g){
     g->setLights(lights);
 }
 
+void readFile(string file_name, vector<Point*>* vertex_list, vector<Point*>* normal_list, vector<Point*>* texture_list){
+
+    vector<string> tokens_v, tokens_n, tokens_t;
+    string buf;
+    string line;
+    int index;
+    string file_path = "../" + file_name;
+    ifstream file (file_path);
+    if(file.is_open()){
+
+        index = 0;
+        getline(file, line);
+        int n_vertex = atoi(line.c_str());
+
+        for(int i=0; i < n_vertex; i++){
+            getline(file,line);
+            stringstream ss(line);
+            while(ss >> buf)
+                tokens_v.push_back(buf); // percorrer as coordenadas dos vértices em cada linha
+            if(tokens_v.size()==3)
+            vertex_list->push_back(new Point(stof(tokens_v[index]),stof(tokens_v[index+1]),stof(tokens_v[index+2]))); // adicionar vértice ao vector
+            index+=3; // incrementar o índice
+        }
 
 
+        index = 0;
+        getline(file, line);
+        int n_normal = atoi(line.c_str());
 
-vector<Point*> readFile(string file_name,vector<Point*> *normals, vector<Point*> *textures){
+        for(int i=0; i < n_normal; i++){
+            getline(file,line);
+            stringstream ss(line);
+            while(ss >> buf)
+                tokens_n.push_back(buf); // percorrer as coordenadas dos vértices em cada linha
 
-    vector<Point*> points;
+            normal_list->push_back(new Point(stof(tokens_n[index]),stof(tokens_n[index+1]),stof(tokens_n[index+2]))); // adicionar vértice ao vector
+            index+=3; // incrementar o índice
+        }
+
+        index = 0;
+        getline(file, line);
+        int n_texture = atoi(line.c_str());
+
+        for(int i=0; i < n_texture; i++){
+            getline(file,line);
+            stringstream ss(line);
+            while(ss >> buf)
+                tokens_t.push_back(buf); // percorrer as coordenadas dos vértices em cada linha
+
+            texture_list->push_back(new Point(stof(tokens_t[index]),stof(tokens_t[index+1]),0)); // adicionar vértice ao vector
+            index+=2; // incrementar o índice
+        }
+
+        file.close();
+    }
+    else cout << "Unable to open file: " << file_name << "." << endl;
+}
+
+/*
+void readFile(string file_name){
+
+    Point p;
     vector<string> tokens,tokensText,tokensNorm;
     string buffer;
     string line;
@@ -158,7 +216,10 @@ vector<Point*> readFile(string file_name,vector<Point*> *normals, vector<Point*>
             // erate over the coordinates of the points in each line
             //cout << tokens[index] << endl;
             //add points to the vector
-            points.push_back(new Point(stof(tokens[index]),stof(tokens[index+1]),stof(tokens[index+2])));
+            p.setX(stof(tokens[index]));
+            p.setY(stof(tokens[index+1]));
+            p.setZ(stof(tokens[index+2]));
+            vertexes.push_back(p);
             //std::cout << i++;
             index+=3;
         }
@@ -173,7 +234,10 @@ vector<Point*> readFile(string file_name,vector<Point*> *normals, vector<Point*>
             while(ss >> buffer)
                 tokensNorm.push_back(buffer);
 
-            normals->push_back(new Point(stof(tokensNorm[index]),stof(tokensNorm[index+1]),stof(tokens[index+2])));
+            p.setX(stof(tokensNorm[index]));
+            p.setY(stof(tokensNorm[index+1]));
+            p.setZ(stof(tokensNorm[index+2]));//POSSIBILIDDE DE NAO SER NORM
+            normals.push_back(p);
             index+=3;
         }
 
@@ -186,17 +250,21 @@ vector<Point*> readFile(string file_name,vector<Point*> *normals, vector<Point*>
             stringstream ss(line);
             while(ss >> buffer)
                 tokensText.push_back(buffer);
-
-            textures->push_back(new Point(stof(tokensText[index]),stof(tokensText[index+1]),stof(tokensText[index+2])));
+            p.setX(stof(tokensText[index]));
+            p.setY(stof(tokensText[index+1]));
+            p.setZ(stof(tokensText[index+2]));
+            textures.push_back(p);
             index+=2;
         }
 
 
         file.close();
     }
-    else cout << "Unable to open file." << endl;
-    return points;
+    else cout << "Unable to open file." << file_path << endl;
 }
+
+
+*/
 
 
 //<models>
@@ -212,13 +280,13 @@ vector<Shape*> findModels(XMLElement* element,Group* g){
             vector<Point*> normals;
             vector<Point*> textures;
 
-            vertexes = readFile(element->Attribute("file"),&normals,&textures);
+            readFile(element->Attribute("file"), &vertexes, &normals, &textures);
+
 
             if(!vertexes.empty()){
                 Shape* shape;
                 if(element->Attribute("texture")){
                     shape = new Shape(vertexes,normals,textures);
-                    shape->readyUp();
                     shape->loadTexture(element->Attribute("texture"));
                 }
                 else

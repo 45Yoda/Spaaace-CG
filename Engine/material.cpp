@@ -1,8 +1,8 @@
-//
+    //
 // Created by yoda45 on 5/18/18.
 //
 
-#include <GL/gl.h>
+#include <GLUT/glut.h>
 #include "material.h"
 #include "action.h"
 
@@ -45,10 +45,10 @@ void Material::draw(){
     glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, shininess);
 
     if(diffuse[3] != -1)
-        glMaterialfv(GL_FRONT_AND_BACK,GL_DIFFUSE,diffuse);
+        glMaterialfv(GL_FRONT_AND_BACK,GL_AMBIENT,ambient);
 
     if(ambient[3] != -1)
-        glMaterialfv(GL_FRONT_AND_BACK,GL_AMBIENT,ambient);
+        glMaterialfv(GL_FRONT_AND_BACK,GL_DIFFUSE,diffuse);
 
     glMaterialfv(GL_FRONT_AND_BACK,GL_SPECULAR,specular);
     glMaterialfv(GL_FRONT_AND_BACK,GL_EMISSION,emission);

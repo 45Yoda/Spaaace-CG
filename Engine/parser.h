@@ -18,7 +18,6 @@ void foundColor(XMLElement*, Shape*);
 void foundLights(XMLElement*, Group*);
 vector<Shape*> findModels(XMLElement*,Group*);
 void findElement(XMLElement*, Group*);
-vector<Point*> readFile(string,vector<Point*>*,vector<Point*>*);
 Group* parseXML(char*);
 
 
