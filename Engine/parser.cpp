@@ -6,7 +6,6 @@
 #include <fstream>
 #include <sstream>
 #include "parser.h"
-#include "material.h"
 
 
 
@@ -190,82 +189,6 @@ void readFile(string file_name, vector<Point*>* vertex_list, vector<Point*>* nor
     }
     else cout << "Unable to open file: " << file_name << "." << endl;
 }
-
-/*
-void readFile(string file_name){
-
-    Point p;
-    vector<string> tokens,tokensText,tokensNorm;
-    string buffer;
-    string line;
-    int index = 0, i=0;
-    string file_path = "../" + file_name;
-    ifstream file (file_path);
-
-    if(file.is_open()){
-
-        index = 0;
-        getline(file,line);
-        int nVert = atoi(line.c_str());
-
-        for(i=0;i< nVert; i++){ // iterate over the lines of the file
-            getline(file,line);
-            stringstream ss(line);
-            while(ss >> buffer)
-                tokens.push_back(buffer); // it
-            // erate over the coordinates of the points in each line
-            //cout << tokens[index] << endl;
-            //add points to the vector
-            p.setX(stof(tokens[index]));
-            p.setY(stof(tokens[index+1]));
-            p.setZ(stof(tokens[index+2]));
-            vertexes.push_back(p);
-            //std::cout << i++;
-            index+=3;
-        }
-
-        index = 0;
-        getline(file,line);
-        int nNorm = atoi(line.c_str());
-
-        for(i=0;i<nNorm;i++){
-            getline(file,line);
-            stringstream ss(line);
-            while(ss >> buffer)
-                tokensNorm.push_back(buffer);
-
-            p.setX(stof(tokensNorm[index]));
-            p.setY(stof(tokensNorm[index+1]));
-            p.setZ(stof(tokensNorm[index+2]));//POSSIBILIDDE DE NAO SER NORM
-            normals.push_back(p);
-            index+=3;
-        }
-
-        index = 0;
-        getline(file,line);
-        int nText = atoi(line.c_str());
-
-        for(int i=0;i<nText;i++){
-            getline(file,line);
-            stringstream ss(line);
-            while(ss >> buffer)
-                tokensText.push_back(buffer);
-            p.setX(stof(tokensText[index]));
-            p.setY(stof(tokensText[index+1]));
-            p.setZ(stof(tokensText[index+2]));
-            textures.push_back(p);
-            index+=2;
-        }
-
-
-        file.close();
-    }
-    else cout << "Unable to open file." << file_path << endl;
-}
-
-
-*/
-
 
 //<models>
 vector<Shape*> findModels(XMLElement* element,Group* g){

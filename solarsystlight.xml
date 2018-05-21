@@ -1,4 +1,17 @@
 <scene>
+	<group>
+		<!--FUNDO-->
+		<group>
+			<lights>
+				<light type="POINT" X="0" Y="0" Z="0"/>
+			</lights>
+			<scale X="-300" Y="-300" Z="-300" />
+			<models>
+				<model file="sphere.3d" texture="stars.jpg" emiX="1" emiY="1" emiZ="1" shiny="128"/>
+			</models>
+		</group>
+	</group>
+
 	<!--SOL-->
 	<group>
         <lights>
@@ -193,34 +206,16 @@
 	</group>
 			<!--ANEL-->
 	<group>
-				<rotate angle="-75" X="1" Y="0" Z="0"/>
+				<rotate angle="75" X="1" Y="0" Z="0"/>
 				<colour R="79" G="52" B="26" />
-				<scale X="0.65" Y="0.65" Z="0.001"/>
+				<scale X="0.35" Y="0.35" Z="0.001"/>
 				<models>
-					<model file="ring.3d" texture="saturnring.jpg" emiX="0" emiY="0" emiZ="0" />
-				</models>
-			</group>
-
-			<group>
-				<rotate angle="-75" X="1" Y="0" Z="0"/>
-				<colour R="36" G="0" B="84" />
-				<scale X="0.5" Y="0.5" Z="0.001"/>
-				<models>
-					<model file="ring.3d" texture="saturnring.jpg" emiX="0" emiY="0" emiZ="0"/>
-				</models>
-			</group>
-
-			<group>
-				<rotate angle="-75" X="1" Y="0" Z="0"/>
-				<colour R="76" G="0" B="84"/>
-				<scale X="0.385" Y="0.385" Z="0.001"/>
-				<models>
-					<model file="ring.3d" texture="saturnring.jpg" emiX="0" emiY="0" emiZ="0"/>
+					<model file="torus.3d" texture="saturnring.jpg" emiX="0" emiY="0" emiZ="0" />
 				</models>
 			</group>
 
 		</group>
-m
+
 	</group>
 	<!--URANO-->
 	<group>
@@ -273,5 +268,32 @@ m
 				</models>
 			</group>
 		</group>
+	</group>
+	<!--COMETA -->
+	<group>
+		<rotate angle="225" X="0" Y="0" Z="1"/>
+		<translate time="45">
+			<point X="40" Y="0" Z="-80" />
+			<point X="36.9552" Y="0" Z="-39.8182" />
+			<point X="28.2843" Y="0" Z="-5.75379" />
+			<point X="15.3073" Y="0" Z="17.0074" />
+			<point X="2.44929e-15" Y="0" Z="25" />
+			<point X="-15.3073" Y="0" Z="17.0074" />
+			<point X="-28.2843" Y="0" Z="-5.75379" />
+			<point X="-36.9552" Y="0" Z="-39.8182" />
+			<point X="-40" Y="0" Z="-80" />
+			<point X="-36.9552" Y="0" Z="-120.182" />
+			<point X="-28.2843" Y="0" Z="-154.246" />
+			<point X="-15.3073" Y="0" Z="-177.007" />
+			<point X="-7.34788e-15" Y="0" Z="-185" />
+			<point X="15.3073" Y="0" Z="-177.007" />
+			<point X="28.2843" Y="0" Z="-154.246" />
+			<point X="36.9552" Y="0" Z="-120.182" />
+		</translate>
+		<scale X="1" Y="1" Z="1" />
+		<colour R="255" G="255" B="255"/>
+		<models>
+			<model file="pot2.3d" texture="Textures/sand.jpg" emiX="0" emiY="0" emiZ="0"/>
+		</models>
 	</group>
 </scene>

@@ -1,13 +1,13 @@
 <scene>
 
     <group>
-        <scale X="15" Y="15" Z="15" />
+        <scale X="1" Y="1" Z="1" />
         <rotate time="50" X="0" Y="1" Z="0" />
         <lights>
             <light type="POINT" X="0" Y="0" Z="0"/>
         </lights>
         <models>
-            <model file="sphere.3d" diffX="0" diffY="0" diffZ="0" emiX="1" emiY="1" emiZ="0.5"/>
+            <model file="torus.3d" diffX="0" diffY="0" diffZ="0" emiX="1" emiY="1" emiZ="0.5"/>
         </models>
     </group>
 

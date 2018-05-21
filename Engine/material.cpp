@@ -4,7 +4,6 @@
 
 #include <GLUT/glut.h>
 #include "material.h"
-#include "action.h"
 
 Material::Material(){
 }

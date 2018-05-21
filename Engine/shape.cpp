@@ -76,8 +76,8 @@ void Shape::readyUp(vector<Point*> points, vector<Point*> normals, vector<Point*
 
 void Shape::loadTexture(string texture_file) {
 
-    string path = "Textures/" + texture_file;
-    unsigned int t,tw,th;
+    string path = "../Textures/" + texture_file;
+    unsigned int tw,th;
     unsigned char *texData;
 
     unsigned int ima[1];

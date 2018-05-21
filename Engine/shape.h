@@ -1,8 +1,6 @@
 #ifndef __SHAPE_H__
 #define __SHAPE_H__
 
-#define GL_GLEXT_PROTOTYPES
-
 
 #include <string>
 #include <vector>
@@ -20,12 +18,6 @@ class Shape{
     int pointsSize=0,normalsSize=0,texturesSize=0;
     GLuint buffers[3];
     GLuint texture;
-    float *v; //Pontos
-    float *n; //Normais
-    float *tex; //Texturas
-    int nvertex;
-    int nnormals;
-    int ntextures;
     unsigned int t, width, height;
     unsigned int texID;
     unsigned char *data;

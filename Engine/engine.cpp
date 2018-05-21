@@ -1,4 +1,3 @@
-#define _USE_MATH_DEFINES
 #include <cmath>
 #include <GL/glut.h>
 #include <IL/ilut.h>
@@ -7,8 +6,6 @@
 #include <fstream>
 #include <sstream>
 #include "shape.h"
-#include "../tinyxml2.h"
-#include "../Generator/point.h"
 #include "group.h"
 #include "parser.h"
 
@@ -58,6 +55,9 @@ void print_help(){
     std::cout<<"*                                                                *" << std::endl;
     std::cout<<"#****************************************************************#" << std::endl;
 }
+
+
+
 
 void key_normal (unsigned char key, int x, int y){
 
@@ -333,7 +333,7 @@ int main(int argc, char **argv) {
     glutInitWindowPosition(100,100);
     glutInitWindowSize(800,800);
     glutCreateWindow("CG_Trabalho");
-
+    mode = GL_FILL;
 
 
     if(argc < 2){

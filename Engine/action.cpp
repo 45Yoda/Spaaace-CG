@@ -3,10 +3,6 @@
 //
 #include <GL/glut.h>
 #include "action.h"
-#include "../Generator/point.h"
-#include <iostream>
-#include <string>
-//#include <opencl-c.h>
 
 using tinyxml2::XMLElement;
 

@@ -3,10 +3,7 @@
 //
 
 #include "group.h"
-#include "light.h"
 #include <iostream>
-#include <fstream>
-#include <sstream>
 
 Group::Group(){
 }
