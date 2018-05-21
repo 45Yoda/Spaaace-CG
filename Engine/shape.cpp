@@ -74,15 +74,18 @@ void Shape::readyUp(vector<Point*> points, vector<Point*> normals, vector<Point*
     free(texture_array);
 }
 
-void Shape::loadTexture(string texture_file){
+void Shape::loadTexture(string texture_file) {
 
     string path = "Textures/" + texture_file;
     unsigned int t,tw,th;
     unsigned char *texData;
 
-    ilGenImages(1, &t);
-    ilBindImage(t);
-    ilLoadImage((ILstring) path.c_str());
+    unsigned int ima[1];
+
+    ilInit();
+    ilGenImages(1, ima);
+    ilBindImage(ima[0]);
+    ilLoadImage((ILstring)path.c_str());
     tw = ilGetInteger(IL_IMAGE_WIDTH);
     th = ilGetInteger(IL_IMAGE_HEIGHT);
     ilConvertImage(IL_RGBA, IL_UNSIGNED_BYTE);
@@ -95,7 +98,6 @@ void Shape::loadTexture(string texture_file){
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, tw, th, 0, GL_RGBA, GL_UNSIGNED_BYTE, texData);
-    glBindTexture(GL_TEXTURE_2D, 0);
 }
 
 

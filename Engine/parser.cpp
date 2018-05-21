@@ -152,7 +152,7 @@ void readFile(string file_name, vector<Point*>* vertex_list, vector<Point*>* nor
             stringstream ss(line);
             while(ss >> buf)
                 tokens_v.push_back(buf); // percorrer as coordenadas dos vértices em cada linha
-            if(tokens_v.size()==3)
+            if(tokens_v.size()>=3)
             vertex_list->push_back(new Point(stof(tokens_v[index]),stof(tokens_v[index+1]),stof(tokens_v[index+2]))); // adicionar vértice ao vector
             index+=3; // incrementar o índice
         }

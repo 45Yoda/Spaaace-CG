@@ -174,7 +174,7 @@
 			<point X="0" Y="0" Z="-120.5005"/>
 			<point X="85.20672" Y="0" Z="-85.20672"/>
 		</translate>
-		<group>
+	<group>
 			<rotate time="39" X="0" Y="1" Z="0"/>
             <colour R="240" G="232" B="170" />
 			<scale X="1.995" Y="1.995" Z="1.995" />
@@ -182,7 +182,7 @@
 				<model file="sphere.3d" texture="saturn.jpg" emiX="0" emiY="0" emiZ="0" />
 			</models>
 			<!--SATELITE N.-->
-			<group>
+	<group>
 				<translate X="0" Y="1.2" Z="3.375" />
 				<rotate time="39" X="0" Y="1" Z="0"/>
 				<colour R="255" G="255" B="255" />
@@ -190,9 +190,9 @@
 				<models>
 					<model file="sphere.3d" texture="moon.jpg" emiX="0" emiY="0" emiZ="0"/>
 				</models>
-			</group>
+	</group>
 			<!--ANEL-->
-			<group>
+	<group>
 				<rotate angle="-75" X="1" Y="0" Z="0"/>
 				<colour R="79" G="52" B="26" />
 				<scale X="0.65" Y="0.65" Z="0.001"/>
@@ -200,6 +200,7 @@
 					<model file="ring.3d" texture="saturnring.jpg" emiX="0" emiY="0" emiZ="0" />
 				</models>
 			</group>
+
 			<group>
 				<rotate angle="-75" X="1" Y="0" Z="0"/>
 				<colour R="36" G="0" B="84" />
@@ -208,6 +209,7 @@
 					<model file="ring.3d" texture="saturnring.jpg" emiX="0" emiY="0" emiZ="0"/>
 				</models>
 			</group>
+
 			<group>
 				<rotate angle="-75" X="1" Y="0" Z="0"/>
 				<colour R="76" G="0" B="84"/>
@@ -216,7 +218,9 @@
 					<model file="ring.3d" texture="saturnring.jpg" emiX="0" emiY="0" emiZ="0"/>
 				</models>
 			</group>
+
 		</group>
+m
 	</group>
 	<!--URANO-->
 	<group>
