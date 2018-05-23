@@ -1,8 +1,10 @@
     //
 // Created by yoda45 on 5/18/18.
 //
-
-#include <GLUT/glut.h>
+#ifdef __APPLE__
+    #include <GLUT/glut.h>
+#endif
+#include <GL/glut.h>
 #include "material.h"
 
 Material::Material(){

@@ -1,4 +1,5 @@
 #include <cmath>
+#include <GL/glew.h>
 #include <GL/glut.h>
 #include <IL/ilut.h>
 #include <vector>
@@ -362,9 +363,10 @@ int main(int argc, char **argv) {
         ilEnable(IL_ORIGIN_SET);
         ilOriginFunc(IL_ORIGIN_LOWER_LEFT);
 
-#ifndef __APPLE__
         glewInit();
-#endif
+
+// glewInit();
+
         initGL();
 
         // enter GLUT's main loop

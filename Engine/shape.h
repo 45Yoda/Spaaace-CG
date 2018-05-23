@@ -1,11 +1,14 @@
 #ifndef __SHAPE_H__
 #define __SHAPE_H__
 
+#define GL_GLEXT_PROTOTYPES
+
 
 #include <string>
 #include <vector>
 #include <IL/il.h>
 #include <GL/glut.h>
+#include <GL/gl.h>
 #include "../Generator/point.h"
 #include "material.h"
 
