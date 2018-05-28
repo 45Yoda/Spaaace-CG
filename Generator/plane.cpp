@@ -36,15 +36,15 @@ vector<Point*> plane(float size, vector<Point*> *normals,vector<Point*> *texture
     //Second triangle
     points.push_back(new Point(-side,0.0f,-side));
     normals->push_back(new Point(0,1,0));
-    textures->push_back(new Point(0,1,0));
+    textures->push_back(new Point(0,0,0));
 
     points.push_back(new Point(-side,0.0f,side));
     normals->push_back(new Point(0,1,0));
-    textures->push_back(new Point(1,0,0));
+    textures->push_back(new Point(0,1,0));
 
     points.push_back(new Point(side,0.0f,-side));
     normals->push_back(new Point(0,1,0));
-    textures->push_back(new Point(0,0,0));
+    textures->push_back(new Point(1,0,0));
 
     return points;
 

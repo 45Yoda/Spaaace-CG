@@ -18,6 +18,21 @@ Group* scene;
 int mode = GL_LINE;
 int fullscreen = 0;
 
+float rad = 5.0f;
+float cX = -30, cY = 30, cZ = 20;
+float angX = 0.0f, angY = 0.0f, angZ = 0.0f;
+float ptX = 0, ptY = 0, ptZ = 0;
+int stX, stY, track = 0, r=5;
+float alpha=0, bota=0;
+
+void resetCam(){
+    angX = angY = angZ = 0.0f;
+    ptX = ptY = ptZ = 0;
+    alpha = 0.0f;
+    bota = 0.5f;
+}
+
+
 float angleX = 0.0, angleY = 0.0;
 
 float ex=0.0f , ey=0.0f , ez=0.0f;
@@ -55,6 +70,62 @@ void print_help(){
     std::cout<<"*         ../Generator/Point.cpp -o engine -lGL -lGLU -lglut    *" << std::endl;
     std::cout<<"*                                                                *" << std::endl;
     std::cout<<"#****************************************************************#" << std::endl;
+}
+
+void normal_key (unsigned char key, int x, int y){
+
+    switch(key){
+        case 'W':
+        case 'w': angX +=5;
+                  break;
+        case 'S':
+        case 's': angX -=5;
+                  break;
+
+        case 'A':
+        case 'a': angY +=5;
+                  break;
+
+        case 'D':
+        case 'd': angY -=5;
+                  break;
+        case 'Q':
+        case 'q': angZ +=5;
+                  break;
+
+        case 'E':
+        case 'e': angZ -=5;
+                  break;
+
+        case 'R':
+        case 'r': resetCam();
+                  break;
+
+        case '+': ptY += 5;
+                  break;
+
+        case '-': ptY -= 5;
+                  break;
+    }
+
+    glutPostRedisplay();
+}
+
+void special_key(int key, int x, int y){
+
+    switch(key){
+        case GLUT_KEY_UP: ptZ += 5.0f;
+                          break;
+
+        case GLUT_KEY_DOWN: ptZ -= 5.0f;
+                            break;
+
+        case GLUT_KEY_LEFT: ptX += 5;
+                            break;
+
+        case GLUT_KEY_RIGHT: ptX -= 5;
+                             break;
+    }
 }
 
 
@@ -177,7 +248,7 @@ void changeSize(int w, int h) {
     glLoadIdentity();
 
     // Set the viewport to be the entire window
-    //glViewport(0, 0, w, h);
+    glViewport(0, 0, w, h);
 
     // Set perspective
     gluPerspective(45.0f ,ratio, 0.1f ,1000.0f);
@@ -280,8 +351,13 @@ void renderScene(void) {
 
 
 
+    gluLookAt(cX,cY,cZ,0.0,0.0,0.0,0.0f,1.0f,0.0f);
+    glRotatef(angX,1,0,0);
+    glRotatef(angY,0,1,0);
+    glRotatef(angZ,0,0,1);
+    glTranslatef(ptX,ptY,ptZ);
 
-    glRotatef(angleX,0,1,0);
+    /*glRotatef(angleX,0,1,0);
     glRotatef(angleY,0,0,1);
 
 
@@ -290,7 +366,7 @@ void renderScene(void) {
 
     glRotatef(angleY,0.0,1.0,0.0);
     glTranslatef(-xp,-yp,-zp);
-
+*/
 
     glColor3f(255,255,255);
 
@@ -356,8 +432,11 @@ int main(int argc, char **argv) {
         glutReshapeFunc(changeSize);
 
         // put here the registration of the keyboard callbacks
-        glutKeyboardFunc(key_normal);
-        glutSpecialFunc(key_special);
+        glutKeyboardFunc(normal_key);
+        glutSpecialFunc(special_key);
+
+        //glutKeyboardFunc(key_normal);
+        //glutSpecialFunc(key_special);
 
         ilInit();
         ilEnable(IL_ORIGIN_SET);
